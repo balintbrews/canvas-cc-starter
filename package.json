@@ -1,8 +1,8 @@
 {
-  "name": "drupal-xb-js-components-storybook-starter",
+  "name": "@steepbase/canvas-cc-starter",
   "version": "0.0.0",
   "private": true,
-  "description": "Build and test JavaScript components for Drupal's Experience Builder with this preconfigured development environment.",
+  "description": "Build and test Drupal Canvas Code Components with this preconfigured development environment.",
   "type": "module",
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.1",
