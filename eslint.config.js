@@ -45,6 +45,18 @@ export default [
     rules: {
       "import/prefer-default-export": "error",
       "import/no-named-export": "error",
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: ["./*", "../*"],
+              message:
+                "Relative imports don't work in Drupal Canvas. Use the `@/components/` alias instead. For example, instead of `import Button from '../button'`, use `import Button from '@/components/button'`.",
+            },
+          ],
+        },
+      ],
     },
   },
   ...storybook.configs["flat/recommended"],
