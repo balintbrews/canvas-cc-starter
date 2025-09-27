@@ -9,8 +9,18 @@ const DIR = path.dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
-    alias: {
-      "@/lib/utils": path.resolve(DIR, "./src/lib/utils.ts"),
-    },
+    alias: [
+      {
+        find: "@/lib/utils",
+        replacement: path.resolve(DIR, "./src/lib/utils.ts"),
+      },
+      {
+        // Make sure we don't resolve nested folder structures under
+        // `@/components/`, like `@/components/atoms/button`.
+        // Those are not (yet) supported in Drupal Canvas.
+        find: /^@\/components\/([a-z_-]+)$/,
+        replacement: path.resolve(DIR, "./src/components/$1"),
+      },
+    ],
   },
 });
