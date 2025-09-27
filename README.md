@@ -29,6 +29,8 @@ mimics how Drupal Canvas compiles JavaScript and builds the CSS code by using
 
 ## Features
 
+- [Drupal Canvas CLI](https://www.npmjs.com/package/@drupal/xb-cli) installed
+  - `.env.example` file with instructions specific to this codebase
 - [Storybook](https://storybook.js.org) for developing and presenting the
   components
   - [Viewports](https://storybook.js.org/docs/essentials/viewport) configured to
@@ -61,14 +63,15 @@ mimics how Drupal Canvas compiles JavaScript and builds the CSS code by using
 
 ## Commands
 
-| Command               | Description                           |
-| --------------------- | ------------------------------------- |
-| `dev`                 | Starts Storybook's development server |
-| `storybook`           | Alias for `dev` command               |
-| `build-storybook`     | Creates a static Storybook build      |
-| `code:check`          | Runs all code checks                  |
-| `code:check:prettier` | Checks code formatting with Prettier  |
-| `code:check:eslint`   | Checks code with ESLint               |
-| `code:fix`            | Runs all code fixes                   |
-| `code:fix:prettier`   | Fixes code formatting with Prettier   |
-| `code:fix:eslint`     | Fixes code with ESLint                |
+| Command                          | Description                                                                  |
+| -------------------------------- | ---------------------------------------------------------------------------- |
+| `npx canvas [command] [options]` | Runs Drupal Canvas CLI commands <br> (`npx canvas` lists available commands) |
+| `npm run dev`                    | Starts Storybook's development server                                        |
+| `npm run storybook`              | Alias for `dev` command                                                      |
+| `npm run build-storybook`        | Creates a static Storybook build                                             |
+| `npm run code:check`             | Runs all code checks                                                         |
+| `npm run code:check:prettier`    | Checks code formatting with Prettier                                         |
+| `npm run code:check:eslint`      | Checks code with ESLint                                                      |
+| `npm run code:fix`               | Runs all code fixes                                                          |
+| `npm run code:fix:prettier`      | Fixes code formatting with Prettier                                          |
+| `npm run code:fix:eslint`        | Fixes code with ESLint                                                       |
