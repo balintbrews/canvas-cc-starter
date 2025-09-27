@@ -27,6 +27,12 @@ This starter project aims to provide a development environment. It loosely
 mimics how Drupal Canvas compiles JavaScript and builds the CSS code by using
 [SWC](https://swc.rs) and [Tailwind CSS v4](https://tailwindcss.com).
 
+## ⚠️ Before you start
+
+→ [**Important notes**](./docs/important-notes.md) — issues, current
+limitations, and considerations when developing Code Components for Drupal
+Canvas
+
 ## Features
 
 - [Drupal Canvas CLI](https://www.npmjs.com/package/@drupal/xb-cli) installed
@@ -49,8 +55,8 @@ mimics how Drupal Canvas compiles JavaScript and builds the CSS code by using
   extended specifically for Drupal Canvas:
   - Disallows named exports and requires default exports in components, which is
     a requirement in Drupal Canvas
-  - Disables the error for missing prop validation, which might be better suited
-    for the intended target audience of Drupal Canvas Code Components
+  - Disallows relative imports as those don't work in Drupal Canvas
+  - Disables the error for missing prop validation
 - Pre-commit hook with [Husky](https://typicode.github.io/husky) for linting and
   formatting staged files using
   [`lint-staged`](https://www.npmjs.com/package/lint-staged)
