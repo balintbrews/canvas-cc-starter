@@ -31,6 +31,8 @@ mimics how Drupal Canvas compiles JavaScript and builds the CSS code by using
 
 - [Storybook](https://storybook.js.org) for developing and presenting the
   components
+  - [Viewports](https://storybook.js.org/docs/essentials/viewport) configured to
+    match the viewport sizes Drupal Canvas uses
 - Compiling with [SWC](https://swc.rs) (Drupal Canvas uses
   [`@swc/wasm-web`](https://swc.rs/docs/usage/wasm)) through
   [`@vitejs/plugin-react-swc`](https://www.npmjs.com/package/@vitejs/plugin-react-swc)
