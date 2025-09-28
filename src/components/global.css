@@ -1,3 +1,21 @@
+/* 
+ * Loading fonts purely via Code Components in Drupal Canvas is currently best
+ * done by importing a CSS file with the font declarations from a URL, i.e. a
+ * CDN.
+ * Alternatively, you can create a minimal Drupal theme that loads local fonts.
+ * (If you do that, you can import the same font, e.g., from a Fontsource package
+ * in `.storybook/preview.js`.)
+ */
+@import url("https://rsms.me/inter/inter.css");
+
+/*
+ * Importing Tailwind CSS after the font import, so PostCSS is happy with the
+ * @import order. This is not necessary using the in-browser code editor, which
+ * will take care of both importing all layers from Tailwind CSS, as well as
+ * moving font imports to the top before compiling.
+ */
+@import "tailwindcss";
+
 /*
  * Colors are based on the Catpuccin color palette.
  * @see https://catppuccin.com
@@ -77,6 +95,12 @@
  * @see https://tailwindcss.com/docs/theme
  */
 @theme inline {
+  --font-sans:
+    "InterVariable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans--font-feature-settings:
+    "liga" 1, "calt" 1, "ss01" 1, "cv05" 1, "cv11" 1;
+
   --color-base: var(--catpuccin-base);
   --color-surface-0: var(--catpuccin-surface-0);
   --color-surface-1: var(--catpuccin-surface-1);

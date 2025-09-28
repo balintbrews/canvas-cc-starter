@@ -48,7 +48,6 @@ Canvas
   [`@swc/wasm-web`](https://swc.rs/docs/usage/wasm)) through
   [`@vitejs/plugin-react-swc`](https://www.npmjs.com/package/@vitejs/plugin-react-swc)
 - [Tailwind CSS v4](https://tailwindcss.com) for styling
-  - [Inter font](https://rsms.me/inter) added as an example
 - [Prettier](https://prettier.io/) with plugins configured
   - [`prettier-plugin-tailwindcss`](https://www.npmjs.com/package/prettier-plugin-tailwindcss)
   - [`@ianvs/prettier-plugin-sort-imports`](https://www.npmjs.com/package/@ianvs/prettier-plugin-sort-imports)

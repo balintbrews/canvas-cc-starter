@@ -1,5 +1,4 @@
-import "@fontsource-variable/inter";
-import "../src/index.css";
+import "../src/components/global.css";
 
 export default {
   parameters: {
