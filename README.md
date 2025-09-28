@@ -41,6 +41,9 @@ Canvas
   components
   - [Viewports](https://storybook.js.org/docs/essentials/viewport) configured to
     match the viewport sizes Drupal Canvas uses
+  - Helper function to load example values for stories (args/prop values) from
+    `component.yml` files:
+    [`src/stories/lib/get-examples.js`](./src/stories/lib/get-examples.js)
 - Compiling with [SWC](https://swc.rs) (Drupal Canvas uses
   [`@swc/wasm-web`](https://swc.rs/docs/usage/wasm)) through
   [`@vitejs/plugin-react-swc`](https://www.npmjs.com/package/@vitejs/plugin-react-swc)
