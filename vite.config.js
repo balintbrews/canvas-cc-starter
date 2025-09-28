@@ -12,7 +12,7 @@ export default defineConfig({
     alias: [
       {
         find: "@/lib/utils",
-        replacement: path.resolve(DIR, "./src/lib/utils.ts"),
+        replacement: path.resolve(DIR, "./src/lib/utils.js"),
       },
       {
         find: "@/lib/FormattedText",
