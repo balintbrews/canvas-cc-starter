@@ -6,12 +6,15 @@ const Logo = ({ linkToFrontPage = true, className }) => {
   const Element = linkToFrontPage ? "a" : "div";
   return (
     <Element
-      className={cn("inline-block h-12 max-h-16 md:h-16", className)}
+      className={cn(
+        "inline-flex h-12 max-h-16 items-center gap-2 md:h-16",
+        className,
+      )}
       {...(linkToFrontPage && { href: "/" })}
     >
       <span className="sr-only">Home</span>
       <svg
-        className="h-full w-auto"
+        className="mt-2 h-full w-auto shrink-0"
         viewBox="0 0 489.142 489.142"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -57,6 +60,9 @@ const Logo = ({ linkToFrontPage = true, className }) => {
           />
         </g>
       </svg>
+      <span className="text-flamingo shrink-0 text-lg uppercase tracking-widest">
+        Humanify
+      </span>
     </Element>
   );
 };
