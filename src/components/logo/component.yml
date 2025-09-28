@@ -1,0 +1,14 @@
+name: Logo
+machineName: logo
+status: true
+required: []
+props:
+  properties:
+    linkToFrontPage:
+      title: Link to front page
+      type: boolean
+      examples:
+        - true
+slots: []
+importedJsComponents: []
+dataDependencies: []

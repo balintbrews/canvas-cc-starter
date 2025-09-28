@@ -1,0 +1,8 @@
+name: Navigation
+machineName: navigation
+status: true
+required: []
+props: []
+slots: []
+importedJsComponents: []
+dataDependencies: []

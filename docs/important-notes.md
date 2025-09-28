@@ -18,11 +18,11 @@ that you should be aware of when developing Code Components for Drupal Canvas.
 When you're outputting a slot surrounded by a container that sizes based on its
 content (flex items, grid items, inline elements, etc.), be mindful of how that
 container will collapse when the slot output is empty. For example, assuming you
-have a slot named `logo`:
+have a slot named `branding`:
 
 ```jsx
 <div className="flex">
-  <div>{logo}</div>
+  <div>{branding}</div>
 </div>
 ```
 
@@ -34,7 +34,7 @@ this, you can add a minimum width:
 
 ```jsx
 <div className="flex">
-  <div className="min-w-32">{logo}</div>
+  <div className="min-w-32">{branding}</div>
 </div>
 ```
 
@@ -46,11 +46,11 @@ workaround you can use until we have a better solution in Drupal Canvas:
 <div className="flex">
   <div
     className={cn(
-      logo?.props?.value?.includes("canvas--slot-empty-placeholder") &&
+      branding?.props?.value?.includes("canvas--slot-empty-placeholder") &&
         "min-w-32",
     )}
   >
-    {logo}
+    {branding}
   </div>
 </div>
 ```
