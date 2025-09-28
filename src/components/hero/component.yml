@@ -1,0 +1,54 @@
+name: Hero
+machineName: hero
+status: true
+required:
+  - title
+  - description
+  - buttonLabel
+  - buttonLink
+props:
+  properties:
+    title:
+      title: Title
+      type: string
+      examples:
+        - White-label human intelligence for your AI projects.
+    description:
+      title: Description
+      type: string
+      examples:
+        - >-
+          Leverage a team of smart, creative, and experienced humans, who
+          actually know what they're doing. We deliver the work, and you can
+          tell your customers and investors that it was done with AI.
+      contentMediaType: text/html
+      x-formatting-context: block
+    buttonLabel:
+      title: Button label
+      type: string
+      examples:
+        - Get started today
+    buttonLink:
+      title: Button link
+      type: string
+      examples:
+        - page/1
+      format: uri-reference
+    image:
+      title: Image
+      type: object
+      examples:
+        - src: >-
+            https://images.unsplash.com/photo-1484959014842-cd1d967a39cf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
+          alt: Woman playing the violin
+          width: 1770
+          height: 1180
+      $ref: json-schema-definitions://canvas.module/image
+    darkVariant:
+      title: Dark variant
+      type: boolean
+      examples:
+        - false
+slots: []
+importedJsComponents: []
+dataDependencies: []

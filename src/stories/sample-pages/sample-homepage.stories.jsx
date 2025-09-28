@@ -1,6 +1,11 @@
 import Header from "@/components/header";
+import Hero from "@/components/hero";
 import Logo from "@/components/logo";
 import Navigation from "@/components/navigation";
+
+import { getComponentExamples } from "../lib/get-examples";
+
+const sampleHeroArgs = await getComponentExamples("hero");
 
 const SampleHomepage = () => {
   return (
@@ -10,6 +15,7 @@ const SampleHomepage = () => {
         navigation={<Navigation />}
         darkVariant={true}
       />
+      <Hero {...sampleHeroArgs} darkVariant={true} />
     </>
   );
 };
