@@ -1,7 +1,7 @@
 import ProjectCard from "./project-card";
 
 const meta = {
-  title: "Project Card",
+  title: "Legacy/Project Card",
   component: ProjectCard,
   argTypes: {
     status: {
@@ -25,7 +25,7 @@ export const InProgress = {
     status: "In Progress",
     progress: 88,
     footer: (
-      <div className="gap-3 flex w-full flex-wrap items-center justify-between">
+      <div className="flex w-full flex-wrap items-center justify-between gap-3">
         <span>Last updated: 2 hours ago</span>
         <span>22 open issues</span>
       </div>
@@ -39,7 +39,7 @@ export const Completed = {
     status: "Completed",
     progress: 100,
     footer: (
-      <div className="gap-3 flex w-full flex-wrap items-center justify-between">
+      <div className="flex w-full flex-wrap items-center justify-between gap-3">
         <span>Last updated: 2 minutes ago</span>
         <span>No open issues</span>
       </div>
@@ -53,7 +53,7 @@ export const NotStarted = {
     status: "Not Started",
     progress: 0,
     footer: (
-      <div className="gap-3 flex w-full flex-wrap items-center justify-between">
+      <div className="flex w-full flex-wrap items-center justify-between gap-3">
         <span>Last updated: 5 hours ago</span>
         <span>922 open issues</span>
       </div>

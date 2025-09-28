@@ -2,7 +2,7 @@ import Navigation from "@/components/navigation";
 import { cn } from "@/lib/utils";
 
 export default {
-  title: "Navigation",
+  title: "Components/Navigation",
   component: Navigation,
 };
 

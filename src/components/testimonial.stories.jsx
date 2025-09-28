@@ -1,7 +1,7 @@
 import Testimonial from "./testimonial";
 
 const meta = {
-  title: "Testimonial",
+  title: "Legacy/Testimonial",
   component: Testimonial,
   argTypes: {
     intent: {

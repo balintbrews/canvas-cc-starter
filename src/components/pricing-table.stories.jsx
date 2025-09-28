@@ -1,7 +1,7 @@
 import PricingTable from "./pricing-table";
 
 export default {
-  title: "Pricing Table",
+  title: "Legacy/Pricing Table",
   component: PricingTable,
 };
 

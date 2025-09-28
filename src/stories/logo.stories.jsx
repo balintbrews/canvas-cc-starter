@@ -2,7 +2,7 @@ import Logo from "@/components/logo";
 import { cn } from "@/lib/utils";
 
 export default {
-  title: "Logo",
+  title: "Components/Logo",
   component: Logo,
 };
 

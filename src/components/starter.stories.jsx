@@ -1,7 +1,7 @@
 import StarterComponent from "./starter";
 
 const meta = {
-  title: "Starter",
+  title: "Legacy/Starter",
   component: StarterComponent,
 };
 
