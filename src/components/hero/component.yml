@@ -19,8 +19,8 @@ props:
       examples:
         - >-
           Leverage a team of smart, creative, and experienced humans, who
-          actually know what they're doing. We deliver the work, and you can
-          tell your customers and investors that it was done with AI.
+          <em>actually</em> know what they're doing. We deliver the work, and
+          you can tell your customers and investors that it was done with AI.
       contentMediaType: text/html
       x-formatting-context: block
     buttonLabel:

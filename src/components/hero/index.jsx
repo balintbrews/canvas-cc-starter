@@ -1,3 +1,4 @@
+import FormattedText from "@/lib/FormattedText";
 import { cn } from "@/lib/utils";
 
 const Hero = ({
@@ -16,9 +17,12 @@ const Hero = ({
             <h2 className="from-peach to-mauve tracking-relaxed text-balance bg-gradient-to-r bg-clip-text text-2xl font-extrabold text-transparent md:text-4xl">
               {title}
             </h2>
-            <p className="text-text text-balance leading-relaxed">
+            <FormattedText
+              as="p"
+              className="text-text text-balance leading-relaxed"
+            >
               {description}
-            </p>
+            </FormattedText>
             <div>
               <a
                 href={buttonLink}

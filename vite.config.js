@@ -15,6 +15,10 @@ export default defineConfig({
         replacement: path.resolve(DIR, "./src/lib/utils.ts"),
       },
       {
+        find: "@/lib/FormattedText",
+        replacement: path.resolve(DIR, "./src/lib/FormattedText.jsx"),
+      },
+      {
         // Make sure we don't resolve nested folder structures under
         // `@/components/`, like `@/components/atoms/button`.
         // Those are not (yet) supported in Drupal Canvas.
