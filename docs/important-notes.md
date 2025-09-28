@@ -3,9 +3,66 @@
 This document outlines important issues, current limitations, and considerations
 that you should be aware of when developing Code Components for Drupal Canvas.
 
+- [Slots in content-sized containers](#slots-in-content-sized-containers)
+- [`hidden` CSS class](#hidden-css-class)
+  - [tl;dr](#tldr)
+  - [Details](#details)
+- [CLI vs. global CSS](#cli-vs-global-css)
+- [CLI and the `upload` command](#cli-and-the-upload-command)
+
+## Slots in content-sized containers
+
+> This point isn't unique to Code Components. It's valid for Single-Directory
+> Components, as well as any component source markup and styling.
+
+When you're outputting a slot surrounded by a container that sizes based on its
+content (flex items, grid items, inline elements, etc.), be mindful of how that
+container will collapse when the slot output is empty. For example, assuming you
+have a slot named `logo`:
+
+```jsx
+<div className="flex">
+  <div>{logo}</div>
+</div>
+```
+
+If the slot's output is empty, the surrounding `<div>` will not have any width
+due to the flex container's sizing. This means that the Drupal Canvas UI won't
+be able to show you instrumentation in its editor frame overlay to place
+components into that slot. (The _Layers_ panel will work regardless.) To solve
+this, you can add a minimum width:
+
+```jsx
+<div className="flex">
+  <div className="min-w-32">{logo}</div>
+</div>
+```
+
+This works great as long as you're expecting content in this slot that will
+always exceed the minimum width you set. If that is not the case, here is a
+workaround you can use until we have a better solution in Drupal Canvas:
+
+```jsx
+<div className="flex">
+  <div
+    className={cn(
+      logo?.props?.value?.includes("canvas--slot-empty-placeholder") &&
+        "min-w-32",
+    )}
+  >
+    {logo}
+  </div>
+</div>
+```
+
 ## `hidden` CSS class
 
-### **tl;dr:**
+> This point isn't unique to Code Components. It's valid for Single-Directory
+> Components, as well as any component source markup and styling that uses a
+> class named `hidden` inside a CSS cascade layer (e.g., any theme using
+> Tailwind CSS 4).
+
+### tl;dr
 
 When using the `hidden` Tailwind utility class but need to override it
 conditionally (e.g., for responsive variants), you need to add `!important` (`!`
