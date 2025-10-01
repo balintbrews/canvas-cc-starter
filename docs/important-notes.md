@@ -3,14 +3,14 @@
 This document outlines important issues, current limitations, and considerations
 that you should be aware of when developing Code Components for Drupal Canvas.
 
-- [Slots in content-sized containers](#slots-in-content-sized-containers)
-- [`hidden` CSS class](#hidden-css-class)
+- [1. Slots in content-sized containers](#1-slots-in-content-sized-containers)
+- [2. `hidden` CSS class](#2-hidden-css-class)
   - [tl;dr](#tldr)
   - [Details](#details)
-- [CLI vs. global CSS](#cli-vs-global-css)
-- [CLI and the `upload` command](#cli-and-the-upload-command)
+- [3. CLI vs. global CSS](#3-cli-vs-global-css)
+- [4. CLI and the `upload` command](#4-cli-and-the-upload-command)
 
-## Slots in content-sized containers
+## 1. Slots in content-sized containers
 
 > This point isn't unique to Code Components. It's valid for Single-Directory
 > Components, as well as any component source markup and styling.
@@ -55,7 +55,7 @@ workaround you can use until we have a better solution in Drupal Canvas:
 </div>
 ```
 
-## `hidden` CSS class
+## 2. `hidden` CSS class
 
 > This point isn't unique to Code Components. It's valid for Single-Directory
 > Components, as well as any component source markup and styling that uses a
@@ -81,7 +81,7 @@ utilities because it's not defined in a
 unlike Tailwind's generated styles. (Styles that are not defined in a layer
 always override styles defined in named and anonymous layers.)
 
-## CLI vs. global CSS
+## 3. CLI vs. global CSS
 
 1. [`#3549124`](https://www.drupal.org/project/canvas/issues/3549124):
    `npx canvas download` overrides your `src/components/global.css` file without
@@ -93,7 +93,7 @@ always override styles defined in named and anonymous layers.)
    then, make sure to manually add any changes in Drupal Canvas that you're
    adding in your `src/components/global.css`.
 
-## CLI and the `upload` command
+## 4. CLI and the `upload` command
 
 1. `npx canvas upload` overrides the published version of the Code Components,
    but doesn't discard auto-saved and unpublished changes to the components.
