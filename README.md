@@ -1,14 +1,5 @@
 # `canvas-cc-starter`
 
-```
-┌─────────────────────────────────────┐
-│                                     │
-│   * Steepbase *                     │
-│   Tools steeped for Drupal Canvas   │
-│                                     │
-└─────────────────────────────────────┘
-```
-
 Build and test
 [Drupal Canvas Code Components](https://project.pages.drupalcode.org/canvas/code-components)
 with this preconfigured development environment.

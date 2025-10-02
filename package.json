@@ -1,8 +1,15 @@
 {
-  "name": "@steepbase/canvas-cc-starter",
+  "name": "canvas-cc-starter",
   "version": "0.0.0",
   "private": true,
   "description": "Build and test Drupal Canvas Code Components with this preconfigured development environment.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/balintbrews/canvas-cc-starter.git"
+  },
+  "author": "Bálint Kléri (https://balintbrews.com)",
+  "bugs": "https://github.com/balintbrews/canvas-cc-starter/issues",
+  "homepage": "https://github.com/balintbrews/canvas-cc-starter#readme",
   "type": "module",
   "dependencies": {
     "class-variance-authority": "^0.7.1",
