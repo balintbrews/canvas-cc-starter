@@ -1,20 +1,13 @@
 import Logo from "@/components/logo";
-import { cn } from "@/lib/utils";
+import Section from "@/components/section";
 
 export default {
   title: "Components/Logo",
   component: Logo,
 };
 
-const Decorator = ({ className, children }) => (
-  <div
-    className={cn(
-      "inline-flex h-24 items-center px-4 sm:px-12 md:h-32 lg:px-16",
-      className,
-    )}
-  >
-    {children}
-  </div>
+const Decorator = ({ children, dark = false }) => (
+  <Section darkVariant={dark} content={children} />
 );
 
 export const Default = {
@@ -30,7 +23,7 @@ export const Default = {
 export const Dark = {
   decorators: [
     (Story) => (
-      <Decorator className="bg-base dark">
+      <Decorator dark>
         <Story />
       </Decorator>
     ),

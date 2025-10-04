@@ -1,9 +1,13 @@
-import Navigation from "@/components/navigation";
+import Heading from "@/components/heading";
 import Section from "@/components/section";
 
+import { getComponentExamples } from "./lib/get-examples";
+
+const args = await getComponentExamples("heading");
+
 export default {
-  title: "Components/Navigation",
-  component: Navigation,
+  title: "Components/Heading",
+  component: Heading,
 };
 
 const Decorator = ({ children, dark = false }) => (
@@ -11,6 +15,7 @@ const Decorator = ({ children, dark = false }) => (
 );
 
 export const Default = {
+  args,
   decorators: [
     (Story) => (
       <Decorator>
@@ -21,6 +26,7 @@ export const Default = {
 };
 
 export const Dark = {
+  args,
   decorators: [
     (Story) => (
       <Decorator dark>

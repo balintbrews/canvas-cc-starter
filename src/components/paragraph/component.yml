@@ -1,0 +1,19 @@
+name: Paragraph
+machineName: paragraph
+status: true
+required:
+  - text
+props:
+  properties:
+    text:
+      title: Text
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - >-
+          Something magical happens when humans make things. Depth, nuance,
+          creativity, and original ideas appear in the work.
+slots: []
+importedJsComponents: []
+dataDependencies: []
