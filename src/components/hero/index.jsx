@@ -10,7 +10,7 @@ const Hero = ({
   darkVariant,
 }) => {
   return (
-    <section className={cn("bg-base overflow-hidden", darkVariant && "dark")}>
+    <section className={cn("bg-base", darkVariant && "dark")}>
       <div className="mx-auto max-w-screen-xl sm:grid sm:grid-cols-2 sm:items-center">
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
           <div className="flex max-w-xl flex-col gap-8">
@@ -36,13 +36,15 @@ const Hero = ({
             </div>
           </div>
         </div>
-        <img
-          alt={image.alt}
-          src={image.src}
-          width={image.width}
-          height={image.height}
-          className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
-        />
+        <div className="h-full w-full overflow-hidden rounded-3xl py-6 md:py-8 lg:py-14">
+          <img
+            alt={image.alt}
+            src={image.src}
+            width={image.width}
+            height={image.height}
+            className="sm:rounded-l-4xl h-full w-full object-cover object-right xl:rounded-r-xl"
+          />
+        </div>
       </div>
     </section>
   );

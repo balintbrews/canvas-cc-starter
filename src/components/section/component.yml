@@ -1,0 +1,43 @@
+name: Section
+machineName: section
+status: true
+required: []
+props:
+  properties:
+    title:
+      title: Title
+      type: string
+      examples:
+        - Believe it or not, this copy was written by a human.
+    description:
+      title: Description
+      type: string
+      examples:
+        - >-
+          Something magical happens when humans make things. Depth, nuance,
+          creativity, and original ideas appear in the work.
+      contentMediaType: text/html
+      x-formatting-context: block
+    darkVariant:
+      title: Dark variant
+      type: boolean
+      examples:
+        - false
+    backgroundColor:
+      title: Background color
+      type: string
+      enum:
+        - base
+        - surface-0
+        - surface-1
+        - surface-2
+      meta:enum:
+        base: Base
+        surface-0: Surface 0
+        surface-1: Surface 1
+        surface-2: Surface 2
+      examples:
+        - base
+slots: []
+importedJsComponents: []
+dataDependencies: []
