@@ -1,0 +1,117 @@
+name: Pricing table
+machineName: pricing-table
+status: true
+required:
+  - entryTierName
+  - entryTierDescription
+  - entryTierPriceMonthly
+  - entryTierPriceAnnual
+  - midTierName
+  - midTierDescription
+  - midTierPriceMonthly
+  - midTierPriceAnnual
+  - advancedTierName
+  - advancedTierDescription
+  - advancedTierPriceMonthly
+  - advancedTierPriceAnnual
+  - buttonLabel
+  - buttonLink
+props:
+  properties:
+    entryTierName:
+      title: "Entry tier: Name"
+      type: string
+      examples:
+        - Basic
+    entryTierDescription:
+      title: "Entry tier: Description"
+      type: string
+      examples:
+        - Perfect for individuals and small projects
+    entryTierPriceMonthly:
+      title: "Entry tier: Price, monthly"
+      type: number
+      examples:
+        - 600
+    entryTierPriceAnnual:
+      title: "Entry tier: Price, annual"
+      type: number
+      examples:
+        - 6000
+    midTierName:
+      title: "Mid tier: Name"
+      type: string
+      examples:
+        - Pro
+    midTierDescription:
+      title: "Mid tier: Description"
+      type: string
+      examples:
+        - Ideal for professionals and growing teams
+    midTierPriceMonthly:
+      title: "Mid tier: Price, monthly"
+      type: number
+      examples:
+        - 2500
+    midTierPriceAnnual:
+      title: "Mid tier: Price, annual"
+      type: number
+      examples:
+        - 25000
+    advancedTierName:
+      title: "Advanced tier: Name"
+      type: string
+      examples:
+        - Business
+    advancedTierDescription:
+      title: "Advanced tier: Description"
+      type: string
+      examples:
+        - For organizations with advanced needs
+    advancedTierPriceMonthly:
+      title: "Advanced tier: Price, monthly"
+      type: number
+      examples:
+        - 7500
+    advancedTierPriceAnnual:
+      title: "Advanced tier: Price, annual"
+      type: number
+      examples:
+        - 75000
+    defaultTier:
+      title: Default tier
+      type: string
+      enum:
+        - entry
+        - mid
+        - advanced
+      meta:enum:
+        entry: Entry
+        mid: Mid
+        advanced: Advanced
+      examples:
+        - entry
+    defaultIsAnnual:
+      title: "Annual selected by default"
+      type: boolean
+      examples:
+        - false
+    annualBadgeText:
+      title: Annual badge text
+      type: string
+      examples:
+        - Save 20%
+    buttonLabel:
+      title: Button label
+      type: string
+      examples:
+        - Get started today with {tier}
+    buttonLink:
+      title: Button link
+      type: string
+      format: uri-reference
+      examples:
+        - "/page/1"
+slots: []
+importedJsComponents: []
+dataDependencies: []

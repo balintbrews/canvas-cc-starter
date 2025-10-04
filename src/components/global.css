@@ -39,6 +39,8 @@
   --catpuccin-surface-1: hsl(225deg, 14%, 77%);
   --catpuccin-surface-2: hsl(227deg, 12%, 71%);
   --catpuccin-text: hsl(234deg, 16%, 35%);
+  --catpuccin-subtext-0: hsl(233deg, 10%, 47%);
+  --catpuccin-subtext-1: hsl(233deg, 13%, 41%);
 
   --catpuccin-rosewater: hsl(11deg, 59%, 67%);
   --catpuccin-flamingo: hsl(0deg, 60%, 67%);
@@ -66,6 +68,8 @@
   --catpuccin-surface-1: hsl(227deg, 15%, 37%);
   --catpuccin-surface-2: hsl(228deg, 13%, 44%);
   --catpuccin-text: hsl(227deg, 70%, 87%);
+  --catpuccin-subtext-0: hsl(228deg, 29%, 73%);
+  --catpuccin-subtext-1: hsl(227deg, 44%, 80%);
 
   --catpuccin-rosewater: hsl(10deg, 57%, 88%);
   --catpuccin-flamingo: hsl(0deg, 59%, 84%);
@@ -107,6 +111,8 @@
   --color-surface-2: var(--catpuccin-surface-2);
   --color-text: var(--catpuccin-text);
   --color-inverted-text: var(--catpuccin-base);
+  --color-subtext-0: var(--catpuccin-subtext-0);
+  --color-subtext-1: var(--catpuccin-subtext-1);
 
   --color-rosewater: var(--catpuccin-rosewater);
   --color-flamingo: var(--catpuccin-flamingo);

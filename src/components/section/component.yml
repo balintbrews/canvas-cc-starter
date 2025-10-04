@@ -1,7 +1,8 @@
 name: Section
 machineName: section
 status: true
-required: []
+required:
+  - backgroundColor
 props:
   properties:
     darkVariant:
