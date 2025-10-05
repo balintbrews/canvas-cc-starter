@@ -52,7 +52,7 @@
   "scripts": {
     "dev": "storybook dev -p 6006 --no-open",
     "storybook": "npm run dev",
-    "build-storybook": "storybook build",
+    "build": "storybook build",
     "code:check": "run-s -c -n code:check:**",
     "code:check:prettier": "npm run s:prettier -- --check",
     "code:check:eslint": "npm run s:eslint",
