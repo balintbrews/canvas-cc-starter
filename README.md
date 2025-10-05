@@ -4,7 +4,7 @@ Build and test
 [Drupal Canvas Code Components](https://project.pages.drupalcode.org/canvas/code-components)
 with this preconfigured development environment.
 
-![Screenshot](./screenshot.jpg)
+[![Screenshot](./screenshot.jpg)](https://canvas-cc-starter-storybook.balintbrews.com)
 
 [Drupal Canvas](https://www.drupal.org/project/canvas) has an in-browser code
 editor for authoring components using React/Preact and Tailwind CSS. Compiling
