@@ -3,14 +3,41 @@
 This document outlines important issues, current limitations, and considerations
 that you should be aware of when developing Code Components for Drupal Canvas.
 
-- [1. Slots in content-sized containers](#1-slots-in-content-sized-containers)
-- [2. `hidden` CSS class](#2-hidden-css-class)
-  - [tl;dr](#tldr)
-  - [Details](#details)
-- [3. CLI vs. global CSS](#3-cli-vs-global-css)
-- [4. CLI and the `upload` command](#4-cli-and-the-upload-command)
+- [1. Prop machine names must be the camel cased version of the prop titles](#1-prop-machine-names-must-be-the-camel-cased-version-of-the-prop-titles)
+- [2. Props with enum options lose labels when edited in Canvas](#2-props-with-enum-options-lose-labels-when-edited-in-canvas)
+- [3. Slots in content-sized containers need a minimum size](#3-slots-in-content-sized-containers-need-a-minimum-size)
+- [4. The `hidden` Tailwind CSS utility class needs to be used carefully](#4-the-hidden-tailwind-css-utility-class-needs-to-be-used-carefully)
+- [5. The CLI tool considers the global CSS in Canvas to be the source of truth](#5-the-cli-tool-considers-the-global-css-in-canvas-to-be-the-source-of-truth)
+- [6. The `upload` CLI command overrides components in Canvas and other considerations](#6-the-upload-cli-command-overrides-components-in-canvas-and-other-considerations)
 
-## 1. Slots in content-sized containers
+---
+
+## 1. Prop machine names must be the camel cased version of the prop titles
+
+The in-browser code editor
+[automatically generates the machine names for the props](https://git.drupalcode.org/project/canvas/-/blob/1efb2c0f06b63c335f3d80f2051cfef31873466d/ui/src/features/code-editor/utils.ts#L22)
+based on the human-readable prop titles. It does so by converting to camel case
+using [`camelCase()` from `lodash`](https://lodash.com/docs/4.17.15#camelCase).
+What this means is that you should follow the same logic until this behavior is
+changed in the in-browser code editor
+([#3524675](https://www.drupal.org/project/canvas/issues/3524675)). Otherwise
+editing a Code Component's props in Canvas will change the prop machine names,
+thus breaking your component's code.
+
+For example, the `iconNameFromLucide` → `"Icon: Name from Lucide"` machine name
+and title pair will work, but `icon` → `"Icon: Name from Lucide"` would break.
+
+## 2. Props with enum options lose labels when edited in Canvas
+
+A somewhat similar limitation that is detailed in _1. Prop titles vs. machine
+names_ also applies to props with enum options where values (`enum`) and labels
+(`meta:enum`) can be defined in your `component.yml`. The in-browser code editor
+will simply copy the values to also be the labels. This won't break anything,
+but the end-user experience will be altered as your labels won't be shown.
+([#3524675](https://www.drupal.org/project/canvas/issues/3524675) will address
+this.)
+
+## 3. Slots in content-sized containers need a minimum size
 
 > This point isn't unique to Code Components. It's valid for Single-Directory
 > Components, as well as any component source markup and styling.
@@ -55,14 +82,14 @@ workaround you can use until we have a better solution in Drupal Canvas:
 </div>
 ```
 
-## 2. `hidden` CSS class
+## 4. The `hidden` Tailwind CSS utility class needs to be used carefully
 
 > This point isn't unique to Code Components. It's valid for Single-Directory
 > Components, as well as any component source markup and styling that uses a
 > class named `hidden` inside a CSS cascade layer (e.g., any theme using
 > Tailwind CSS 4).
 
-### tl;dr
+**tl;dr**
 
 When using the `hidden` Tailwind utility class but need to override it
 conditionally (e.g., for responsive variants), you need to add `!important` (`!`
@@ -70,7 +97,7 @@ prefix in Tailwind CSS) to the overriding class.
 
 For example, `md:!block hidden`.
 
-### Details
+**Details**
 
 Drupal
 [core's `system` module defines CSS classes to hide elements in various ways](https://git.drupalcode.org/project/drupal/-/blob/11.x/core/modules/system/css/components/hidden.module.css).
@@ -81,7 +108,7 @@ utilities because it's not defined in a
 unlike Tailwind's generated styles. (Styles that are not defined in a layer
 always override styles defined in named and anonymous layers.)
 
-## 3. CLI vs. global CSS
+## 5. The CLI tool considers the global CSS in Canvas to be the source of truth
 
 1. [`#3549124`](https://www.drupal.org/project/canvas/issues/3549124):
    `npx canvas download` overrides your `src/components/global.css` file without
@@ -91,9 +118,10 @@ always override styles defined in named and anonymous layers.)
    the global CSS from Drupal Canvas in the background to use that for building
    the CSS. This is by design, but we may need to revisit this decision. Until
    then, make sure to manually add any changes in Drupal Canvas that you're
-   adding in your `src/components/global.css`.
+   adding in your `src/components/global.css` before running the
+   `build`/`upload` command.
 
-## 4. CLI and the `upload` command
+## 6. The `upload` CLI command overrides components in Canvas and other considerations
 
 1. `npx canvas upload` overrides the published version of the Code Components,
    but doesn't discard auto-saved and unpublished changes to the components.
