@@ -37,6 +37,11 @@ export default {
       },
     },
     layout: "fullscreen",
+    options: {
+      storySort: {
+        order: ["Example pages", "Components", "*"],
+      },
+    },
   },
   initialGlobals: {
     viewport: { value: "tablet", isRotated: false },

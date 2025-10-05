@@ -18,7 +18,7 @@ const exampleParagraphArgs = await getComponentExamples("paragraph");
 const examplePricingTableArgs = await getComponentExamples("pricing-table");
 const exampleCardExamples = await getComponentExamples("card");
 
-const SampleHomepage = () => {
+const ExampleHomepage = () => {
   return (
     <>
       <Header
@@ -70,8 +70,8 @@ const SampleHomepage = () => {
 };
 
 export default {
-  title: "Sample pages/Homepage",
-  component: SampleHomepage,
+  title: "Example pages/Homepage",
+  component: ExampleHomepage,
 };
 
 export const Homepage = {};
