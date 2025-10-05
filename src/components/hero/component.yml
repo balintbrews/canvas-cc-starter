@@ -12,7 +12,7 @@ props:
       title: Title
       type: string
       examples:
-        - White-label human intelligence for your AI projects.
+        - White-label human intelligence for your AI projects
     description:
       title: Description
       type: string

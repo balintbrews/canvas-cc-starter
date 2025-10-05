@@ -1,0 +1,11 @@
+name: Grid
+machineName: grid
+status: true
+required: []
+props:
+  properties: {}
+slots:
+  content:
+    title: Content
+importedJsComponents: []
+dataDependencies: []

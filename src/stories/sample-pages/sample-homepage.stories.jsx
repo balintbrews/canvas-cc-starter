@@ -1,3 +1,5 @@
+import Card from "@/components/card";
+import Grid from "@/components/grid";
 import Header from "@/components/header";
 import Heading from "@/components/heading";
 import Hero from "@/components/hero";
@@ -9,11 +11,12 @@ import Section from "@/components/section";
 
 import { getComponentExamples } from "../lib/get-examples";
 
-const sampleHeroArgs = await getComponentExamples("hero");
-const sampleSectionArgs = await getComponentExamples("section");
-const sampleHeadingArgs = await getComponentExamples("heading");
-const sampleParagraphArgs = await getComponentExamples("paragraph");
-const samplePricingTableArgs = await getComponentExamples("pricing-table");
+const exampleHeroArgs = await getComponentExamples("hero");
+const exampleSectionArgs = await getComponentExamples("section");
+const exampleHeadingArgs = await getComponentExamples("heading");
+const exampleParagraphArgs = await getComponentExamples("paragraph");
+const examplePricingTableArgs = await getComponentExamples("pricing-table");
+const exampleCardExamples = await getComponentExamples("card");
 
 const SampleHomepage = () => {
   return (
@@ -23,13 +26,32 @@ const SampleHomepage = () => {
         navigation={<Navigation />}
         darkVariant={true}
       />
-      <Hero {...sampleHeroArgs} darkVariant={true} />
+      <Hero {...exampleHeroArgs[0]} darkVariant={true} />
+
       <Section
-        {...sampleSectionArgs}
         content={
           <>
-            <Heading {...sampleHeadingArgs} />
-            <Paragraph {...sampleParagraphArgs} />
+            <Heading {...exampleHeadingArgs[1]} />
+            <Paragraph {...exampleParagraphArgs[1]} />
+            <Grid
+              content={
+                <>
+                  {exampleCardExamples.map((cardProps, index) => (
+                    <Card key={index} {...cardProps} />
+                  ))}
+                </>
+              }
+            />
+          </>
+        }
+      />
+      <Section
+        {...exampleSectionArgs[0]}
+        backgroundColor="surface-1"
+        content={
+          <>
+            <Heading {...exampleHeadingArgs[0]} />
+            <Paragraph {...exampleParagraphArgs[0]} />
           </>
         }
       />
@@ -37,8 +59,9 @@ const SampleHomepage = () => {
         darkVariant={true}
         content={
           <>
-            <Heading text="Simple, transparent pricing" />
-            <PricingTable {...samplePricingTableArgs} />
+            <Heading {...exampleHeadingArgs[2]} />
+            <Paragraph {...exampleParagraphArgs[2]} />
+            <PricingTable {...examplePricingTableArgs[0]} />
           </>
         }
       />

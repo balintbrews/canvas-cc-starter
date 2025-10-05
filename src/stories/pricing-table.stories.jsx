@@ -3,7 +3,7 @@ import Section from "@/components/section";
 import PricingTable from "../components/pricing-table";
 import { getComponentExamples } from "./lib/get-examples";
 
-const args = await getComponentExamples("pricing-table");
+const examplePricingTableArgs = await getComponentExamples("pricing-table");
 
 export default {
   title: "Components/Pricing table",
@@ -15,7 +15,7 @@ const Decorator = ({ children, dark = false }) => (
 );
 
 export const Default = {
-  args,
+  args: examplePricingTableArgs[0],
   decorators: [
     (Story) => (
       <Decorator>
@@ -26,7 +26,7 @@ export const Default = {
 };
 
 export const Dark = {
-  args,
+  args: examplePricingTableArgs[0],
   decorators: [
     (Story) => (
       <Decorator dark>

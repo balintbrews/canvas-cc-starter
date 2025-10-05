@@ -2,7 +2,7 @@ import Hero from "@/components/hero";
 
 import { getComponentExamples } from "./lib/get-examples";
 
-const args = await getComponentExamples("hero");
+const exampleHeroArgs = await getComponentExamples("hero");
 
 export default {
   title: "Components/Hero",
@@ -10,12 +10,12 @@ export default {
 };
 
 export const Default = {
-  args,
+  args: exampleHeroArgs[0],
 };
 
 export const Dark = {
   args: {
-    ...args,
+    ...exampleHeroArgs[0],
     darkVariant: true,
   },
 };

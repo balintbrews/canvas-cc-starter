@@ -4,10 +4,9 @@ import Section from "@/components/section";
 
 import { getComponentExamples } from "./lib/get-examples";
 
-const args = await getComponentExamples("section");
-
-const sampleHeadingArgs = await getComponentExamples("heading");
-const sampleParagraphArgs = await getComponentExamples("paragraph");
+const exampleSectionArgs = await getComponentExamples("section");
+const exampleHeadingArgs = await getComponentExamples("heading");
+const exampleParagraphArgs = await getComponentExamples("paragraph");
 
 export default {
   title: "Components/Section",
@@ -24,11 +23,11 @@ export const Default = {
   args: {
     content: (
       <>
-        <Heading {...sampleHeadingArgs} />
-        <Paragraph {...sampleParagraphArgs} />
+        <Heading {...exampleHeadingArgs[0]} />
+        <Paragraph {...exampleParagraphArgs[0]} />
       </>
     ),
-    ...args,
+    ...exampleSectionArgs[0],
     backgroundColor: "base",
   },
 };
@@ -37,11 +36,11 @@ export const Dark = {
   args: {
     content: (
       <>
-        <Heading {...sampleHeadingArgs} />
-        <Paragraph {...sampleParagraphArgs} />
+        <Heading {...exampleHeadingArgs[0]} />
+        <Paragraph {...exampleParagraphArgs[0]} />
       </>
     ),
-    ...args,
+    ...exampleSectionArgs[0],
     darkVariant: true,
     backgroundColor: "base",
   },

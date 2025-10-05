@@ -1,0 +1,85 @@
+name: Card
+machineName: card
+status: true
+required:
+  - iconColor
+props:
+  properties:
+    iconNameFromLucide:
+      title: "Icon: Name from Lucide"
+      type: string
+      examples:
+        - layout-panel-top
+        - figma
+        - message-square-more
+        - radio-tower
+        - file-chart-column-increasing
+        - mail-question-mark
+    iconColor:
+      title: "Icon: Color"
+      type: string
+      enum:
+        - rosewater
+        - flamingo
+        - pink
+        - mauve
+        - red
+        - maroon
+        - peach
+        - yellow
+        - green
+        - teal
+        - sky
+        - sapphire
+        - blue
+        - lavender
+      meta:enum:
+        rosewater: Rosewater
+        flamingo: Flamingo
+        pink: Pink
+        mauve: Mauve
+        red: Red
+        maroon: Maroon
+        peach: Peach
+        yellow: Yellow
+        green: Green
+        teal: Teal
+        sky: Sky
+        sapphire: Sapphire
+        blue: Blue
+        lavender: Lavender
+      examples:
+        - peach
+        - sapphire
+        - mauve
+        - yellow
+        - green
+        - flamingo
+    title:
+      title: Title
+      type: string
+      examples:
+        - Website design
+        - Figma to code
+        - Marketing copy-writing
+        - Social media
+        - Analytics and reporting
+        - Summarizing emails
+    description:
+      title: Description
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      examples:
+        - Knowing where to take inspiration from and why can be useful.
+        - Imagine code that people are not terrified to look at, let alone
+          maintain.
+        - Sometimes it's advised not to sound like everyone else on the
+          internet.
+        - We'll give you a discount if we only have to deal with Bluesky.
+        - Our single promise is that we'll never include emojis in our reports.
+        - We don't actually do this, but we needed six things for this grid to
+          look nice.
+slots: []
+importedJsComponents: []
+dataDependencies: []

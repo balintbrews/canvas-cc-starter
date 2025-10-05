@@ -3,7 +3,7 @@ import Section from "@/components/section";
 
 import { getComponentExamples } from "./lib/get-examples";
 
-const args = await getComponentExamples("paragraph");
+const exampleParagraphArgs = await getComponentExamples("paragraph");
 
 export default {
   title: "Components/Paragraph",
@@ -15,7 +15,7 @@ const Decorator = ({ children, dark = false }) => (
 );
 
 export const Default = {
-  args,
+  args: exampleParagraphArgs[0],
   decorators: [
     (Story) => (
       <Decorator>
@@ -26,7 +26,7 @@ export const Default = {
 };
 
 export const Dark = {
-  args,
+  args: exampleParagraphArgs[0],
   decorators: [
     (Story) => (
       <Decorator dark>
