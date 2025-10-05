@@ -15,7 +15,6 @@ const Decorator = ({ children, dark = false }) => (
   <Section darkVariant={dark} content={children} />
 );
 
-// Example with card components
 export const Default = {
   args: {
     content: (
@@ -48,26 +47,6 @@ export const Dark = {
   decorators: [
     (Story) => (
       <Decorator dark>
-        <Story />
-      </Decorator>
-    ),
-  ],
-};
-
-// Example with multiple items - duplicates the examples to show wrapping
-export const SixItems = {
-  args: {
-    content: (
-      <>
-        {[...exampleCardArgs, ...exampleCardArgs].map((cardProps, index) => (
-          <Card key={index} {...cardProps} />
-        ))}
-      </>
-    ),
-  },
-  decorators: [
-    (Story) => (
-      <Decorator>
         <Story />
       </Decorator>
     ),

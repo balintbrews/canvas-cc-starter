@@ -24,7 +24,7 @@ export default {
           name: "Tablet",
           styles: {
             width: "1024px",
-            height: "768px",
+            height: "100%",
           },
         },
         mobile: {

@@ -11,6 +11,7 @@ import Section from "@/components/section";
 
 import { getComponentExamples } from "../lib/get-examples";
 
+const exampleHeaderArgs = await getComponentExamples("header");
 const exampleHeroArgs = await getComponentExamples("hero");
 const exampleSectionArgs = await getComponentExamples("section");
 const exampleHeadingArgs = await getComponentExamples("heading");
@@ -24,11 +25,12 @@ const ExampleHomepage = () => {
       <Header
         branding={<Logo />}
         navigation={<Navigation />}
-        darkVariant={true}
+        {...exampleHeaderArgs[0]}
       />
-      <Hero {...exampleHeroArgs[0]} darkVariant={true} />
+      <Hero {...exampleHeroArgs[0]} />
 
       <Section
+        {...exampleSectionArgs[0]}
         content={
           <>
             <Heading {...exampleHeadingArgs[1]} />
@@ -46,8 +48,7 @@ const ExampleHomepage = () => {
         }
       />
       <Section
-        {...exampleSectionArgs[0]}
-        backgroundColor="surface-1"
+        {...exampleSectionArgs[1]}
         content={
           <>
             <Heading {...exampleHeadingArgs[0]} />

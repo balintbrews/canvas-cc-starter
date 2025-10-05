@@ -5,6 +5,12 @@ import Navigation from "@/components/navigation";
 export default {
   title: "Components/Header",
   component: Header,
+  argTypes: {
+    backgroundColor: {
+      control: "select",
+      options: ["base", "mantle", "crust"],
+    },
+  },
 };
 
 export const Default = {

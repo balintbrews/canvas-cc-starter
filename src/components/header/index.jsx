@@ -1,8 +1,31 @@
 import { cn } from "@/lib/utils";
+import { cva } from "class-variance-authority";
 
-const Header = ({ branding, navigation, darkVariant }) => {
+const Header = ({ branding, navigation, darkVariant, backgroundColor }) => {
+  const headerVariants = cva("", {
+    variants: {
+      colorScheme: {
+        light: "",
+        dark: "dark",
+      },
+      backgroundColor: {
+        base: "bg-base",
+        mantle: "bg-mantle",
+        crust: "bg-crust",
+      },
+    },
+    defaultVariants: {
+      colorScheme: "light",
+      backgroundColor: "base",
+    },
+  });
   return (
-    <header className={cn("bg-base", darkVariant && "dark")}>
+    <header
+      className={headerVariants({
+        colorScheme: darkVariant ? "dark" : "light",
+        backgroundColor,
+      })}
+    >
       <div className="min-w-sm mx-auto flex h-24 max-w-screen-xl items-center justify-between gap-x-12 px-4 sm:px-12 md:h-32 lg:gap-x-16 lg:px-16">
         <div
           className={cn(

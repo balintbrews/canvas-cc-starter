@@ -49,12 +49,12 @@ props:
         blue: Blue
         lavender: Lavender
       examples:
-        - peach
         - sapphire
+        - rosewater
         - mauve
         - yellow
         - green
-        - flamingo
+        - pink
     title:
       title: Title
       type: string

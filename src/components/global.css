@@ -35,6 +35,8 @@
    * @see https://catppuccin.com/palette/#flavor-latte
    */
   --catpuccin-base: hsl(220deg, 23%, 95%);
+  --catpuccin-mantle: hsl(220deg, 22%, 92%);
+  --catpuccin-crust: hsl(220deg, 21%, 89%);
   --catpuccin-surface-0: hsl(223deg, 16%, 83%);
   --catpuccin-surface-1: hsl(225deg, 14%, 77%);
   --catpuccin-surface-2: hsl(227deg, 12%, 71%);
@@ -64,6 +66,8 @@
    * @see https://catppuccin.com/palette/#flavor-frappe
    */
   --catpuccin-base: hsl(229deg, 19%, 23%);
+  --catpuccin-mantle: hsl(231deg, 19%, 20%);
+  --catpuccin-crust: hsl(229deg, 20%, 17%);
   --catpuccin-surface-0: hsl(230deg, 16%, 30%);
   --catpuccin-surface-1: hsl(227deg, 15%, 37%);
   --catpuccin-surface-2: hsl(228deg, 13%, 44%);
@@ -106,6 +110,8 @@
     "liga" 1, "calt" 1, "ss01" 1, "cv05" 1, "cv11" 1;
 
   --color-base: var(--catpuccin-base);
+  --color-mantle: var(--catpuccin-mantle);
+  --color-crust: var(--catpuccin-crust);
   --color-surface-0: var(--catpuccin-surface-0);
   --color-surface-1: var(--catpuccin-surface-1);
   --color-surface-2: var(--catpuccin-surface-2);

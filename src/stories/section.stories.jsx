@@ -14,7 +14,7 @@ export default {
   argTypes: {
     backgroundColor: {
       control: "select",
-      options: ["base", "surface-0", "surface-1", "surface-2"],
+      options: ["base", "mantle", "crust"],
     },
   },
 };

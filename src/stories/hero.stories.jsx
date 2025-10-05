@@ -7,6 +7,12 @@ const exampleHeroArgs = await getComponentExamples("hero");
 export default {
   title: "Components/Hero",
   component: Hero,
+  argTypes: {
+    backgroundColor: {
+      control: "select",
+      options: ["base", "mantle", "crust"],
+    },
+  },
 };
 
 export const Default = {

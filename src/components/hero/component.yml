@@ -6,6 +6,7 @@ required:
   - description
   - buttonLabel
   - buttonLink
+  - backgroundColor
 props:
   properties:
     title:
@@ -48,7 +49,20 @@ props:
       title: Dark variant
       type: boolean
       examples:
-        - false
+        - true
+    backgroundColor:
+      title: Background color
+      type: string
+      enum:
+        - base
+        - mantle
+        - crust
+      meta:enum:
+        base: Base
+        mantle: Mantle
+        crust: Crust
+      examples:
+        - crust
 slots: []
 importedJsComponents: []
 dataDependencies: []

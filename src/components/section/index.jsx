@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
 import { cva } from "class-variance-authority";
 
-const Header = ({ content, darkVariant, backgroundColor = "base" }) => {
-  const colorVariants = cva("", {
+const Section = ({ content, darkVariant, backgroundColor = "base" }) => {
+  const sectionVariants = cva("", {
     variants: {
       colorScheme: {
         light: "",
@@ -10,17 +10,20 @@ const Header = ({ content, darkVariant, backgroundColor = "base" }) => {
       },
       backgroundColor: {
         base: "bg-base",
-        "surface-0": "bg-surface-0",
-        "surface-1": "bg-surface-1",
-        "surface-2": "bg-surface-2",
+        mantle: "bg-mantle",
+        crust: "bg-crust",
       },
+    },
+    defaultVariants: {
+      colorScheme: "light",
+      backgroundColor: "base",
     },
   });
 
   return (
     <section
       className={cn(
-        colorVariants({
+        sectionVariants({
           colorScheme: darkVariant ? "dark" : "light",
           backgroundColor,
         }),
@@ -33,4 +36,4 @@ const Header = ({ content, darkVariant, backgroundColor = "base" }) => {
   );
 };
 
-export default Header;
+export default Section;

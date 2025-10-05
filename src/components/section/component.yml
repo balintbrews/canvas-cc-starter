@@ -10,21 +10,21 @@ props:
       type: boolean
       examples:
         - false
+        - false
     backgroundColor:
       title: Background color
       type: string
       enum:
         - base
-        - surface-0
-        - surface-1
-        - surface-2
+        - mantle
+        - crust
       meta:enum:
         base: Base
-        surface-0: Surface 0
-        surface-1: Surface 1
-        surface-2: Surface 2
+        mantle: Mantle
+        crust: Crust
       examples:
-        - base
+        - mantle
+        - crust
 slots:
   content:
     title: Content

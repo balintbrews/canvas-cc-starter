@@ -1,5 +1,6 @@
 import FormattedText from "@/lib/FormattedText";
 import { cn } from "@/lib/utils";
+import { cva } from "class-variance-authority";
 
 const Hero = ({
   title,
@@ -8,9 +9,32 @@ const Hero = ({
   buttonLink,
   image,
   darkVariant,
+  backgroundColor,
 }) => {
+  const heroVariants = cva("", {
+    variants: {
+      colorScheme: {
+        light: "",
+        dark: "dark",
+      },
+      backgroundColor: {
+        base: "bg-base",
+        mantle: "bg-mantle",
+        crust: "bg-crust",
+      },
+    },
+    defaultVariants: {
+      colorScheme: "light",
+      backgroundColor: "base",
+    },
+  });
   return (
-    <section className={cn("bg-base", darkVariant && "dark")}>
+    <section
+      className={heroVariants({
+        colorScheme: darkVariant ? "dark" : "light",
+        backgroundColor,
+      })}
+    >
       <div className="mx-auto max-w-screen-xl sm:grid sm:grid-cols-2 sm:items-center">
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
           <div className="flex max-w-xl flex-col gap-8">
@@ -42,7 +66,7 @@ const Hero = ({
             src={image.src}
             width={image.width}
             height={image.height}
-            className="sm:rounded-l-4xl h-full w-full object-cover object-right xl:rounded-r-xl"
+            className="sm:rounded-l-4xl dark:border-surface-0 h-full w-full object-cover object-right shadow-lg xl:rounded-r-xl dark:border dark:shadow-none"
           />
         </div>
       </div>

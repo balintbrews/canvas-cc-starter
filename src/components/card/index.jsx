@@ -1,13 +1,8 @@
 import FormattedText from "@/lib/FormattedText";
 import { cva } from "class-variance-authority";
 
-const Card = ({
-  title,
-  description,
-  iconNameFromLucide,
-  iconColor = "text",
-}) => {
-  const iconVariants = cva("size-8", {
+const Card = ({ title, description, iconNameFromLucide, iconColor }) => {
+  const cardVariants = cva("size-8", {
     variants: {
       iconColor: {
         text: "bg-text",
@@ -27,12 +22,15 @@ const Card = ({
         lavender: "bg-lavender",
       },
     },
+    defaultVariants: {
+      iconColor: "teal",
+    },
   });
   return (
     <div className="bg-surface-0 flex flex-col gap-3 rounded-lg p-6">
       {iconNameFromLucide && (
         <div
-          className={iconVariants({ iconColor })}
+          className={cardVariants({ iconColor })}
           style={{
             maskImage: `url(https://esm.sh/lucide-static@0.544.0/icons/${iconNameFromLucide}.svg)`,
             maskSize: "contain",
