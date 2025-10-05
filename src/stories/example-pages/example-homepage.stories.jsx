@@ -1,4 +1,5 @@
 import Card from "@/components/card";
+import Footer from "@/components/footer";
 import Grid from "@/components/grid";
 import Header from "@/components/header";
 import Heading from "@/components/heading";
@@ -18,6 +19,7 @@ const exampleHeadingArgs = await getComponentExamples("heading");
 const exampleParagraphArgs = await getComponentExamples("paragraph");
 const examplePricingTableArgs = await getComponentExamples("pricing-table");
 const exampleCardExamples = await getComponentExamples("card");
+const exampleFooterArgs = await getComponentExamples("footer");
 
 const ExampleHomepage = () => {
   return (
@@ -65,6 +67,10 @@ const ExampleHomepage = () => {
             <PricingTable {...examplePricingTableArgs[0]} />
           </>
         }
+      />
+      <Footer
+        {...exampleFooterArgs[0]}
+        branding={<Logo linkToFrontPage={false} />}
       />
     </>
   );
