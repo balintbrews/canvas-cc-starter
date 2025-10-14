@@ -15,12 +15,12 @@ const PricingTable = ({
   advancedTierPriceMonthly,
   advancedTierPriceAnnual,
   defaultTier,
-  defaultIsAnnual,
+  annualSelectedByDefault,
   annualBadgeText,
   buttonLabel,
   buttonLink,
 }) => {
-  const [isAnnual, setIsAnnual] = useState(defaultIsAnnual);
+  const [isAnnual, setIsAnnual] = useState(annualSelectedByDefault);
   const [tier, setTier] = useState(defaultTier);
 
   const tierNames = {

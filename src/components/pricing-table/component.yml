@@ -93,7 +93,7 @@ props:
         advanced: Advanced
       examples:
         - entry
-    defaultIsAnnual:
+    annualSelectedByDefault:
       title: "Annual selected by default"
       type: boolean
       examples:
