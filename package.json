@@ -20,7 +20,7 @@
     "tailwind-merge": "^3.0.1"
   },
   "devDependencies": {
-    "@drupal-canvas/cli": "^0.1.1",
+    "@drupal-canvas/cli": "^0.2.0",
     "@eslint/js": "^9.20.0",
     "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "@storybook/addon-docs": "^9.1.8",
