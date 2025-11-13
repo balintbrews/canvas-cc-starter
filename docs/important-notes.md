@@ -5,9 +5,8 @@ that you should be aware of when developing Code Components for Drupal Canvas.
 
 - [1. Prop machine names must be the camel cased version of the prop titles](#1-prop-machine-names-must-be-the-camel-cased-version-of-the-prop-titles)
 - [2. Slots in content-sized containers need a minimum size](#2-slots-in-content-sized-containers-need-a-minimum-size)
-- [3. The `hidden` Tailwind CSS utility class needs to be used carefully](#3-the-hidden-tailwind-css-utility-class-needs-to-be-used-carefully)
-- [4. The CLI tool considers the global CSS in Canvas to be the source of truth](#4-the-cli-tool-considers-the-global-css-in-canvas-to-be-the-source-of-truth)
-- [5. The `upload` CLI command overrides components in Canvas and other considerations](#5-the-upload-cli-command-overrides-components-in-canvas-and-other-considerations)
+- [3. The CLI tool considers the global CSS in Canvas to be the source of truth](#3-the-cli-tool-considers-the-global-css-in-canvas-to-be-the-source-of-truth)
+- [4. The `upload` CLI command overrides components in Canvas and other considerations](#4-the-upload-cli-command-overrides-components-in-canvas-and-other-considerations)
 
 ---
 
@@ -71,33 +70,7 @@ workaround you can use until we have a better solution in Drupal Canvas:
 </div>
 ```
 
-## 3. The `hidden` Tailwind CSS utility class needs to be used carefully
-
-> This point isn't unique to Code Components. It's valid for Single-Directory
-> Components, as well as any component source markup and styling that uses a
-> class named `hidden` inside a CSS cascade layer (e.g., any theme using
-> Tailwind CSS 4).
-
-**tl;dr**
-
-When using the `hidden` Tailwind utility class but need to override it
-conditionally (e.g., for responsive variants), you need to add `!important` (`!`
-prefix in Tailwind CSS) to the overriding class.
-
-For example, `md:!block hidden`.
-
-**Details**
-
-Drupal
-[core's `system` module defines CSS classes to hide elements in various ways](https://git.drupalcode.org/project/drupal/-/blob/11.x/core/modules/system/css/components/hidden.module.css).
-One of those classes is named `hidden`, which sets a `display: none`
-declaration. This will typically take precedence over Tailwind's display
-utilities because it's not defined in a
-[cascade layer](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer#description),
-unlike Tailwind's generated styles. (Styles that are not defined in a layer
-always override styles defined in named and anonymous layers.)
-
-## 4. The CLI tool considers the global CSS in Canvas to be the source of truth
+## 3. The CLI tool considers the global CSS in Canvas to be the source of truth
 
 1. [`#3549124`](https://www.drupal.org/project/canvas/issues/3549124):
    `npx canvas download` overrides your `src/components/global.css` file without
@@ -110,7 +83,7 @@ always override styles defined in named and anonymous layers.)
    adding in your `src/components/global.css` before running the
    `build`/`upload` command.
 
-## 5. The `upload` CLI command overrides components in Canvas and other considerations
+## 4. The `upload` CLI command overrides components in Canvas and other considerations
 
 1. `npx canvas upload` overrides the published version of the Code Components,
    but doesn't discard auto-saved and unpublished changes to the components.
