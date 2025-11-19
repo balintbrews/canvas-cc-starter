@@ -1,6 +1,6 @@
 const Heading = ({ text }) => {
   return (
-    <h2 className="text-text mx-auto max-w-screen-lg text-balance text-center text-2xl font-extrabold md:text-3xl">
+    <h2 className="mx-auto max-w-screen-lg text-center text-2xl font-extrabold text-balance text-text md:text-3xl">
       {text}
     </h2>
   );

@@ -38,12 +38,12 @@ const Hero = ({
       <div className="mx-auto max-w-screen-xl sm:grid sm:grid-cols-2 sm:items-center">
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
           <div className="flex max-w-xl flex-col gap-8">
-            <h2 className="from-peach to-mauve tracking-relaxed text-balance bg-gradient-to-r bg-clip-text text-2xl font-extrabold text-transparent md:text-4xl">
+            <h2 className="tracking-relaxed bg-gradient-to-r from-peach to-mauve bg-clip-text text-2xl font-extrabold text-balance text-transparent md:text-4xl">
               {title}
             </h2>
             <FormattedText
               as="p"
-              className="text-text text-balance leading-relaxed"
+              className="leading-relaxed text-balance text-text"
             >
               {description}
             </FormattedText>
@@ -51,8 +51,8 @@ const Hero = ({
               <a
                 href={buttonLink}
                 className={cn(
-                  "bg-mauve text-inverted-text hover:bg-mauve/75 inline-block rounded-sm px-12 py-3 text-sm font-medium transition",
-                  "focus-visible:outline-red focus-visible:outline-2 focus-visible:outline-offset-2",
+                  "inline-block rounded-sm bg-mauve px-12 py-3 text-sm font-medium text-inverted-text transition hover:bg-mauve/75",
+                  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red",
                 )}
               >
                 {buttonLabel}
@@ -66,7 +66,7 @@ const Hero = ({
             src={image.src}
             width={image.width}
             height={image.height}
-            className="sm:rounded-l-4xl dark:border-surface-0 h-full w-full object-cover object-right shadow-lg xl:rounded-r-xl dark:border dark:shadow-none"
+            className="h-full w-full object-cover object-right shadow-lg sm:rounded-l-4xl xl:rounded-r-xl dark:border dark:border-surface-0 dark:shadow-none"
           />
         </div>
       </div>

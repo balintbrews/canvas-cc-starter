@@ -26,7 +26,7 @@ const Header = ({ branding, navigation, darkVariant, backgroundColor }) => {
         backgroundColor,
       })}
     >
-      <div className="min-w-sm mx-auto flex h-24 max-w-screen-xl items-center justify-between gap-x-12 px-4 sm:px-12 md:h-32 lg:gap-x-16 lg:px-16">
+      <div className="mx-auto flex h-24 max-w-screen-xl min-w-sm items-center justify-between gap-x-12 px-4 sm:px-12 md:h-32 lg:gap-x-16 lg:px-16">
         <div
           className={cn(
             "h-12 flex-shrink-0 items-center justify-start md:h-16",

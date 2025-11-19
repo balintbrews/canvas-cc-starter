@@ -60,7 +60,7 @@ const Logo = ({ linkToFrontPage = true, className }) => {
           />
         </g>
       </svg>
-      <span className="text-flamingo shrink-0 text-lg uppercase tracking-widest">
+      <span className="shrink-0 text-lg tracking-widest text-flamingo uppercase">
         Humanify
       </span>
     </Element>

@@ -29,7 +29,7 @@ const Section = ({ content, darkVariant, backgroundColor = "base" }) => {
         }),
       )}
     >
-      <div className="min-w-sm mx-auto flex max-w-screen-xl flex-col items-center gap-6 p-12 px-4 md:p-16 md:px-12 lg:gap-8 lg:px-16">
+      <div className="mx-auto flex max-w-screen-xl min-w-sm flex-col items-center gap-6 p-12 px-4 md:p-16 md:px-12 lg:gap-8 lg:px-16">
         {content}
       </div>
     </section>

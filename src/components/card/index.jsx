@@ -27,7 +27,7 @@ const Card = ({ title, description, iconNameFromLucide, iconColor }) => {
     },
   });
   return (
-    <div className="bg-surface-0 flex flex-col gap-3 rounded-lg p-6">
+    <div className="flex flex-col gap-3 rounded-lg bg-surface-0 p-6">
       {iconNameFromLucide && (
         <div
           className={cardVariants({ iconColor })}
@@ -43,7 +43,7 @@ const Card = ({ title, description, iconNameFromLucide, iconColor }) => {
           }}
         />
       )}
-      {title && <h3 className="text-text text-lg font-semibold">{title}</h3>}
+      {title && <h3 className="text-lg font-semibold text-text">{title}</h3>}
       {description && (
         <FormattedText as="p" className="text-subtext-0">
           {description}

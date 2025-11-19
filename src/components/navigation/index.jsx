@@ -16,7 +16,7 @@ const Navigation = () => {
             <li key={item.title}>
               <a
                 href={item.href}
-                className="text-text hover:text-text/75 transition-colors"
+                className="text-text transition-colors hover:text-text/75"
               >
                 {item.title}
               </a>
@@ -27,7 +27,7 @@ const Navigation = () => {
       <div className="flex items-center gap-4">
         <div className="sm:flex sm:gap-4">
           <a
-            className="bg-teal text-inverted-text hover:bg-teal/90 rounded-md px-5 py-2.5 text-sm font-medium shadow-sm transition-colors"
+            className="rounded-md bg-teal px-5 py-2.5 text-sm font-medium text-inverted-text shadow-sm transition-colors hover:bg-teal/90"
             href="#"
           >
             Login
@@ -35,7 +35,7 @@ const Navigation = () => {
 
           <div className="hidden sm:!flex">
             <a
-              className="bg-surface-0/75 text-text hover:text-text/75 rounded-md px-5 py-2.5 text-sm font-medium transition-colors"
+              className="rounded-md bg-surface-0/75 px-5 py-2.5 text-sm font-medium text-text transition-colors hover:text-text/75"
               href="#"
             >
               Register
@@ -44,7 +44,7 @@ const Navigation = () => {
         </div>
 
         <div className="block md:hidden">
-          <button className="bg-surface-2 text-text rounded-sm p-2">
+          <button className="rounded-sm bg-surface-2 p-2 text-text">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="size-5"

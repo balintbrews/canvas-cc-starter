@@ -60,7 +60,7 @@ const PricingTable = ({
         <div className="w-24 text-right">
           <span
             className={cn(
-              "text-subtext-0/75 font-medium",
+              "font-medium text-subtext-0/75",
               !isAnnual && "text-mauve",
             )}
           >
@@ -70,11 +70,11 @@ const PricingTable = ({
 
         <button
           onClick={() => setIsAnnual(!isAnnual)}
-          className="bg-surface-1 relative mx-3 h-7 w-14 cursor-pointer rounded-full border-0 p-0.5"
+          className="relative mx-3 h-7 w-14 cursor-pointer rounded-full border-0 bg-surface-1 p-0.5"
         >
           <div
             className={cn(
-              "border-flamingo bg-inverted-text absolute top-0.5 h-6 w-6 rounded-full border-2 transition-all duration-200",
+              "absolute top-0.5 h-6 w-6 rounded-full border-2 border-flamingo bg-inverted-text transition-all duration-200",
               isAnnual ? "left-7" : "left-0.5",
             )}
           />
@@ -82,7 +82,7 @@ const PricingTable = ({
         <div className="flex w-36 items-center">
           <span
             className={cn(
-              "text-subtext-0/75 font-medium",
+              "font-medium text-subtext-0/75",
               isAnnual && "text-mauve",
             )}
           >
@@ -90,7 +90,7 @@ const PricingTable = ({
           </span>
           <span
             className={cn(
-              "bg-green text-inverted-text ml-2 whitespace-nowrap rounded-full px-2 py-1 text-xs font-medium leading-none transition-opacity duration-200",
+              "ml-2 rounded-full bg-green px-2 py-1 text-xs leading-none font-medium whitespace-nowrap text-inverted-text transition-opacity duration-200",
               isAnnual ? "opacity-100" : "opacity-0",
             )}
           >
@@ -120,21 +120,21 @@ const PricingTable = ({
               className={cn(
                 "group flex-1 cursor-pointer rounded-lg p-5 transition-all duration-200",
                 "bg-surface-1",
-                "data-[state=selected]:outline-mauve data-[state=selected]:outline-offset-3 data-[state=selected]:outline-2",
-                "focus-visible:outline-red focus-visible:outline-2 focus-visible:outline-offset-2",
+                "data-[state=selected]:outline-2 data-[state=selected]:outline-offset-3 data-[state=selected]:outline-mauve",
+                "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red",
               )}
             >
-              <h3 className="text-text mb-3 text-lg font-bold">
+              <h3 className="mb-3 text-lg font-bold text-text">
                 {tierNames[planName]}
               </h3>
 
               <div className="mb-4">
-                <div className="text-text mb-1 text-2xl font-bold">
+                <div className="mb-1 text-2xl font-bold text-text">
                   ${price.toLocaleString()}
                 </div>
               </div>
 
-              <div className="text-text text-sm leading-relaxed">
+              <div className="text-sm leading-relaxed text-text">
                 {tierDescriptions[planName]}
               </div>
             </div>
@@ -147,8 +147,8 @@ const PricingTable = ({
         <a
           href={buttonLink}
           className={cn(
-            "bg-mauve text-inverted-text hover:bg-mauve/75 inline-block w-full rounded-sm px-12 py-3 text-center text-sm font-medium transition",
-            "focus-visible:outline-red focus-visible:outline-2 focus-visible:outline-offset-2",
+            "inline-block w-full rounded-sm bg-mauve px-12 py-3 text-center text-sm font-medium text-inverted-text transition hover:bg-mauve/75",
+            "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red",
           )}
         >
           {buttonLabel.replace("{tier}", tierNames[tier])}

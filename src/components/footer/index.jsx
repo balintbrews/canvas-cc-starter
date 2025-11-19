@@ -32,7 +32,7 @@ const Footer = ({
         backgroundColor,
       })}
     >
-      <div className="min-w-sm mx-auto flex max-w-screen-md flex-col items-center gap-12 p-12 md:p-16">
+      <div className="mx-auto flex max-w-screen-md min-w-sm flex-col items-center gap-12 p-12 md:p-16">
         <div
           className={cn(
             "h-12 flex-shrink-0 items-center justify-start",
@@ -43,7 +43,7 @@ const Footer = ({
         >
           {branding}
         </div>
-        <FormattedText as="p" className="text-text text-sm">
+        <FormattedText as="p" className="text-sm text-text">
           {copyrightNotice}
         </FormattedText>
       </div>
