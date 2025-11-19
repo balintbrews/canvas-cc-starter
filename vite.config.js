@@ -9,6 +9,7 @@ const DIR = path.dirname(fileURLToPath(import.meta.url));
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
+    // @todo Set up generic aliases here, and validate imports using ESLint.
     alias: [
       {
         find: "@/lib/utils",
