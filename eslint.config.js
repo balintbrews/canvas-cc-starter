@@ -7,7 +7,7 @@ import storybook from "eslint-plugin-storybook";
 import globals from "globals";
 
 export default [
-  { ignores: ["dist"] },
+  { ignores: ["storybook-static"] },
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
