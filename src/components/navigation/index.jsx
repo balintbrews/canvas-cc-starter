@@ -28,7 +28,7 @@ const Navigation = () => {
         <div className="sm:flex sm:gap-4">
           <a
             className="rounded-md bg-teal px-5 py-2.5 text-sm font-medium text-inverted-text shadow-sm transition-colors hover:bg-teal/90"
-            href="#"
+            href="/"
           >
             Login
           </a>
@@ -36,7 +36,7 @@ const Navigation = () => {
           <div className="hidden sm:!flex">
             <a
               className="rounded-md bg-surface-0/75 px-5 py-2.5 text-sm font-medium text-text transition-colors hover:text-text/75"
-              href="#"
+              href="/"
             >
               Register
             </a>

@@ -12,6 +12,7 @@
   "homepage": "https://github.com/balintbrews/canvas-cc-starter#readme",
   "type": "module",
   "dependencies": {
+    "@drupal-canvas/eslint-config": "^0.0.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "prop-types": "^15.8.1",
@@ -20,7 +21,7 @@
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {
-    "@drupal-canvas/cli": "^0.2.0",
+    "@drupal-canvas/cli": "^0.3.0",
     "@eslint/js": "^9.39.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
     "@storybook/addon-docs": "^10.0.8",
@@ -60,7 +61,7 @@
     "code:fix:prettier": "npm run s:prettier -- --write",
     "code:fix:eslint": "npm run s:eslint -- --fix",
     "s:prettier": "prettier \"**/*.{js,jsx,json,html,md,mdx,yml}\"",
-    "s:eslint": "eslint \"**/*.{js,jsx}\"",
+    "s:eslint": "eslint \"**/*.{js,jsx,yml,yaml}\"",
     "prepare": "husky"
   }
 }
