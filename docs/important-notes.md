@@ -4,8 +4,7 @@ This document outlines important issues, current limitations, and considerations
 that you should be aware of when developing Code Components for Drupal Canvas.
 
 - [1. Slots in content-sized containers need a minimum size](#1-slots-in-content-sized-containers-need-a-minimum-size)
-- [2. The CLI tool considers the global CSS in Canvas to be the source of truth](#2-the-cli-tool-considers-the-global-css-in-canvas-to-be-the-source-of-truth)
-- [3. The `upload` CLI command overrides components in Canvas and other considerations](#3-the-upload-cli-command-overrides-components-in-canvas-and-other-considerations)
+- [2. The `upload` CLI command overrides components in Canvas and other considerations](#2-the-upload-cli-command-overrides-components-in-canvas-and-other-considerations)
 
 ---
 
@@ -54,20 +53,7 @@ workaround you can use until we have a better solution in Drupal Canvas:
 </div>
 ```
 
-## 2. The CLI tool considers the global CSS in Canvas to be the source of truth
-
-1. [`#3549124`](https://www.drupal.org/project/canvas/issues/3549124):
-   `npx canvas download` overrides your `src/components/global.css` file without
-   giving you any warnings when downloading any component.
-2. `npx canvas build` (which is executed by `npx canvas upload`) doesn't use
-   your `src/components/global.css` file for building Tailwind CSS. It downloads
-   the global CSS from Drupal Canvas in the background to use that for building
-   the CSS. Until this is revisited in
-   [#3560957](https://www.drupal.org/project/canvas/issues/3560957), make sure
-   to manually add any changes in Drupal Canvas that you're adding in your
-   `src/components/global.css` before running the `build`/`upload` command.
-
-## 3. The `upload` CLI command overrides components in Canvas and other considerations
+## 2. The `upload` CLI command overrides components in Canvas and other considerations
 
 1. `npx canvas upload` overrides the published version of the Code Components,
    but doesn't discard auto-saved and unpublished changes to the components.
