@@ -1,0 +1,9 @@
+name: Layout
+machineName: layout
+status: true
+required: []
+props:
+  properties: []
+slots:
+  outlet:
+    title: Outlet
