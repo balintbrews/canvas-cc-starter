@@ -2,5 +2,6 @@ name: Navigation
 machineName: navigation
 status: true
 required: []
-props: []
+props:
+  properties: []
 slots: []
