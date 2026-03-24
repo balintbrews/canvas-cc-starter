@@ -1,27 +1,6 @@
 {
   "title": "Home",
   "elements": {
-    "12db327c-9a19-4952-9389-80ba8354a5b0": {
-      "type": "js.header",
-      "props": {
-        "darkVariant": true,
-        "backgroundColor": "crust"
-      },
-      "slots": {
-        "branding": ["aaef79ba-f04f-42bc-b888-e0229d46c9b5"],
-        "navigation": ["95805f3a-b32e-4d58-b08e-f506579ab18f"]
-      }
-    },
-    "aaef79ba-f04f-42bc-b888-e0229d46c9b5": {
-      "type": "js.logo",
-      "props": {
-        "linkToFrontPage": true
-      }
-    },
-    "95805f3a-b32e-4d58-b08e-f506579ab18f": {
-      "type": "js.navigation",
-      "props": {}
-    },
     "8219557f-cb7b-4ccd-970f-5aba5eaf776b": {
       "type": "js.hero",
       "props": {
@@ -265,26 +244,6 @@
           "uri": "internal:/page/1",
           "options": []
         }
-      }
-    },
-    "c3ba66be-2b6b-4030-96d0-3a99b77471fe": {
-      "type": "js.footer",
-      "props": {
-        "copyrightNotice": {
-          "value": "&copy; 2025-2026 Humanify Example Ventures Inc. All rights reserved.",
-          "format": "canvas_html_block"
-        },
-        "darkVariant": true,
-        "backgroundColor": "crust"
-      },
-      "slots": {
-        "branding": ["dfbead05-a679-4531-b629-995b7bed1cb0"]
-      }
-    },
-    "dfbead05-a679-4531-b629-995b7bed1cb0": {
-      "type": "js.logo",
-      "props": {
-        "linkToFrontPage": false
       }
     }
   }
