@@ -38,8 +38,7 @@
       }
     },
     {
-      "name": "Empty",
-      "props": {}
+      "name": "Empty"
     }
   ]
 }

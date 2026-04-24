@@ -14,8 +14,7 @@
           }
         },
         "pricing-table-default": {
-          "type": "pricing-table",
-          "props": {}
+          "type": "pricing-table"
         }
       }
     },
@@ -34,8 +33,7 @@
           }
         },
         "pricing-table-dark": {
-          "type": "pricing-table",
-          "props": {}
+          "type": "pricing-table"
         }
       }
     }

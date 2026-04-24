@@ -35,7 +35,7 @@ props:
       format: uri-reference
       title: Button link
       examples:
-        - page/1
+        - /page/1
     image:
       type: object
       $ref: json-schema-definitions://canvas.module/image

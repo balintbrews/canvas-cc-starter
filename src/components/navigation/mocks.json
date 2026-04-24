@@ -15,8 +15,7 @@
           }
         },
         "navigation-default": {
-          "type": "navigation",
-          "props": {}
+          "type": "navigation"
         }
       }
     },
@@ -35,8 +34,7 @@
           }
         },
         "navigation-dark": {
-          "type": "navigation",
-          "props": {}
+          "type": "navigation"
         }
       }
     }

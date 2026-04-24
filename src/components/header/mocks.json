@@ -2,7 +2,6 @@
   "mocks": [
     {
       "name": "Branded header",
-      "props": {},
       "slots": {
         "branding": ["header-logo-default"],
         "navigation": ["header-navigation-default"]
@@ -15,8 +14,7 @@
           }
         },
         "header-navigation-default": {
-          "type": "navigation",
-          "props": {}
+          "type": "navigation"
         }
       }
     },
@@ -37,14 +35,12 @@
           }
         },
         "header-navigation-dark": {
-          "type": "navigation",
-          "props": {}
+          "type": "navigation"
         }
       }
     },
     {
-      "name": "Empty",
-      "props": {}
+      "name": "Empty"
     }
   ]
 }

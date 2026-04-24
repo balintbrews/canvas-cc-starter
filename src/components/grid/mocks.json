@@ -15,7 +15,6 @@
         },
         "grid-default": {
           "type": "grid",
-          "props": {},
           "slots": {
             "content": [
               "grid-default-card-1",
@@ -98,7 +97,6 @@
         },
         "grid-dark": {
           "type": "grid",
-          "props": {},
           "slots": {
             "content": [
               "grid-dark-card-1",
