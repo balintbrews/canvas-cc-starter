@@ -14,17 +14,6 @@ props:
         - megaphone
         - file-chart-column-increasing
         - presentation
-    variant:
-      type: string
-      enum:
-        - standard
-        - spotlight
-      meta:enum:
-        standard: Standard
-        spotlight: Spotlight
-      title: Variant
-      examples:
-        - standard
     title:
       type: string
       title: Title

@@ -1,71 +1,10 @@
 {
   "mocks": [
     {
-      "name": "Standard card",
-      "root": "card-standard-card",
-      "elements": {
-        "card-standard-card": {
-          "type": "section",
-          "props": {
-            "darkVariant": false
-          },
-          "slots": {
-            "content": ["card-default"]
-          }
-        },
-        "card-default": {
-          "type": "card",
-          "props": {
-            "iconNameFromLucide": "lightbulb",
-            "title": "Creative direction",
-            "description": "We shape raw ideas and AI-generated directions into clear creative choices your team can execute confidently."
-          }
-        }
-      }
-    },
-    {
-      "name": "Dark",
-      "root": "card-dark-preview",
-      "elements": {
-        "card-dark-preview": {
-          "type": "section",
-          "props": {
-            "darkVariant": true
-          },
-          "slots": {
-            "content": ["card-dark"]
-          }
-        },
-        "card-dark": {
-          "type": "card",
-          "props": {
-            "iconNameFromLucide": "lightbulb",
-            "title": "Creative direction",
-            "description": "We shape raw ideas and AI-generated directions into clear creative choices your team can execute confidently."
-          }
-        }
-      }
-    },
-    {
       "name": "Without icon",
-      "root": "card-without-icon-preview",
-      "elements": {
-        "card-without-icon-preview": {
-          "type": "section",
-          "props": {
-            "darkVariant": false
-          },
-          "slots": {
-            "content": ["card-without-icon"]
-          }
-        },
-        "card-without-icon": {
-          "type": "card",
-          "props": {
-            "title": "Creative direction",
-            "description": "We shape raw ideas and AI-generated directions into clear creative choices your team can execute confidently."
-          }
-        }
+      "props": {
+        "title": "Creative direction",
+        "description": "We shape raw ideas and AI-generated directions into clear creative choices your team can execute confidently."
       }
     }
   ]
