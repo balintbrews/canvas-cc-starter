@@ -24,7 +24,7 @@ function ImageFeature({
   return (
     <div
       className={cn(
-        'grid gap-8 border-y border-line py-8 md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-12 lg:gap-16',
+        'grid gap-8 py-8 md:grid-cols-[0.95fr_1.05fr] md:items-center md:gap-12 lg:gap-16',
         className,
       )}
       {...props}
@@ -43,17 +43,17 @@ function ImageFeature({
           className="absolute right-5 bottom-5 flex h-14 w-24 items-center justify-center rounded-lg bg-paper/90 shadow-sm backdrop-blur"
           aria-hidden="true"
         >
-          <LogoMark className="h-10" />
+          <LogoMark className="h-10" primaryClassName="fill-navy" />
         </div>
       </div>
 
       <div className="max-w-2xl py-2">
         {eyebrow && (
-          <p className="mb-4 text-base leading-6 font-semibold text-green">
+          <p className="mb-4 text-base leading-6 font-semibold text-green dark:text-green">
             {eyebrow}
           </p>
         )}
-        <h2 className="max-w-2xl font-serif text-4xl leading-[0.98] font-normal text-balance text-text md:text-5xl">
+        <h2 className="max-w-2xl font-serif text-4xl font-normal text-balance text-text md:text-5xl">
           {title}
         </h2>
         <FormattedText

@@ -12,7 +12,7 @@ props:
       $ref: json-schema-definitions://canvas.module/image
       title: Image
       examples:
-        - src: https://placehold.co/1770x1180/png?text=Image+feature
+        - src: https://placehold.co/1770x1180/png?text=Image+placeholder
           alt: Image feature placeholder
           width: 1770
           height: 1180

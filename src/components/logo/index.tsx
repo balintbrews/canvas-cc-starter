@@ -8,9 +8,10 @@ export interface LogoProps {
 
 export interface LogoMarkProps {
   className?: string;
+  primaryClassName?: string;
 }
 
-function LogoMark({ className }: LogoMarkProps) {
+function LogoMark({ className, primaryClassName }: LogoMarkProps) {
   return (
     <svg
       className={cn('h-full w-auto shrink-0', className)}
@@ -18,8 +19,22 @@ function LogoMark({ className }: LogoMarkProps) {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden="true"
     >
-      <rect className="fill-text" x="3" y="4" width="8" height="32" rx="4" />
-      <rect className="fill-text" x="23" y="4" width="8" height="32" rx="4" />
+      <rect
+        className={cn('fill-text', primaryClassName)}
+        x="3"
+        y="4"
+        width="8"
+        height="32"
+        rx="4"
+      />
+      <rect
+        className={cn('fill-text', primaryClassName)}
+        x="23"
+        y="4"
+        width="8"
+        height="32"
+        rx="4"
+      />
       <rect className="fill-green" x="13" y="4" width="8" height="14" rx="4" />
       <rect className="fill-green" x="13" y="22" width="8" height="14" rx="4" />
     </svg>

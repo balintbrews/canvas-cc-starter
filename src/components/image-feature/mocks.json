@@ -14,7 +14,31 @@
           }
         },
         "image-feature-default": {
-          "type": "image-feature"
+          "type": "image-feature",
+          "props": {
+            "eyebrow": "Human judgment, applied"
+          }
+        }
+      }
+    },
+    {
+      "name": "Navy background",
+      "root": "image-feature-navy-section",
+      "elements": {
+        "image-feature-navy-section": {
+          "type": "section",
+          "props": {
+            "backgroundColor": "navy"
+          },
+          "slots": {
+            "content": ["image-feature-navy"]
+          }
+        },
+        "image-feature-navy": {
+          "type": "image-feature",
+          "props": {
+            "eyebrow": "Human judgment, applied"
+          }
         }
       }
     }
