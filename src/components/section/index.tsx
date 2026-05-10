@@ -12,6 +12,9 @@ const sectionVariants = cva('', {
       navy: 'dark bg-navy',
     },
   },
+  defaultVariants: {
+    backgroundColor: 'cream',
+  },
 });
 
 type SectionBackgroundColor = NonNullable<
@@ -22,7 +25,7 @@ export interface SectionProps extends Omit<
   ComponentPropsWithoutRef<'section'>,
   'children' | 'content'
 > {
-  backgroundColor?: SectionBackgroundColor;
+  backgroundColor: SectionBackgroundColor;
   content?: ReactNode;
 }
 
