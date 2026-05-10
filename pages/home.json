@@ -138,9 +138,9 @@
       "props": {
         "image": {
           "src": "https://images.unsplash.com/photo-1752650736024-d6aac18abc2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-          "alt": "Woman playing the violin",
+          "alt": "Two people looking at a book beside a laptop in a sunlit workspace",
           "width": 1770,
-          "height": 1180
+          "height": 996
         },
         "eyebrow": "Human judgment, applied",
         "title": "We bring human strengths to AI-first teams.",
