@@ -4,7 +4,7 @@
       "name": "Branded footer",
       "props": {
         "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc. All rights reserved.",
-        "backgroundColor": "crust"
+        "backgroundColor": "navy"
       },
       "slots": {
         "branding": ["footer-logo-default"]
@@ -23,7 +23,7 @@
       "props": {
         "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc. All rights reserved.",
         "darkVariant": true,
-        "backgroundColor": "crust"
+        "backgroundColor": "navy"
       },
       "slots": {
         "branding": ["footer-logo-dark"]

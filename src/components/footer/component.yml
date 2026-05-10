@@ -12,7 +12,7 @@ props:
       x-formatting-context: block
       title: Copyright notice
       examples:
-        - '&copy; 2025-2026 Humanify Example Ventures Inc. All rights reserved.'
+        - '&copy; 2025-2026 Humanify Example Ventures Inc.'
     darkVariant:
       type: boolean
       title: Dark variant
@@ -21,16 +21,18 @@ props:
     backgroundColor:
       type: string
       enum:
-        - base
-        - mantle
-        - crust
+        - cream
+        - paper
+        - sage-band
+        - navy
       meta:enum:
-        base: Base
-        mantle: Mantle
-        crust: Crust
+        cream: Cream
+        paper: Paper
+        sage-band: Sage band
+        navy: Navy
       title: Background color
       examples:
-        - crust
+        - navy
 slots:
   branding:
     title: Branding

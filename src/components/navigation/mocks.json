@@ -8,7 +8,7 @@
           "type": "section",
           "props": {
             "darkVariant": false,
-            "backgroundColor": "crust"
+            "backgroundColor": "sage-band"
           },
           "slots": {
             "content": ["navigation-default"]
@@ -27,7 +27,7 @@
           "type": "section",
           "props": {
             "darkVariant": true,
-            "backgroundColor": "crust"
+            "backgroundColor": "sage-band"
           },
           "slots": {
             "content": ["navigation-dark"]

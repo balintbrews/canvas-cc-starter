@@ -1,8 +1,7 @@
 name: Card
 machineName: card
 status: true
-required:
-  - iconColor
+required: []
 props:
   properties:
     iconNameFromLucide:
@@ -15,46 +14,17 @@ props:
         - megaphone
         - file-chart-column-increasing
         - presentation
-    iconColor:
+    variant:
       type: string
       enum:
-        - rosewater
-        - flamingo
-        - pink
-        - mauve
-        - red
-        - maroon
-        - peach
-        - yellow
-        - green
-        - teal
-        - sky
-        - sapphire
-        - blue
-        - lavender
+        - standard
+        - spotlight
       meta:enum:
-        rosewater: Rosewater
-        flamingo: Flamingo
-        pink: Pink
-        mauve: Mauve
-        red: Red
-        maroon: Maroon
-        peach: Peach
-        yellow: Yellow
-        green: Green
-        teal: Teal
-        sky: Sky
-        sapphire: Sapphire
-        blue: Blue
-        lavender: Lavender
-      title: 'Icon: Color'
+        standard: Standard
+        spotlight: Spotlight
+      title: Variant
       examples:
-        - sapphire
-        - rosewater
-        - mauve
-        - yellow
-        - green
-        - pink
+        - standard
     title:
       type: string
       title: Title

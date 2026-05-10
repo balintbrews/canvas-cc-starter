@@ -1,0 +1,75 @@
+{
+  "title": "Careers",
+  "path": "/careers",
+  "elements": {
+    "careers-header": {
+      "type": "js.header",
+      "props": {
+        "darkVariant": false,
+        "backgroundColor": "cream"
+      },
+      "slots": {
+        "branding": ["careers-header-logo"],
+        "navigation": ["careers-navigation"]
+      }
+    },
+    "careers-header-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": true
+      }
+    },
+    "careers-navigation": {
+      "type": "js.navigation",
+      "props": {
+        "activeUrl": "/page/careers"
+      }
+    },
+    "careers-section": {
+      "type": "js.section",
+      "props": {
+        "darkVariant": false,
+        "backgroundColor": "paper"
+      },
+      "slots": {
+        "content": ["careers-eyebrow", "careers-heading", "careers-paragraph"]
+      }
+    },
+    "careers-eyebrow": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "Careers",
+        "variant": "eyebrow"
+      }
+    },
+    "careers-heading": {
+      "type": "js.heading",
+      "props": {
+        "text": "Help teams make AI-assisted work more human."
+      }
+    },
+    "careers-paragraph": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "<p>We look for editors, strategists, designers, and communicators who can turn fast machine output into work people trust.</p>"
+      }
+    },
+    "careers-footer": {
+      "type": "js.footer",
+      "props": {
+        "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc.",
+        "darkVariant": true,
+        "backgroundColor": "navy"
+      },
+      "slots": {
+        "branding": ["careers-footer-logo"]
+      }
+    },
+    "careers-footer-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": false
+      }
+    }
+  }
+}

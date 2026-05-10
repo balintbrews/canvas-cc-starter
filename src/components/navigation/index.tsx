@@ -7,30 +7,36 @@ interface MenuItem {
 }
 
 const menu: MenuItem[] = [
-  { title: 'Home', url: '#' },
-  { title: 'Services', url: '#' },
-  { title: 'Blog', url: '#' },
-  { title: 'About', url: '#' },
-  { title: 'Careers', url: '#' },
+  { title: 'Home', url: '/page/home' },
+  { title: 'Services', url: '/page/services' },
+  { title: 'Blog', url: '/page/blog' },
+  { title: 'About', url: '/page/about' },
+  { title: 'Careers', url: '/page/careers' },
 ];
 
-export type NavigationProps = HTMLAttributes<HTMLDivElement>;
+export interface NavigationProps extends HTMLAttributes<HTMLDivElement> {
+  activeUrl?: string;
+}
 
-function Navigation({ className, ...props }: NavigationProps) {
+function Navigation({
+  activeUrl = '/page/home',
+  className,
+  ...props
+}: NavigationProps) {
   // Data fetching is supported using SWR and @drupal-api-client/json-api-client.
   // @see https://project.pages.drupalcode.org/canvas/code-components/data-fetching
   return (
-    <div
-      className={cn('md:flex md:items-center md:gap-12', className)}
-      {...props}
-    >
-      <nav aria-label="Global" className="hidden md:block!">
-        <ul className="flex items-center gap-6 text-sm">
+    <div className={cn('flex items-center xl:gap-12', className)} {...props}>
+      <nav aria-label="Global" className="hidden xl:block!">
+        <ul className="flex items-center gap-8 text-sm font-medium">
           {menu.map((item) => (
             <li key={item.title}>
               <a
                 href={item.url}
-                className="text-text transition-colors hover:text-text/75"
+                className={cn(
+                  'inline-flex min-h-10 items-center border-b border-transparent text-text transition-colors hover:text-green',
+                  item.url === activeUrl && 'border-green text-green',
+                )}
               >
                 {item.title}
               </a>
@@ -38,29 +44,30 @@ function Navigation({ className, ...props }: NavigationProps) {
           ))}
         </ul>
       </nav>
-      <div className="flex items-center gap-4">
-        <div className="sm:flex sm:gap-4">
+      <div className="flex items-center gap-3">
+        <div className="hidden xl:flex xl:items-center xl:gap-5">
           <a
-            href="/"
-            className="inline-block rounded-md bg-teal px-5 py-2.5 text-sm font-medium text-inverted-text shadow-sm transition hover:bg-teal/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
+            href="/page/login"
+            className="inline-flex text-sm font-medium text-text transition-colors hover:text-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green"
           >
             Login
           </a>
 
-          <div className="hidden sm:flex!">
+          <div className="flex">
             <a
-              href="/"
-              className="inline-block rounded-md bg-surface-0/75 px-5 py-2.5 text-sm font-medium text-text transition hover:text-text/75 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red"
+              href="/page/register"
+              className="inline-flex min-h-12 items-center rounded-md bg-text px-6 text-sm font-bold text-inverted-text shadow-sm transition hover:bg-text/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green"
             >
               Register
             </a>
           </div>
         </div>
 
-        <div className="block md:hidden">
+        <div className="block xl:hidden">
           <button
             type="button"
-            className="rounded-sm bg-surface-2 p-2 text-text"
+            className="rounded-sm bg-surface-0 p-2 text-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green"
+            aria-label="Open menu"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

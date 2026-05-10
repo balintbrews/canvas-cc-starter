@@ -8,7 +8,7 @@
           "type": "section",
           "props": {
             "darkVariant": true,
-            "backgroundColor": "base"
+            "backgroundColor": "cream"
           },
           "slots": {
             "content": ["logo-dark"]

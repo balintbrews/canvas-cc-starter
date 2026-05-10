@@ -1,0 +1,79 @@
+{
+  "title": "Register",
+  "path": "/register",
+  "elements": {
+    "register-header": {
+      "type": "js.header",
+      "props": {
+        "darkVariant": false,
+        "backgroundColor": "cream"
+      },
+      "slots": {
+        "branding": ["register-header-logo"],
+        "navigation": ["register-navigation"]
+      }
+    },
+    "register-header-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": true
+      }
+    },
+    "register-navigation": {
+      "type": "js.navigation",
+      "props": {
+        "activeUrl": "/page/register"
+      }
+    },
+    "register-section": {
+      "type": "js.section",
+      "props": {
+        "darkVariant": false,
+        "backgroundColor": "paper"
+      },
+      "slots": {
+        "content": [
+          "register-eyebrow",
+          "register-heading",
+          "register-paragraph"
+        ]
+      }
+    },
+    "register-eyebrow": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "Register",
+        "variant": "eyebrow"
+      }
+    },
+    "register-heading": {
+      "type": "js.heading",
+      "props": {
+        "text": "Build your hybrid team."
+      }
+    },
+    "register-paragraph": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "<p>Use this page as the starting point for a new Humanify account or team inquiry workflow.</p>"
+      }
+    },
+    "register-footer": {
+      "type": "js.footer",
+      "props": {
+        "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc.",
+        "darkVariant": true,
+        "backgroundColor": "navy"
+      },
+      "slots": {
+        "branding": ["register-footer-logo"]
+      }
+    },
+    "register-footer-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": false
+      }
+    }
+  }
+}

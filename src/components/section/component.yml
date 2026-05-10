@@ -13,17 +13,19 @@ props:
     backgroundColor:
       type: string
       enum:
-        - base
-        - mantle
-        - crust
+        - cream
+        - paper
+        - sage-band
+        - navy
       meta:enum:
-        base: Base
-        mantle: Mantle
-        crust: Crust
+        cream: Cream
+        paper: Paper
+        sage-band: Sage band
+        navy: Navy
       title: Background color
       examples:
-        - mantle
-        - crust
+        - paper
+        - sage-band
 slots:
   content:
     title: Content

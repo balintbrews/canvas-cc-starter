@@ -12,7 +12,7 @@ function Heading({ className, text, ...props }: HeadingProps) {
   return (
     <h2
       className={cn(
-        'mx-auto max-w-5xl text-center text-2xl font-extrabold text-balance text-text md:text-3xl',
+        'max-w-5xl font-serif text-3xl leading-tight font-normal text-balance text-text',
         className,
       )}
       {...props}

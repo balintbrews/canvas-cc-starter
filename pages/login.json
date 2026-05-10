@@ -1,0 +1,75 @@
+{
+  "title": "Login",
+  "path": "/login",
+  "elements": {
+    "login-header": {
+      "type": "js.header",
+      "props": {
+        "darkVariant": false,
+        "backgroundColor": "cream"
+      },
+      "slots": {
+        "branding": ["login-header-logo"],
+        "navigation": ["login-navigation"]
+      }
+    },
+    "login-header-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": true
+      }
+    },
+    "login-navigation": {
+      "type": "js.navigation",
+      "props": {
+        "activeUrl": "/page/login"
+      }
+    },
+    "login-section": {
+      "type": "js.section",
+      "props": {
+        "darkVariant": false,
+        "backgroundColor": "paper"
+      },
+      "slots": {
+        "content": ["login-eyebrow", "login-heading", "login-paragraph"]
+      }
+    },
+    "login-eyebrow": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "Login",
+        "variant": "eyebrow"
+      }
+    },
+    "login-heading": {
+      "type": "js.heading",
+      "props": {
+        "text": "Welcome back to Humanify."
+      }
+    },
+    "login-paragraph": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "<p>Use this page as the starting point for an account sign-in workflow.</p>"
+      }
+    },
+    "login-footer": {
+      "type": "js.footer",
+      "props": {
+        "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc.",
+        "darkVariant": true,
+        "backgroundColor": "navy"
+      },
+      "slots": {
+        "branding": ["login-footer-logo"]
+      }
+    },
+    "login-footer-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": false
+      }
+    }
+  }
+}

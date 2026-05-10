@@ -30,7 +30,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "lightbulb",
-            "iconColor": "sapphire",
             "title": "Creative direction",
             "description": "We shape raw ideas and AI-generated directions into clear creative choices your team can execute confidently."
           }
@@ -39,7 +38,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "book-open",
-            "iconColor": "rosewater",
             "title": "Product storytelling",
             "description": "We turn feature lists and technical outputs into narratives customers understand and care about."
           }
@@ -48,7 +46,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "pen-tool",
-            "iconColor": "mauve",
             "title": "Brand and voice systems",
             "description": "We define reusable messaging rules so AI outputs stay on-brand across channels, markets, and teams."
           }
@@ -57,7 +54,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "megaphone",
-            "iconColor": "yellow",
             "title": "Campaign concepts",
             "description": "We develop campaign themes and creative briefs that connect business goals to audience needs."
           }
@@ -66,7 +62,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "file-chart-column-increasing",
-            "iconColor": "green",
             "title": "Insight synthesis",
             "description": "We combine model output, research, and team context into prioritized insights that drive better decisions."
           }
@@ -75,7 +70,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "presentation",
-            "iconColor": "pink",
             "title": "Executive communication",
             "description": "We craft high-stakes updates, memos, and presentations with the right tone, structure, and strategic focus."
           }
@@ -112,7 +106,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "lightbulb",
-            "iconColor": "sapphire",
             "title": "Creative direction",
             "description": "We shape raw ideas and AI-generated directions into clear creative choices your team can execute confidently."
           }
@@ -121,7 +114,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "book-open",
-            "iconColor": "rosewater",
             "title": "Product storytelling",
             "description": "We turn feature lists and technical outputs into narratives customers understand and care about."
           }
@@ -130,7 +122,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "pen-tool",
-            "iconColor": "mauve",
             "title": "Brand and voice systems",
             "description": "We define reusable messaging rules so AI outputs stay on-brand across channels, markets, and teams."
           }
@@ -139,7 +130,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "megaphone",
-            "iconColor": "yellow",
             "title": "Campaign concepts",
             "description": "We develop campaign themes and creative briefs that connect business goals to audience needs."
           }
@@ -148,7 +138,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "file-chart-column-increasing",
-            "iconColor": "green",
             "title": "Insight synthesis",
             "description": "We combine model output, research, and team context into prioritized insights that drive better decisions."
           }
@@ -157,7 +146,6 @@
           "type": "card",
           "props": {
             "iconNameFromLucide": "presentation",
-            "iconColor": "pink",
             "title": "Executive communication",
             "description": "We craft high-stakes updates, memos, and presentations with the right tone, structure, and strategic focus."
           }

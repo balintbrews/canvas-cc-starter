@@ -1,0 +1,75 @@
+{
+  "title": "Blog",
+  "path": "/blog",
+  "elements": {
+    "blog-header": {
+      "type": "js.header",
+      "props": {
+        "darkVariant": false,
+        "backgroundColor": "cream"
+      },
+      "slots": {
+        "branding": ["blog-header-logo"],
+        "navigation": ["blog-navigation"]
+      }
+    },
+    "blog-header-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": true
+      }
+    },
+    "blog-navigation": {
+      "type": "js.navigation",
+      "props": {
+        "activeUrl": "/page/blog"
+      }
+    },
+    "blog-section": {
+      "type": "js.section",
+      "props": {
+        "darkVariant": false,
+        "backgroundColor": "paper"
+      },
+      "slots": {
+        "content": ["blog-eyebrow", "blog-heading", "blog-paragraph"]
+      }
+    },
+    "blog-eyebrow": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "Blog",
+        "variant": "eyebrow"
+      }
+    },
+    "blog-heading": {
+      "type": "js.heading",
+      "props": {
+        "text": "Ideas for better human and AI collaboration."
+      }
+    },
+    "blog-paragraph": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "<p>Read practical notes on shaping AI-generated work into clear, trusted, and memorable communication.</p>"
+      }
+    },
+    "blog-footer": {
+      "type": "js.footer",
+      "props": {
+        "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc.",
+        "darkVariant": true,
+        "backgroundColor": "navy"
+      },
+      "slots": {
+        "branding": ["blog-footer-logo"]
+      }
+    },
+    "blog-footer-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": false
+      }
+    }
+  }
+}

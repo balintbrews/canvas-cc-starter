@@ -4,14 +4,17 @@ status: true
 required:
   - entryTierName
   - entryTierDescription
+  - entryTierIconNameFromLucide
   - entryTierPriceMonthly
   - entryTierPriceAnnual
   - midTierName
   - midTierDescription
+  - midTierIconNameFromLucide
   - midTierPriceMonthly
   - midTierPriceAnnual
   - advancedTierName
   - advancedTierDescription
+  - advancedTierIconNameFromLucide
   - advancedTierPriceMonthly
   - advancedTierPriceAnnual
   - defaultTier
@@ -30,6 +33,11 @@ props:
       title: 'Entry tier: Description'
       examples:
         - For pilots and focused projects
+    entryTierIconNameFromLucide:
+      type: string
+      title: 'Entry tier: Icon name from Lucide'
+      examples:
+        - send
     entryTierPriceMonthly:
       type: number
       title: 'Entry tier: Price, monthly'
@@ -50,6 +58,11 @@ props:
       title: 'Mid tier: Description'
       examples:
         - For teams scaling AI-assisted delivery
+    midTierIconNameFromLucide:
+      type: string
+      title: 'Mid tier: Icon name from Lucide'
+      examples:
+        - chart-no-axes-column-increasing
     midTierPriceMonthly:
       type: number
       title: 'Mid tier: Price, monthly'
@@ -70,6 +83,11 @@ props:
       title: 'Advanced tier: Description'
       examples:
         - For complex organizations and mission-critical work
+    advancedTierIconNameFromLucide:
+      type: string
+      title: 'Advanced tier: Icon name from Lucide'
+      examples:
+        - building-2
     advancedTierPriceMonthly:
       type: number
       title: 'Advanced tier: Price, monthly'
@@ -114,4 +132,6 @@ props:
       title: Button link
       examples:
         - /page/1
-slots: []
+slots:
+  intro:
+    title: Intro

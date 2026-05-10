@@ -11,14 +11,15 @@ const headerVariants = cva('', {
       dark: 'dark',
     },
     backgroundColor: {
-      base: 'bg-base',
-      mantle: 'bg-mantle',
-      crust: 'bg-crust',
+      cream: 'bg-cream',
+      paper: 'bg-paper',
+      'sage-band': 'bg-sage-band',
+      navy: 'bg-navy',
     },
   },
   defaultVariants: {
     colorScheme: 'light',
-    backgroundColor: 'base',
+    backgroundColor: 'cream',
   },
 });
 
@@ -55,16 +56,16 @@ function Header({
       )}
       {...props}
     >
-      <div className="mx-auto flex h-24 max-w-7xl min-w-sm items-center justify-between gap-x-12 px-4 sm:px-12 md:h-32 lg:gap-x-16 lg:px-16">
+      <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-x-8 px-5 py-4 sm:px-8 lg:px-16">
         <div
           className={cn(
-            'h-12 shrink-0 items-center justify-start md:h-16',
+            'h-10 shrink-0 items-center justify-start md:h-12',
             hasEmptySlotPlaceholder(branding) && 'min-w-32',
           )}
         >
           {branding}
         </div>
-        <div className="flex h-12 grow items-center justify-end md:h-16">
+        <div className="flex min-h-12 grow items-center justify-end">
           {navigation}
         </div>
       </div>

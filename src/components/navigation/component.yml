@@ -3,5 +3,11 @@ machineName: navigation
 status: true
 required: []
 props:
-  properties: []
+  properties:
+    activeUrl:
+      type: string
+      format: uri-reference
+      title: Active URL
+      examples:
+        - /page/home
 slots: []

@@ -8,7 +8,7 @@
           "type": "section",
           "props": {
             "darkVariant": false,
-            "backgroundColor": "base"
+            "backgroundColor": "cream"
           },
           "slots": {
             "content": ["paragraph-default"]
@@ -30,7 +30,7 @@
           "type": "section",
           "props": {
             "darkVariant": true,
-            "backgroundColor": "base"
+            "backgroundColor": "cream"
           },
           "slots": {
             "content": ["paragraph-dark"]

@@ -4,7 +4,7 @@
       "name": "Heading and paragraph",
       "props": {
         "darkVariant": false,
-        "backgroundColor": "base"
+        "backgroundColor": "cream"
       },
       "slots": {
         "content": ["section-default-heading", "section-default-paragraph"]
@@ -28,7 +28,7 @@
       "name": "Dark",
       "props": {
         "darkVariant": true,
-        "backgroundColor": "base"
+        "backgroundColor": "cream"
       },
       "slots": {
         "content": ["section-dark-heading", "section-dark-paragraph"]

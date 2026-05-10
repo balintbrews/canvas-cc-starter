@@ -3,48 +3,34 @@ import { cn, FormattedText } from 'drupal-canvas';
 import type { CSSProperties, HTMLAttributes } from 'react';
 import type { VariantProps } from 'class-variance-authority';
 
-const cardIconVariants = cva('size-8', {
+const cardVariants = cva('bg-transparent', {
   variants: {
-    iconColor: {
-      text: 'bg-text',
-      rosewater: 'bg-rosewater',
-      flamingo: 'bg-flamingo',
-      pink: 'bg-pink',
-      mauve: 'bg-mauve',
-      red: 'bg-red',
-      maroon: 'bg-maroon',
-      peach: 'bg-peach',
-      yellow: 'bg-yellow',
-      green: 'bg-green',
-      teal: 'bg-teal',
-      sky: 'bg-sky',
-      sapphire: 'bg-sapphire',
-      blue: 'bg-blue',
-      lavender: 'bg-lavender',
+    variant: {
+      standard: 'flex gap-6 px-0 py-6 md:px-8 md:py-7',
+      spotlight:
+        'flex flex-col gap-6 px-0 py-8 md:flex-row md:items-center md:gap-10 md:px-12 md:py-12',
     },
   },
   defaultVariants: {
-    iconColor: 'teal',
+    variant: 'standard',
   },
 });
 
-type CardIconColor = NonNullable<
-  VariantProps<typeof cardIconVariants>['iconColor']
->;
+type CardVariant = NonNullable<VariantProps<typeof cardVariants>['variant']>;
 
 export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   description?: string;
-  iconColor: CardIconColor;
   iconNameFromLucide?: string;
   title?: string;
+  variant?: CardVariant;
 }
 
 function Card({
   className,
   description,
-  iconColor,
   iconNameFromLucide,
   title,
+  variant,
   ...props
 }: CardProps) {
   const iconMaskStyle: CSSProperties | undefined = iconNameFromLucide
@@ -61,25 +47,50 @@ function Card({
     : undefined;
 
   return (
-    <div
-      className={cn(
-        'flex flex-col gap-3 rounded-lg bg-surface-0 p-6',
-        className,
-      )}
-      {...props}
-    >
+    <div className={cn(cardVariants({ variant }), className)} {...props}>
       {iconNameFromLucide && (
         <div
-          className={cn(cardIconVariants({ iconColor }))}
-          style={iconMaskStyle}
-        />
+          className={cn(
+            'flex shrink-0 items-center justify-center rounded-full bg-surface-0',
+            variant === 'spotlight' ? 'size-20 md:size-24' : 'size-16',
+          )}
+        >
+          <div
+            className={cn(
+              variant === 'spotlight' ? 'size-10 md:size-12' : 'size-8',
+              'bg-green',
+            )}
+            style={iconMaskStyle}
+          />
+        </div>
       )}
-      {title && <h3 className="text-lg font-semibold text-text">{title}</h3>}
-      {description && (
-        <FormattedText as="div" className="text-subtext-0">
-          {description}
-        </FormattedText>
-      )}
+      <div className="min-w-0">
+        {title && (
+          <h3
+            className={cn(
+              'text-text',
+              variant === 'spotlight'
+                ? 'mb-3 max-w-2xl font-serif text-3xl leading-tight font-normal md:text-4xl'
+                : 'mb-2 text-base leading-5 font-bold',
+            )}
+          >
+            {title}
+          </h3>
+        )}
+        {description && (
+          <FormattedText
+            as="div"
+            className={cn(
+              'text-subtext-0',
+              variant === 'spotlight'
+                ? 'max-w-4xl text-base leading-7'
+                : 'text-sm leading-6',
+            )}
+          >
+            {description}
+          </FormattedText>
+        )}
+      </div>
     </div>
   );
 }

@@ -5,8 +5,8 @@
     "12db327c-9a19-4952-9389-80ba8354a5b0": {
       "type": "js.header",
       "props": {
-        "darkVariant": true,
-        "backgroundColor": "crust"
+        "darkVariant": false,
+        "backgroundColor": "cream"
       },
       "slots": {
         "branding": ["aaef79ba-f04f-42bc-b888-e0229d46c9b5"],
@@ -20,7 +20,10 @@
       }
     },
     "95805f3a-b32e-4d58-b08e-f506579ab18f": {
-      "type": "js.navigation"
+      "type": "js.navigation",
+      "props": {
+        "activeUrl": "/page/home"
+      }
     },
     "8219557f-cb7b-4ccd-970f-5aba5eaf776b": {
       "type": "js.hero",
@@ -29,21 +32,14 @@
         "description": "AI agents are extraordinary at speed, scale, and automation. We add the human layer they need: creative direction, editorial judgment, and strategic thinking that turns capable output into <em>standout work</em>.",
         "buttonLabel": "Build your hybrid team",
         "buttonLink": "/page/1",
-        "image": {
-          "src": "https://images.unsplash.com/photo-1752650736024-d6aac18abc2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
-          "alt": "People working at a desk",
-          "width": 1770,
-          "height": 996
-        },
-        "darkVariant": true,
-        "backgroundColor": "crust"
+        "backgroundColor": "cream"
       }
     },
     "ecaa0198-64b4-49d8-8ca9-c7cd600a955a": {
       "type": "js.section",
       "props": {
         "darkVariant": false,
-        "backgroundColor": "base"
+        "backgroundColor": "paper"
       },
       "slots": {
         "content": [
@@ -54,15 +50,16 @@
       }
     },
     "0558829e-4676-45bf-aa34-9838c7ad3ddc": {
-      "type": "js.heading",
+      "type": "js.paragraph",
       "props": {
-        "text": "We make great AI outputs genuinely excellent."
+        "text": "We make great AI outputs genuinely excellent.",
+        "variant": "eyebrow"
       }
     },
     "7ce396bc-5eca-4147-8518-424fb1f7636c": {
-      "type": "js.paragraph",
+      "type": "js.heading",
       "props": {
-        "text": "<p>Your agents generate options fast. Our specialists shape those options into work people trust, remember, and act on.</p>"
+        "text": "Your agents generate options fast. Our specialists shape those options into work people trust, remember, and act on."
       }
     },
     "7899ab7e-c603-4110-9b2a-25ca3a4d0fa7": {
@@ -81,8 +78,7 @@
     "35379040-c351-4050-9c6d-8e4cd795dcf8": {
       "type": "js.card",
       "props": {
-        "iconNameFromLucide": "lightbulb",
-        "iconColor": "sapphire",
+        "iconNameFromLucide": "pen-tool",
         "title": "Creative direction",
         "description": "<p>We shape raw ideas and AI-generated directions into clear creative choices your team can execute confidently.</p>"
       }
@@ -90,8 +86,7 @@
     "25bfb9a8-d04d-4158-b84f-3c9381f211df": {
       "type": "js.card",
       "props": {
-        "iconNameFromLucide": "book-open",
-        "iconColor": "rosewater",
+        "iconNameFromLucide": "message-circle",
         "title": "Product storytelling",
         "description": "<p>We turn feature lists and technical outputs into narratives customers understand and care about.</p>"
       }
@@ -99,8 +94,7 @@
     "96df2f62-c80e-4ad3-8f68-a0d35b5dfd66": {
       "type": "js.card",
       "props": {
-        "iconNameFromLucide": "pen-tool",
-        "iconColor": "mauve",
+        "iconNameFromLucide": "shield-check",
         "title": "Brand and voice systems",
         "description": "<p>We define reusable messaging rules so AI outputs stay on-brand across channels, markets, and teams.</p>"
       }
@@ -109,7 +103,6 @@
       "type": "js.card",
       "props": {
         "iconNameFromLucide": "megaphone",
-        "iconColor": "yellow",
         "title": "Campaign concepts",
         "description": "<p>We develop campaign themes and creative briefs that connect business goals to audience needs.</p>"
       }
@@ -117,8 +110,7 @@
     "62a3be9f-7210-4ccc-9282-d88fd56b4325": {
       "type": "js.card",
       "props": {
-        "iconNameFromLucide": "file-chart-column-increasing",
-        "iconColor": "green",
+        "iconNameFromLucide": "chart-column-increasing",
         "title": "Insight synthesis",
         "description": "<p>We combine model output, research, and team context into prioritized insights that drive better decisions.</p>"
       }
@@ -126,8 +118,7 @@
     "96855491-06b0-4b82-804a-030f0b24d2e8": {
       "type": "js.card",
       "props": {
-        "iconNameFromLucide": "presentation",
-        "iconColor": "pink",
+        "iconNameFromLucide": "file-text",
         "description": "<p>We craft high-stakes updates, memos, and presentations with the right tone, structure, and strategic focus.</p>",
         "title": "Executive communication"
       }
@@ -136,38 +127,64 @@
       "type": "js.section",
       "props": {
         "darkVariant": false,
-        "backgroundColor": "crust"
+        "backgroundColor": "sage-band"
       },
       "slots": {
-        "content": [
-          "0d4c1178-1fef-4392-8812-3bcd33bb8912",
-          "50d3bb9e-d06e-4ae0-b30d-6f3690300a84"
-        ]
+        "content": ["9f03d491-1c75-45b6-8e4c-75c837a3b964"]
       }
     },
-    "0d4c1178-1fef-4392-8812-3bcd33bb8912": {
-      "type": "js.heading",
+    "9f03d491-1c75-45b6-8e4c-75c837a3b964": {
+      "type": "js.image-feature",
       "props": {
-        "text": "We bring human strengths to AI-first teams."
-      }
-    },
-    "50d3bb9e-d06e-4ae0-b30d-6f3690300a84": {
-      "type": "js.paragraph",
-      "props": {
-        "text": "We partner with AI-native teams to add what machines still struggle to replicate: taste, narrative coherence, emotional resonance, and domain-informed judgment."
+        "image": {
+          "src": "https://images.unsplash.com/photo-1752650736024-d6aac18abc2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+          "alt": "Woman playing the violin",
+          "width": 1770,
+          "height": 1180
+        },
+        "eyebrow": "Human judgment, applied",
+        "title": "We bring human strengths to AI-first teams.",
+        "description": "<p>We partner with AI-native teams to add what machines still struggle to replicate: taste, narrative coherence, emotional resonance, and domain-informed judgment.</p>"
       }
     },
     "1d3ff9bf-917b-4658-9946-ed65622cf0c3": {
       "type": "js.section",
       "props": {
-        "darkVariant": true,
-        "backgroundColor": "base"
+        "darkVariant": false,
+        "backgroundColor": "cream"
       },
       "slots": {
-        "content": [
+        "content": ["0ef21892-c9a4-4f4f-b5de-ea0c1579c4c3"]
+      }
+    },
+    "0ef21892-c9a4-4f4f-b5de-ea0c1579c4c3": {
+      "type": "js.pricing-table",
+      "props": {
+        "entryTierName": "Starter",
+        "entryTierDescription": "For pilots and focused projects",
+        "entryTierIconNameFromLucide": "send",
+        "entryTierPriceMonthly": 2500,
+        "entryTierPriceAnnual": 25000,
+        "midTierName": "Growth",
+        "midTierDescription": "For teams scaling AI-assisted delivery",
+        "midTierIconNameFromLucide": "chart-no-axes-column-increasing",
+        "midTierPriceMonthly": 4500,
+        "midTierPriceAnnual": 45000,
+        "advancedTierName": "Enterprise",
+        "advancedTierDescription": "For complex organizations and mission-critical work",
+        "advancedTierIconNameFromLucide": "building-2",
+        "advancedTierPriceMonthly": 9500,
+        "advancedTierPriceAnnual": 95000,
+        "defaultTier": "mid",
+        "annualSelectedByDefault": false,
+        "annualBadgeText": "Save 17%",
+        "buttonLabel": "Choose {tier}",
+        "buttonLink": "/page/1"
+      },
+      "slots": {
+        "intro": [
           "1151a3f7-577b-40b4-b272-e6055daa5ca9",
-          "f86ed772-6a4b-44c8-a8ea-06fdcbc8c0d2",
-          "0ef21892-c9a4-4f4f-b5de-ea0c1579c4c3"
+          "f86ed772-6a4b-44c8-a8ea-06fdcbc8c0d2"
         ]
       }
     },
@@ -183,34 +200,12 @@
         "text": "<p>Choose the model that fits your stage, then scale across strategy, design, and communication with a team that knows how to collaborate with AI systems.</p>"
       }
     },
-    "0ef21892-c9a4-4f4f-b5de-ea0c1579c4c3": {
-      "type": "js.pricing-table",
-      "props": {
-        "entryTierName": "Starter",
-        "entryTierDescription": "For pilots and focused projects",
-        "entryTierPriceMonthly": 2500,
-        "entryTierPriceAnnual": 25000,
-        "midTierName": "Growth",
-        "midTierDescription": "For teams scaling AI-assisted delivery",
-        "midTierPriceMonthly": 4500,
-        "midTierPriceAnnual": 45000,
-        "advancedTierName": "Enterprise",
-        "advancedTierDescription": "For complex organizations and mission-critical work",
-        "advancedTierPriceMonthly": 9500,
-        "advancedTierPriceAnnual": 95000,
-        "defaultTier": "entry",
-        "annualSelectedByDefault": false,
-        "annualBadgeText": "Save 17%",
-        "buttonLabel": "Choose {tier}",
-        "buttonLink": "/page/1"
-      }
-    },
     "c3ba66be-2b6b-4030-96d0-3a99b77471fe": {
       "type": "js.footer",
       "props": {
-        "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc. All rights reserved.",
+        "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc.",
         "darkVariant": true,
-        "backgroundColor": "crust"
+        "backgroundColor": "navy"
       },
       "slots": {
         "branding": ["dfbead05-a679-4531-b629-995b7bed1cb0"]

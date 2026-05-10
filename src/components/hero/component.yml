@@ -36,32 +36,19 @@ props:
       title: Button link
       examples:
         - /page/1
-    image:
-      type: object
-      $ref: json-schema-definitions://canvas.module/image
-      title: Image
-      examples:
-        - src: >-
-            https://images.unsplash.com/photo-1752650736024-d6aac18abc2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80
-          alt: Woman playing the violin
-          width: 1770
-          height: 1180
-    darkVariant:
-      type: boolean
-      title: Dark variant
-      examples:
-        - true
     backgroundColor:
       type: string
       enum:
-        - base
-        - mantle
-        - crust
+        - cream
+        - paper
+        - sage-band
+        - navy
       meta:enum:
-        base: Base
-        mantle: Mantle
-        crust: Crust
+        cream: Cream
+        paper: Paper
+        sage-band: Sage band
+        navy: Navy
       title: Background color
       examples:
-        - crust
+        - cream
 slots: []

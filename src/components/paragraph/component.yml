@@ -22,4 +22,15 @@ props:
           Choose the model that fits your stage, then scale across strategy,
           design, and communication with a team that knows how to collaborate
           with AI systems.
+    variant:
+      type: string
+      enum:
+        - body
+        - eyebrow
+      meta:enum:
+        body: Body
+        eyebrow: Eyebrow
+      title: Variant
+      examples:
+        - body
 slots: []

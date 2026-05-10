@@ -10,9 +10,10 @@ const sectionVariants = cva('', {
       dark: 'dark',
     },
     backgroundColor: {
-      base: 'bg-base',
-      mantle: 'bg-mantle',
-      crust: 'bg-crust',
+      cream: 'bg-cream',
+      paper: 'bg-paper',
+      'sage-band': 'bg-sage-band',
+      navy: 'bg-navy',
     },
   },
   defaultVariants: {
@@ -51,7 +52,7 @@ function Section({
       )}
       {...props}
     >
-      <div className="mx-auto flex max-w-7xl min-w-sm flex-col items-center gap-6 p-12 px-4 md:p-16 md:px-12 lg:gap-8 lg:px-16">
+      <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-8 px-5 py-10 sm:px-8 md:py-12 lg:px-16">
         {content}
       </div>
     </section>
