@@ -26,9 +26,12 @@ function Navigation({
   // Data fetching is supported using SWR and @drupal-api-client/json-api-client.
   // @see https://project.pages.drupalcode.org/canvas/code-components/data-fetching
   return (
-    <div className={cn('flex items-center xl:gap-12', className)} {...props}>
-      <nav aria-label="Global" className="hidden xl:block!">
-        <ul className="flex items-center gap-8 text-sm font-medium">
+    <div
+      className={cn('flex items-center lg:gap-7 xl:gap-12', className)}
+      {...props}
+    >
+      <nav aria-label="Global" className="hidden lg:block!">
+        <ul className="flex items-center gap-5 text-sm font-medium xl:gap-8">
           {menu.map((item) => (
             <li key={item.title}>
               <a
@@ -45,7 +48,7 @@ function Navigation({
         </ul>
       </nav>
       <div className="flex items-center gap-3">
-        <div className="hidden xl:flex xl:items-center xl:gap-5">
+        <div className="hidden lg:flex lg:items-center lg:gap-4 xl:gap-5">
           <a
             href="/page/login"
             className="inline-flex text-sm font-medium text-text transition-colors hover:text-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green"
@@ -56,14 +59,14 @@ function Navigation({
           <div className="flex">
             <a
               href="/page/register"
-              className="inline-flex min-h-12 items-center rounded-md bg-text px-6 text-sm font-bold text-inverted-text shadow-sm transition hover:bg-text/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green"
+              className="inline-flex min-h-12 items-center rounded-md bg-text px-5 text-sm font-bold text-inverted-text shadow-sm transition hover:bg-text/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green xl:px-6"
             >
               Register
             </a>
           </div>
         </div>
 
-        <div className="block xl:hidden">
+        <div className="block lg:hidden">
           <button
             type="button"
             className="rounded-sm bg-surface-0 p-2 text-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green"
