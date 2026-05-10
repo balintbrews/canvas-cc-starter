@@ -1,46 +1,67 @@
 {
   "mocks": [
     {
-      "name": "Branded header",
-      "slots": {
-        "branding": ["header-logo-default"],
-        "navigation": ["header-navigation-default"]
-      },
-      "elements": {
-        "header-logo-default": {
-          "type": "logo",
-          "props": {
-            "linkToFrontPage": true
-          }
-        },
-        "header-navigation-default": {
-          "type": "navigation"
-        }
-      }
-    },
-    {
-      "name": "Light",
+      "name": "Paper background",
       "props": {
-        "darkVariant": false
+        "backgroundColor": "paper"
       },
       "slots": {
-        "branding": ["header-logo-dark"],
-        "navigation": ["header-navigation-dark"]
+        "branding": ["header-logo-paper"],
+        "navigation": ["header-navigation-paper"]
       },
       "elements": {
-        "header-logo-dark": {
+        "header-logo-paper": {
           "type": "logo",
           "props": {
             "linkToFrontPage": true
           }
         },
-        "header-navigation-dark": {
+        "header-navigation-paper": {
           "type": "navigation"
         }
       }
     },
     {
-      "name": "Empty"
+      "name": "Mist background",
+      "props": {
+        "backgroundColor": "mist"
+      },
+      "slots": {
+        "branding": ["header-logo-mist"],
+        "navigation": ["header-navigation-mist"]
+      },
+      "elements": {
+        "header-logo-mist": {
+          "type": "logo",
+          "props": {
+            "linkToFrontPage": true
+          }
+        },
+        "header-navigation-mist": {
+          "type": "navigation"
+        }
+      }
+    },
+    {
+      "name": "Navy background",
+      "props": {
+        "backgroundColor": "navy"
+      },
+      "slots": {
+        "branding": ["header-logo-navy"],
+        "navigation": ["header-navigation-navy"]
+      },
+      "elements": {
+        "header-logo-navy": {
+          "type": "logo",
+          "props": {
+            "linkToFrontPage": true
+          }
+        },
+        "header-navigation-navy": {
+          "type": "navigation"
+        }
+      }
     }
   ]
 }

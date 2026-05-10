@@ -6,19 +6,14 @@ import type { VariantProps } from 'class-variance-authority';
 
 const headerVariants = cva('', {
   variants: {
-    colorScheme: {
-      light: '',
-      dark: 'dark',
-    },
     backgroundColor: {
       cream: 'bg-cream',
       paper: 'bg-paper',
-      'sage-band': 'bg-sage-band',
-      navy: 'bg-navy',
+      mist: 'bg-mist',
+      navy: 'dark bg-navy',
     },
   },
   defaultVariants: {
-    colorScheme: 'light',
     backgroundColor: 'cream',
   },
 });
@@ -33,7 +28,6 @@ export interface HeaderProps extends Omit<
 > {
   backgroundColor: HeaderBackgroundColor;
   branding?: ReactNode;
-  darkVariant?: boolean;
   navigation?: ReactNode;
 }
 
@@ -41,7 +35,6 @@ function Header({
   backgroundColor,
   branding,
   className,
-  darkVariant,
   navigation,
   ...props
 }: HeaderProps) {
@@ -50,7 +43,6 @@ function Header({
       className={cn(
         headerVariants({
           backgroundColor,
-          colorScheme: darkVariant ? 'dark' : 'light',
         }),
         className,
       )}

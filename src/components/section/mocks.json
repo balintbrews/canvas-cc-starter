@@ -1,9 +1,8 @@
 {
   "mocks": [
     {
-      "name": "Heading and paragraph",
+      "name": "Cream background",
       "props": {
-        "darkVariant": false,
         "backgroundColor": "cream"
       },
       "slots": {
@@ -25,22 +24,67 @@
       }
     },
     {
-      "name": "Dark",
+      "name": "Paper background",
       "props": {
-        "darkVariant": true,
-        "backgroundColor": "cream"
+        "backgroundColor": "paper"
       },
       "slots": {
-        "content": ["section-dark-heading", "section-dark-paragraph"]
+        "content": ["section-paper-heading", "section-paper-paragraph"]
       },
       "elements": {
-        "section-dark-heading": {
+        "section-paper-heading": {
           "type": "heading",
           "props": {
             "text": "We bring human strengths to AI-first teams."
           }
         },
-        "section-dark-paragraph": {
+        "section-paper-paragraph": {
+          "type": "paragraph",
+          "props": {
+            "text": "We partner with AI-native teams to add what machines still struggle to replicate: taste, narrative coherence, emotional resonance, and domain-informed judgment."
+          }
+        }
+      }
+    },
+    {
+      "name": "Mist background",
+      "props": {
+        "backgroundColor": "mist"
+      },
+      "slots": {
+        "content": ["section-mist-heading", "section-mist-paragraph"]
+      },
+      "elements": {
+        "section-mist-heading": {
+          "type": "heading",
+          "props": {
+            "text": "We bring human strengths to AI-first teams."
+          }
+        },
+        "section-mist-paragraph": {
+          "type": "paragraph",
+          "props": {
+            "text": "We partner with AI-native teams to add what machines still struggle to replicate: taste, narrative coherence, emotional resonance, and domain-informed judgment."
+          }
+        }
+      }
+    },
+    {
+      "name": "Navy background",
+      "props": {
+        "backgroundColor": "navy"
+      },
+      "slots": {
+        "content": ["section-navy-heading", "section-navy-paragraph"]
+      },
+      "elements": {
+        "section-navy-heading": {
+          "type": "heading",
+          "props": {
+            "text": "We bring human strengths to AI-first teams."
+          }
+        },
+        "section-navy-paragraph": {
           "type": "paragraph",
           "props": {
             "text": "We partner with AI-native teams to add what machines still struggle to replicate: taste, narrative coherence, emotional resonance, and domain-informed judgment."

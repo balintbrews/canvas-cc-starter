@@ -1,6 +1,26 @@
 import { hasEmptySlotPlaceholder } from '@/lib/types';
+import { cva } from 'class-variance-authority';
 import { cn, FormattedText } from 'drupal-canvas';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+import type { VariantProps } from 'class-variance-authority';
+
+const footerVariants = cva('', {
+  variants: {
+    backgroundColor: {
+      cream: 'bg-cream',
+      paper: 'bg-paper',
+      mist: 'bg-mist',
+      navy: 'dark bg-navy',
+    },
+  },
+  defaultVariants: {
+    backgroundColor: 'cream',
+  },
+});
+
+type FooterBackgroundColor = NonNullable<
+  VariantProps<typeof footerVariants>['backgroundColor']
+>;
 
 function LinkedInLogoIcon() {
   return (
@@ -44,7 +64,7 @@ function SocialLink({ children, label, url }: SocialLinkProps) {
   return (
     <a
       href={url}
-      className="inline-flex size-10 items-center justify-center rounded-full border border-inverted-text/30 text-inverted-text transition hover:border-green hover:text-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green"
+      className="inline-flex size-10 items-center justify-center rounded-full border border-text/30 text-text transition hover:border-green hover:text-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green"
       aria-label={label}
     >
       {children}
@@ -56,6 +76,7 @@ export interface FooterProps extends Omit<
   ComponentPropsWithoutRef<'footer'>,
   'children'
 > {
+  backgroundColor: FooterBackgroundColor;
   branding?: ReactNode;
   copyrightNotice: string;
   emailUrl?: string;
@@ -64,6 +85,7 @@ export interface FooterProps extends Omit<
 }
 
 function Footer({
+  backgroundColor,
   branding,
   className,
   copyrightNotice,
@@ -73,7 +95,10 @@ function Footer({
   ...props
 }: FooterProps) {
   return (
-    <footer className={cn('bg-navy text-inverted-text', className)} {...props}>
+    <footer
+      className={cn(footerVariants({ backgroundColor }), className)}
+      {...props}
+    >
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-8 sm:px-8 md:grid-cols-[1fr_auto] md:items-center lg:px-16">
         <div className="flex flex-col gap-3">
           <div
@@ -86,7 +111,7 @@ function Footer({
           </div>
           <FormattedText
             as="div"
-            className="text-xs leading-5 text-inverted-text/65 md:text-sm"
+            className="text-xs leading-5 text-text/65 md:text-sm"
           >
             {copyrightNotice}
           </FormattedText>

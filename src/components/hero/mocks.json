@@ -1,0 +1,22 @@
+{
+  "mocks": [
+    {
+      "name": "Paper background",
+      "props": {
+        "backgroundColor": "paper"
+      }
+    },
+    {
+      "name": "Mist background",
+      "props": {
+        "backgroundColor": "mist"
+      }
+    },
+    {
+      "name": "Navy background",
+      "props": {
+        "backgroundColor": "navy"
+      }
+    }
+  ]
+}

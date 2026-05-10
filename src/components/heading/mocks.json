@@ -7,7 +7,6 @@
         "heading-in-a-section": {
           "type": "section",
           "props": {
-            "darkVariant": false,
             "backgroundColor": "cream"
           },
           "slots": {
@@ -23,14 +22,13 @@
       }
     },
     {
-      "name": "Dark",
+      "name": "Navy background",
       "root": "heading-dark-preview",
       "elements": {
         "heading-dark-preview": {
           "type": "section",
           "props": {
-            "darkVariant": true,
-            "backgroundColor": "cream"
+            "backgroundColor": "navy"
           },
           "slots": {
             "content": ["heading-dark"]

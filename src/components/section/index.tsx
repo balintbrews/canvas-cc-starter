@@ -5,19 +5,12 @@ import type { VariantProps } from 'class-variance-authority';
 
 const sectionVariants = cva('', {
   variants: {
-    colorScheme: {
-      light: '',
-      dark: 'dark',
-    },
     backgroundColor: {
       cream: 'bg-cream',
       paper: 'bg-paper',
-      'sage-band': 'bg-sage-band',
-      navy: 'bg-navy',
+      mist: 'bg-mist',
+      navy: 'dark bg-navy',
     },
-  },
-  defaultVariants: {
-    colorScheme: 'light',
   },
 });
 
@@ -31,14 +24,12 @@ export interface SectionProps extends Omit<
 > {
   backgroundColor?: SectionBackgroundColor;
   content?: ReactNode;
-  darkVariant?: boolean;
 }
 
 function Section({
   backgroundColor,
   className,
   content,
-  darkVariant,
   ...props
 }: SectionProps) {
   return (
@@ -46,7 +37,6 @@ function Section({
       className={cn(
         sectionVariants({
           backgroundColor,
-          colorScheme: darkVariant ? 'dark' : 'light',
         }),
         className,
       )}

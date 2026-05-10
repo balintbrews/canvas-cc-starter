@@ -1,20 +1,60 @@
 {
   "mocks": [
     {
-      "name": "Branded footer",
+      "name": "Paper background",
       "props": {
+        "backgroundColor": "paper",
         "emailUrl": "mailto:hello@example.com",
         "linkedInUrl": "https://www.linkedin.com",
         "xUrl": "https://x.com"
       },
       "slots": {
-        "branding": ["footer-logo-default"]
+        "branding": ["footer-logo-paper"]
       },
       "elements": {
-        "footer-logo-default": {
+        "footer-logo-paper": {
           "type": "logo",
           "props": {
-            "darkBackground": true,
+            "linkToFrontPage": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Mist background",
+      "props": {
+        "backgroundColor": "mist",
+        "emailUrl": "mailto:hello@example.com",
+        "linkedInUrl": "https://www.linkedin.com",
+        "xUrl": "https://x.com"
+      },
+      "slots": {
+        "branding": ["footer-logo-mist"]
+      },
+      "elements": {
+        "footer-logo-mist": {
+          "type": "logo",
+          "props": {
+            "linkToFrontPage": false
+          }
+        }
+      }
+    },
+    {
+      "name": "Navy background",
+      "props": {
+        "backgroundColor": "navy",
+        "emailUrl": "mailto:hello@example.com",
+        "linkedInUrl": "https://www.linkedin.com",
+        "xUrl": "https://x.com"
+      },
+      "slots": {
+        "branding": ["footer-logo-navy"]
+      },
+      "elements": {
+        "footer-logo-navy": {
+          "type": "logo",
+          "props": {
             "linkToFrontPage": false
           }
         }

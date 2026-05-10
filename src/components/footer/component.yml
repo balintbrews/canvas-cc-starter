@@ -2,9 +2,25 @@ name: Footer
 machineName: footer
 status: true
 required:
+  - backgroundColor
   - copyrightNotice
 props:
   properties:
+    backgroundColor:
+      type: string
+      enum:
+        - cream
+        - paper
+        - mist
+        - navy
+      meta:enum:
+        cream: Cream
+        paper: Paper
+        mist: Mist
+        navy: Navy
+      title: Background color
+      examples:
+        - cream
     copyrightNotice:
       type: string
       contentMediaType: text/html

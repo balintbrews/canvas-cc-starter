@@ -5,7 +5,6 @@
     "careers-header": {
       "type": "js.header",
       "props": {
-        "darkVariant": false,
         "backgroundColor": "cream"
       },
       "slots": {
@@ -28,7 +27,6 @@
     "careers-section": {
       "type": "js.section",
       "props": {
-        "darkVariant": false,
         "backgroundColor": "paper"
       },
       "slots": {
@@ -57,6 +55,7 @@
     "careers-footer": {
       "type": "js.footer",
       "props": {
+        "backgroundColor": "navy",
         "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc.",
         "linkedInUrl": "https://www.linkedin.com",
         "xUrl": "https://x.com",
@@ -69,7 +68,6 @@
     "careers-footer-logo": {
       "type": "js.logo",
       "props": {
-        "darkBackground": true,
         "linkToFrontPage": false
       }
     }

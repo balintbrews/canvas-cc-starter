@@ -37,14 +37,13 @@
       }
     },
     {
-      "name": "Dark",
+      "name": "Navy background",
       "root": "pricing-table-dark-preview",
       "elements": {
         "pricing-table-dark-preview": {
           "type": "section",
           "props": {
-            "darkVariant": true,
-            "backgroundColor": "cream"
+            "backgroundColor": "navy"
           },
           "slots": {
             "content": ["pricing-table-dark"]

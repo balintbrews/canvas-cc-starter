@@ -1,14 +1,19 @@
 {
   "mocks": [
     {
-      "name": "Dark",
+      "name": "No link",
+      "props": {
+        "linkToFrontPage": false
+      }
+    },
+    {
+      "name": "Navy background",
       "root": "logo-dark-preview",
       "elements": {
         "logo-dark-preview": {
           "type": "section",
           "props": {
-            "darkVariant": true,
-            "backgroundColor": "cream"
+            "backgroundColor": "navy"
           },
           "slots": {
             "content": ["logo-dark"]
@@ -20,12 +25,6 @@
             "linkToFrontPage": true
           }
         }
-      }
-    },
-    {
-      "name": "No link",
-      "props": {
-        "linkToFrontPage": false
       }
     }
   ]

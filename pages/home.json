@@ -5,7 +5,6 @@
     "12db327c-9a19-4952-9389-80ba8354a5b0": {
       "type": "js.header",
       "props": {
-        "darkVariant": false,
         "backgroundColor": "cream"
       },
       "slots": {
@@ -38,7 +37,6 @@
     "ecaa0198-64b4-49d8-8ca9-c7cd600a955a": {
       "type": "js.section",
       "props": {
-        "darkVariant": false,
         "backgroundColor": "paper"
       },
       "slots": {
@@ -126,8 +124,7 @@
     "496c3054-2795-46ed-9c96-2a2b8f9ffcbd": {
       "type": "js.section",
       "props": {
-        "darkVariant": false,
-        "backgroundColor": "sage-band"
+        "backgroundColor": "mist"
       },
       "slots": {
         "content": ["9f03d491-1c75-45b6-8e4c-75c837a3b964"]
@@ -150,7 +147,6 @@
     "1d3ff9bf-917b-4658-9946-ed65622cf0c3": {
       "type": "js.section",
       "props": {
-        "darkVariant": false,
         "backgroundColor": "cream"
       },
       "slots": {
@@ -203,6 +199,7 @@
     "c3ba66be-2b6b-4030-96d0-3a99b77471fe": {
       "type": "js.footer",
       "props": {
+        "backgroundColor": "navy",
         "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc.",
         "linkedInUrl": "https://www.linkedin.com",
         "xUrl": "https://x.com",
@@ -215,7 +212,6 @@
     "dfbead05-a679-4531-b629-995b7bed1cb0": {
       "type": "js.logo",
       "props": {
-        "darkBackground": true,
         "linkToFrontPage": false
       }
     }

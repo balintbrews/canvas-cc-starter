@@ -29,7 +29,7 @@
   --ink: hsl(215deg, 55%, 15%);
   --cream: hsl(48deg, 55%, 97%);
   --paper: hsl(45deg, 70%, 99%);
-  --sage-band: hsl(80deg, 35%, 94%);
+  --mist: hsl(80deg, 35%, 94%);
   --sage: hsl(96deg, 25%, 82%);
   --green: hsl(119deg, 21%, 46%);
   --deep-green: hsl(161deg, 42%, 25%);
@@ -76,7 +76,7 @@
   --color-ink: var(--ink);
   --color-cream: var(--cream);
   --color-paper: var(--paper);
-  --color-sage-band: var(--sage-band);
+  --color-mist: var(--mist);
   --color-sage: var(--sage);
   --color-green: var(--green);
   --color-deep-green: var(--deep-green);

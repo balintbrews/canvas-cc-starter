@@ -37,8 +37,9 @@ function Navigation({
               <a
                 href={item.url}
                 className={cn(
-                  'inline-flex min-h-10 items-center border-b border-transparent text-text transition-colors hover:text-green',
-                  item.url === activeUrl && 'border-green text-green',
+                  'inline-flex min-h-10 items-center border-b border-transparent text-text transition-colors hover:text-green dark:text-subtext-0 dark:hover:text-cream',
+                  item.url === activeUrl &&
+                    'border-green text-green dark:border-cream dark:text-cream',
                 )}
               >
                 {item.title}
@@ -51,7 +52,7 @@ function Navigation({
         <div className="hidden lg:flex lg:items-center lg:gap-4 xl:gap-5">
           <a
             href="/page/login"
-            className="inline-flex text-sm font-medium text-text transition-colors hover:text-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green"
+            className="inline-flex text-sm font-medium text-text transition-colors hover:text-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green dark:text-subtext-0 dark:hover:text-cream"
           >
             Login
           </a>
@@ -59,7 +60,7 @@ function Navigation({
           <div className="flex">
             <a
               href="/page/register"
-              className="inline-flex min-h-12 items-center rounded-md bg-text px-5 text-sm font-bold text-inverted-text shadow-sm transition hover:bg-text/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green xl:px-6"
+              className="inline-flex min-h-12 items-center rounded-md bg-surface-1 px-5 text-sm font-bold text-text shadow-sm transition hover:bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green xl:px-6 dark:hover:bg-surface-0"
             >
               Register
             </a>

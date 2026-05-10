@@ -7,7 +7,7 @@
         "image-feature-in-section": {
           "type": "section",
           "props": {
-            "backgroundColor": "sage-band"
+            "backgroundColor": "mist"
           },
           "slots": {
             "content": ["image-feature-default"]

@@ -7,8 +7,7 @@
         "navigation-primary-navigation": {
           "type": "section",
           "props": {
-            "darkVariant": false,
-            "backgroundColor": "sage-band"
+            "backgroundColor": "cream"
           },
           "slots": {
             "content": ["navigation-default"]
@@ -20,14 +19,13 @@
       }
     },
     {
-      "name": "Dark",
+      "name": "Navy background",
       "root": "navigation-dark-preview",
       "elements": {
         "navigation-dark-preview": {
           "type": "section",
           "props": {
-            "darkVariant": true,
-            "backgroundColor": "sage-band"
+            "backgroundColor": "navy"
           },
           "slots": {
             "content": ["navigation-dark"]

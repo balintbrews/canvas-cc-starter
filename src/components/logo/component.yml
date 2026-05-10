@@ -4,11 +4,6 @@ status: true
 required: []
 props:
   properties:
-    darkBackground:
-      type: boolean
-      title: Dark background
-      examples:
-        - false
     linkToFrontPage:
       type: boolean
       title: Link to front page

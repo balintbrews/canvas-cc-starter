@@ -41,12 +41,12 @@ props:
       enum:
         - cream
         - paper
-        - sage-band
+        - mist
         - navy
       meta:enum:
         cream: Cream
         paper: Paper
-        sage-band: Sage band
+        mist: Mist
         navy: Navy
       title: Background color
       examples:

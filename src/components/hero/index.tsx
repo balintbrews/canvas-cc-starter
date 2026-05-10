@@ -9,8 +9,8 @@ const heroVariants = cva('', {
     backgroundColor: {
       cream: 'bg-cream',
       paper: 'bg-paper',
-      'sage-band': 'bg-sage-band',
-      navy: 'bg-navy',
+      mist: 'bg-mist',
+      navy: 'dark bg-navy',
     },
   },
   defaultVariants: {
@@ -53,9 +53,13 @@ export interface HeroProps extends Omit<
   title: string;
 }
 
-function HeroGraphic() {
+function HeroGraphic({ isNavy = false }: { isNavy?: boolean }) {
   const gradientId = useId().replace(/:/g, '');
   const fadeId = useId().replace(/:/g, '');
+  const linePrimaryColor = isNavy
+    ? 'var(--color-sage)'
+    : 'var(--color-deep-green)';
+  const lineSecondaryColor = 'var(--color-green)';
 
   return (
     <div className="relative h-full min-h-[24rem] w-[clamp(44rem,62vw,62rem)] overflow-hidden">
@@ -67,12 +71,21 @@ function HeroGraphic() {
       >
         <defs>
           <linearGradient id={gradientId} x1="0%" x2="100%" y1="0%" y2="100%">
-            <stop offset="0%" stopColor="var(--color-sage)" />
-            <stop offset="100%" stopColor="var(--color-paper)" />
+            <stop
+              offset="0%"
+              stopColor={isNavy ? 'var(--color-mist)' : 'var(--color-sage)'}
+            />
+            <stop
+              offset="100%"
+              stopColor={isNavy ? 'var(--color-sage)' : 'var(--color-paper)'}
+            />
           </linearGradient>
           <radialGradient id={fadeId} cx="50%" cy="50%" r="60%">
             <stop offset="0%" stopColor="var(--color-paper)" />
-            <stop offset="100%" stopColor="var(--color-paper)" />
+            <stop
+              offset="100%"
+              stopColor={isNavy ? 'var(--color-mist)' : 'var(--color-paper)'}
+            />
           </radialGradient>
         </defs>
 
@@ -84,7 +97,7 @@ function HeroGraphic() {
               cy="246"
               r={92 + index * 14}
               fill="none"
-              stroke="var(--color-green)"
+              stroke={isNavy ? 'var(--color-sage)' : 'var(--color-green)'}
               strokeDasharray="1 8"
               strokeWidth="1"
             />
@@ -98,7 +111,12 @@ function HeroGraphic() {
           fill={`url(#${gradientId})`}
           opacity="0.95"
         />
-        <circle cx="382" cy="248" r="112" fill="var(--color-navy)" />
+        <circle
+          cx="382"
+          cy="248"
+          r="112"
+          fill={isNavy ? 'var(--color-surface-2)' : 'var(--color-navy)'}
+        />
         <circle
           cx="326"
           cy="248"
@@ -114,11 +132,9 @@ function HeroGraphic() {
               188 + offset
             } 700 ${146 + offset}`}
             fill="none"
-            stroke={
-              index % 3 === 0 ? 'var(--color-deep-green)' : 'var(--color-green)'
-            }
+            stroke={index % 3 === 0 ? linePrimaryColor : lineSecondaryColor}
             strokeWidth="1"
-            opacity="0.45"
+            opacity={isNavy ? '0.58' : '0.45'}
           />
         ))}
 
@@ -135,16 +151,25 @@ function HeroGraphic() {
             cx={cx}
             cy={cy}
             r={index % 2 === 0 ? 2.8 : 2.2}
-            fill={
-              index % 2 === 0 ? 'var(--color-deep-green)' : 'var(--color-green)'
-            }
+            fill={index % 2 === 0 ? linePrimaryColor : lineSecondaryColor}
             opacity="0.8"
           />
         ))}
 
         <g transform="translate(306 224)">
-          <rect width="10" height="48" rx="5" className="fill-text" />
-          <rect x="28" width="10" height="48" rx="5" className="fill-text" />
+          <rect
+            width="10"
+            height="48"
+            rx="5"
+            className={isNavy ? 'fill-navy' : 'fill-text'}
+          />
+          <rect
+            x="28"
+            width="10"
+            height="48"
+            rx="5"
+            className={isNavy ? 'fill-navy' : 'fill-text'}
+          />
           <rect x="14" width="10" height="18" rx="5" className="fill-green" />
           <rect
             x="14"
@@ -180,10 +205,10 @@ function Hero({
       )}
       {...props}
     >
-      <div className="relative mx-auto min-h-[32rem] max-w-7xl px-5 pt-10 pr-20 pb-10 sm:px-8 sm:pr-24 md:min-h-[34rem] md:pt-12 md:pr-[36vw] md:pb-12 lg:px-16 lg:pt-14 lg:pr-[42vw] lg:pb-8 xl:pr-[38rem]">
+      <div className="relative mx-auto min-h-128 max-w-7xl px-5 pt-10 pr-20 pb-10 sm:px-8 sm:pr-24 md:min-h-136 md:pt-12 md:pr-[36vw] md:pb-12 lg:px-16 lg:pt-14 lg:pr-[42vw] lg:pb-8 xl:pr-152">
         <div className="relative z-10">
-          <div className="flex max-w-[34rem] flex-col gap-7">
-            <h1 className="max-w-[34rem] font-serif text-5xl leading-[0.98] font-normal text-balance text-text md:text-[3.25rem]">
+          <div className="flex max-w-136 flex-col gap-7">
+            <h1 className="max-w-136 font-serif text-5xl font-normal text-balance text-text md:text-[3.25rem]">
               {title}
             </h1>
             <FormattedText
@@ -207,7 +232,7 @@ function Hero({
           className="pointer-events-none absolute top-0 bottom-0 left-[calc(100%-5rem)] flex items-center sm:left-[calc(100%-6rem)] md:left-[max(31rem,54vw)] lg:left-[max(35rem,48vw)] xl:left-[52%]"
           aria-hidden="true"
         >
-          <HeroGraphic />
+          <HeroGraphic isNavy={backgroundColor === 'navy'} />
         </div>
       </div>
     </section>
