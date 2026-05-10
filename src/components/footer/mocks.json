@@ -3,8 +3,9 @@
     {
       "name": "Branded footer",
       "props": {
-        "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc. All rights reserved.",
-        "backgroundColor": "navy"
+        "emailUrl": "mailto:hello@example.com",
+        "linkedInUrl": "https://www.linkedin.com",
+        "xUrl": "https://x.com"
       },
       "slots": {
         "branding": ["footer-logo-default"]
@@ -13,32 +14,11 @@
         "footer-logo-default": {
           "type": "logo",
           "props": {
-            "linkToFrontPage": true
+            "darkBackground": true,
+            "linkToFrontPage": false
           }
         }
       }
-    },
-    {
-      "name": "Dark",
-      "props": {
-        "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc. All rights reserved.",
-        "darkVariant": true,
-        "backgroundColor": "navy"
-      },
-      "slots": {
-        "branding": ["footer-logo-dark"]
-      },
-      "elements": {
-        "footer-logo-dark": {
-          "type": "logo",
-          "props": {
-            "linkToFrontPage": true
-          }
-        }
-      }
-    },
-    {
-      "name": "Empty"
     }
   ]
 }

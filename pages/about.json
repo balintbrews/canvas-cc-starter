@@ -58,8 +58,9 @@
       "type": "js.footer",
       "props": {
         "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc.",
-        "darkVariant": true,
-        "backgroundColor": "navy"
+        "linkedInUrl": "https://www.linkedin.com",
+        "xUrl": "https://x.com",
+        "emailUrl": "mailto:hello@example.com"
       },
       "slots": {
         "branding": ["about-footer-logo"]
@@ -68,6 +69,7 @@
     "about-footer-logo": {
       "type": "js.logo",
       "props": {
+        "darkBackground": true,
         "linkToFrontPage": false
       }
     }

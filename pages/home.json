@@ -204,8 +204,9 @@
       "type": "js.footer",
       "props": {
         "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc.",
-        "darkVariant": true,
-        "backgroundColor": "navy"
+        "linkedInUrl": "https://www.linkedin.com",
+        "xUrl": "https://x.com",
+        "emailUrl": "mailto:hello@example.com"
       },
       "slots": {
         "branding": ["dfbead05-a679-4531-b629-995b7bed1cb0"]
@@ -214,6 +215,7 @@
     "dfbead05-a679-4531-b629-995b7bed1cb0": {
       "type": "js.logo",
       "props": {
+        "darkBackground": true,
         "linkToFrontPage": false
       }
     }

@@ -3,7 +3,6 @@ machineName: footer
 status: true
 required:
   - copyrightNotice
-  - backgroundColor
 props:
   properties:
     copyrightNotice:
@@ -13,26 +12,24 @@ props:
       title: Copyright notice
       examples:
         - '&copy; 2025-2026 Humanify Example Ventures Inc.'
-    darkVariant:
-      type: boolean
-      title: Dark variant
-      examples:
-        - true
-    backgroundColor:
+    linkedInUrl:
       type: string
-      enum:
-        - cream
-        - paper
-        - sage-band
-        - navy
-      meta:enum:
-        cream: Cream
-        paper: Paper
-        sage-band: Sage band
-        navy: Navy
-      title: Background color
+      format: uri-reference
+      title: LinkedIn URL
       examples:
-        - navy
+        - https://www.linkedin.com
+    xUrl:
+      type: string
+      format: uri-reference
+      title: X URL
+      examples:
+        - https://x.com
+    emailUrl:
+      type: string
+      format: uri-reference
+      title: Email URL
+      examples:
+        - mailto:hello@example.com
 slots:
   branding:
     title: Branding
