@@ -30,7 +30,7 @@
         "title": "Human expertise that amplifies what your AI agents can do",
         "description": "AI agents are extraordinary at speed, scale, and automation. We add the human layer they need: creative direction, editorial judgment, and strategic thinking that turns capable output into <em>standout work</em>.",
         "buttonLabel": "Build your hybrid team",
-        "buttonLink": "/page/1",
+        "buttonLink": "/register",
         "backgroundColor": "cream"
       }
     },
@@ -175,7 +175,7 @@
         "annualSelectedByDefault": false,
         "annualBadgeText": "Save 17%",
         "buttonLabel": "Choose {tier}",
-        "buttonLink": "/page/1"
+        "buttonLink": "/register"
       },
       "slots": {
         "intro": [
