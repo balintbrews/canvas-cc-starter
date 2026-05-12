@@ -103,8 +103,8 @@ function PricingTable({
   return (
     <div className={cn('w-full', className)} {...props}>
       {intro && (
-        <div className="mx-auto mb-10 w-full max-w-6xl border-y border-line py-8 md:py-10 dark:border-surface-0">
-          <div className="mx-auto flex max-w-3xl flex-col items-center gap-3 text-center [&>*]:max-w-3xl">
+        <div className="mx-auto mb-10 w-full max-w-6xl border-y border-line py-8 md:py-10">
+          <div className="mx-auto flex max-w-3xl flex-col items-center gap-3 text-center *:max-w-3xl">
             {intro}
           </div>
         </div>
@@ -162,19 +162,18 @@ function PricingTable({
               className={cn(
                 'relative flex flex-col rounded-xl border border-line bg-paper p-6 shadow-sm transition-colors',
                 'data-[state=selected]:border-green',
-                'dark:border-surface-1 dark:bg-surface-0/80 dark:shadow-none dark:data-[state=selected]:border-green dark:data-[state=selected]:bg-surface-1/70',
               )}
             >
               <div className="mb-5 flex min-h-6 justify-center">
                 {planName === 'mid' && (
-                  <div className="inline-flex h-5 items-center rounded-full bg-surface-0 px-3 text-xs leading-none font-bold tracking-wide text-green uppercase dark:bg-navy/55">
+                  <div className="inline-flex h-5 items-center rounded-full bg-surface-0 px-3 text-xs leading-none font-bold tracking-wide text-green uppercase">
                     Most popular
                   </div>
                 )}
               </div>
 
               <div className="mb-4 flex items-center gap-5">
-                <div className="flex size-16 shrink-0 items-center justify-center rounded-full bg-surface-0 dark:bg-navy/55">
+                <div className="flex size-16 shrink-0 items-center justify-center rounded-full bg-surface-0">
                   <span
                     aria-hidden="true"
                     className="size-9 bg-green"
@@ -200,8 +199,7 @@ function PricingTable({
                 className={cn(
                   'mt-auto inline-flex min-h-11 items-center justify-center rounded-md border border-green px-5 text-center text-base font-medium text-green transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green',
                   isSelected && 'bg-green text-inverted-text hover:bg-green/90',
-                  !isSelected &&
-                    'hover:bg-surface-0 dark:border-sage/70 dark:text-sage dark:hover:bg-navy/35 dark:hover:text-cream',
+                  !isSelected && 'hover:bg-surface-0',
                 )}
               >
                 {buttonLabel.replace('{tier}', tierNames[planName])}

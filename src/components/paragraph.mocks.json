@@ -20,27 +20,6 @@
           }
         }
       }
-    },
-    {
-      "name": "Navy background",
-      "root": "paragraph-navy-background",
-      "elements": {
-        "paragraph-navy-background": {
-          "type": "section",
-          "props": {
-            "backgroundColor": "navy"
-          },
-          "slots": {
-            "content": ["paragraph-dark"]
-          }
-        },
-        "paragraph-dark": {
-          "type": "paragraph",
-          "props": {
-            "text": "We partner with AI-native teams to add what machines still struggle to replicate: taste, narrative coherence, emotional resonance, and domain-informed judgment."
-          }
-        }
-      }
     }
   ]
 }

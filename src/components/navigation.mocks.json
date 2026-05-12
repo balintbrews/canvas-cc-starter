@@ -17,24 +17,6 @@
           "type": "navigation"
         }
       }
-    },
-    {
-      "name": "Navy background",
-      "root": "navigation-dark-preview",
-      "elements": {
-        "navigation-dark-preview": {
-          "type": "section",
-          "props": {
-            "backgroundColor": "navy"
-          },
-          "slots": {
-            "content": ["navigation-dark"]
-          }
-        },
-        "navigation-dark": {
-          "type": "navigation"
-        }
-      }
     }
   ]
 }

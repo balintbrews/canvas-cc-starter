@@ -9,7 +9,6 @@ const sectionVariants = cva('', {
       cream: 'bg-cream',
       paper: 'bg-paper',
       mist: 'bg-mist',
-      navy: 'dark bg-navy',
     },
   },
   defaultVariants: {

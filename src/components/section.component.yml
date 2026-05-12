@@ -11,12 +11,10 @@ props:
         - cream
         - paper
         - mist
-        - navy
       meta:enum:
         cream: Cream
         paper: Paper
         mist: Mist
-        navy: Navy
       title: Background color
       examples:
         - cream

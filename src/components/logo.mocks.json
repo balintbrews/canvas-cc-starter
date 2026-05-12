@@ -5,27 +5,6 @@
       "props": {
         "linkToFrontPage": false
       }
-    },
-    {
-      "name": "Navy background",
-      "root": "logo-dark-preview",
-      "elements": {
-        "logo-dark-preview": {
-          "type": "section",
-          "props": {
-            "backgroundColor": "navy"
-          },
-          "slots": {
-            "content": ["logo-dark"]
-          }
-        },
-        "logo-dark": {
-          "type": "logo",
-          "props": {
-            "linkToFrontPage": true
-          }
-        }
-      }
     }
   ]
 }
