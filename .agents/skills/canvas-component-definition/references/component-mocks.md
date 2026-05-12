@@ -1,4 +1,4 @@
-# Workbench Mocks
+# Component Mocks
 
 Canvas Workbench is the supported tool for local component preview work.
 
@@ -25,6 +25,11 @@ using the first example value for each prop from `component.yml`.
 
 Choose descriptive names that explain what is different about the preview, such
 as `Dark`, `Featured`, `Centered`, or `Full width`.
+
+Use mock names to describe states and variations. Do not rename the component to
+match those states. For example, keep the component name `Hero` and use mock
+names like `Simple`, `Solid`, `Cream background`, or `Two cards` when those are
+just preview variations.
 
 ## Cover meaningful variations
 

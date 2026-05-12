@@ -2,11 +2,18 @@
 name: canvas-component-push
 description:
   Push validated Canvas component changes to Drupal Canvas and recover from
-  common push failures. Use after component work is complete and validated.
-  Handles dependency-related push failures that require retry.
+  common push failures. Use only when the user explicitly requests a
+  push/publish/sync action. Handles dependency-related push failures that
+  require retry.
 ---
 
-## Push to Canvas
+## Activation guard
+
+Run this skill only when the user explicitly asks to push, publish, sync, or
+upload components to Canvas.
+
+Do not run this skill automatically after component edits, validation, or task
+completion.
 
 Before pushing, confirm the user has Drupal Canvas CLI installed and configured
 for their target site.
@@ -15,19 +22,34 @@ for their target site.
 
 Before running any push command:
 
-1. Check that a `.env` file exists in the project root.
-2. If `.env` exists, verify these values are set:
-   - `CANVAS_SITE_URL`
-   - `CANVAS_CLIENT_ID`
-   - `CANVAS_CLIENT_SECRET`
-3. If `.env` is missing, or any required value is missing, **stop** and ask the
-   user to complete setup first.
-4. **Do not guess setup steps**. Point the user to the official docs:
+1. Check that Canvas CLI auth is configured from a supported source. For local
+   project work, prefer a `.env` file in the project root. The CLI also reads
+   shell environment variables, `~/.canvasrc`, and interactive-login tokens
+   stored in `~/.config/drupal-canvas/oauth.json` (written by
+   `npx canvas login`).
+2. Verify `CANVAS_SITE_URL` is set.
+3. **Primary auth (prefer env-based):** configure at least one of:
+   - **`CANVAS_ACCESS_TOKEN`** — set and non-empty in `.env` / the shell
+     (simplest for many setups), or
+   - **`CANVAS_CLIENT_ID` and `CANVAS_CLIENT_SECRET`** — both set (typical for
+     CI and service-style access).
+4. **Fallback when tokens are not configured:** if `CANVAS_SITE_URL` is set but
+   **neither** an access token **nor** client credentials appear in `.env` / the
+   shell, use **`npx canvas login`** (browser-based Canvas sign-in). Tokens are
+   stored under `~/.config/drupal-canvas/oauth.json` (keyed by site URL). See
+   [interactive login with Canvas Login](https://git.drupalcode.org/project/canvas/-/tree/1.x/modules/canvas_oauth#23-interactive-login-with-canvas-login).
+   Do not treat auth as missing until this fallback has been tried or ruled out.
+5. If `CANVAS_ACCESS_TOKEN` is set, treat it as the active auth mode. It skips
+   the OAuth client credentials flow entirely, and `CANVAS_CLIENT_ID`,
+   `CANVAS_CLIENT_SECRET`, and `CANVAS_SCOPE` are ignored.
+6. If required setup is still missing after the checks above, **stop** and ask
+   the user to complete setup first.
+7. **Do not guess setup steps**. Point the user to the official docs:
    - Drupal Canvas OAuth module setup:
      <https://git.drupalcode.org/project/canvas/-/tree/1.x/modules/canvas_oauth#2-setup>
    - Drupal Canvas CLI package/docs:
      <https://www.npmjs.com/package/@drupal-canvas/cli>
-5. Continue only after the user confirms setup is complete.
+8. Continue only after the user confirms setup is complete.
 
 ## Run push
 
@@ -41,6 +63,58 @@ example, if using npm, run the following command:
 ```bash
 npx canvas push --yes
 ```
+
+If pages are included and they contain image props with external URLs, the first
+push may fail with an error like "Some pages contain media that references
+external URLs". This is expected until media is reconciled.
+
+Supported authored page image sources:
+
+- External `http://` or `https://` URLs
+- `data:image/...` URLs
+
+Supported image formats for reconciliation: `.jpg`, `.png`, `.gif`, `.webp`, and
+`.avif`.
+
+Local filesystem image upload through the CLI is not supported.
+
+### Media reconciliation for pages
+
+When working with pages that include image props:
+
+1. Run the page push, for example:
+
+   ```bash
+   npx canvas push --yes --include-pages
+   ```
+
+2. If Canvas reports external media references, run:
+
+   ```bash
+   npx canvas reconcile-media
+   ```
+
+3. Re-run the page push:
+
+   ```bash
+   npx canvas push --yes --include-pages
+   ```
+
+4. Pull pages back down to sync resolved inputs locally:
+
+   ```bash
+   npx canvas pull --include-pages
+   ```
+
+After reconciliation/pull, page JSON may be updated so that:
+
+- The image prop keeps the same object shape but now includes resolved `src`,
+  `alt`, `width`, and `height`
+- A `_provenance` object may be added with values such as `target_id` and
+  `source_url`
+
+Preserve resolved image props and `_provenance` during later edits unless you
+are intentionally replacing the media.
 
 ## Handling push failures
 
@@ -59,6 +133,10 @@ like invalid credentials, unauthorized/forbidden responses, DNS issues,
 connection refused, host unreachable, request timeout before reaching Canvas, or
 TLS/SSL handshake/certificate failures.
 
+If `CANVAS_ACCESS_TOKEN` is the active auth mode, treat token-related failures
+as setup failures. Do not retry on errors like an invalid or expired token, or
+401 responses that indicate the token is not accepted.
+
 Point the user to the official setup docs:
 
 - Drupal Canvas OAuth module setup:
@@ -66,9 +144,12 @@ Point the user to the official setup docs:
 - Drupal Canvas CLI package/docs:
   <https://www.npmjs.com/package/@drupal-canvas/cli>
 
-Ask them to verify and update `.env` values (`CANVAS_SITE_URL`,
-`CANVAS_CLIENT_ID`, `CANVAS_CLIENT_SECRET`) and OAuth/CLI setup, then retry the
-push only after they confirm setup updates are complete.
+Ask them to verify `CANVAS_SITE_URL` and the active token or client credential
+values from whichever config source the CLI is using first (for example: shell
+environment variables, `.env`, `~/.canvasrc`, or interactive-login
+config/session); if those are unset or invalid, have them run
+**`npx canvas login`** as a fallback (or again, to refresh interactive tokens).
+Retry the push only after they confirm setup updates are complete.
 
 ### Dependency-related failures
 
