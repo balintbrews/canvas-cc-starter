@@ -7,11 +7,11 @@ interface MenuItem {
 }
 
 const menu: MenuItem[] = [
-  { title: 'Home', url: '/page/home' },
-  { title: 'Services', url: '/page/services' },
-  { title: 'Blog', url: '/page/blog' },
-  { title: 'About', url: '/page/about' },
-  { title: 'Careers', url: '/page/careers' },
+  { title: 'Home', url: '/home' },
+  { title: 'Services', url: '/services' },
+  { title: 'Blog', url: '/blog' },
+  { title: 'About', url: '/about' },
+  { title: 'Careers', url: '/careers' },
 ];
 
 export interface NavigationProps extends HTMLAttributes<HTMLDivElement> {
@@ -19,7 +19,7 @@ export interface NavigationProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 function Navigation({
-  activeUrl = '/page/home',
+  activeUrl = '/home',
   className,
   ...props
 }: NavigationProps) {
@@ -51,7 +51,7 @@ function Navigation({
       <div className="flex items-center gap-3">
         <div className="hidden lg:flex lg:items-center lg:gap-4 xl:gap-5">
           <a
-            href="/page/login"
+            href="/login"
             className="inline-flex text-sm font-medium text-text transition-colors hover:text-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green dark:hover:text-green"
           >
             Login
@@ -59,7 +59,7 @@ function Navigation({
 
           <div className="flex">
             <a
-              href="/page/register"
+              href="/register"
               className="inline-flex min-h-12 items-center rounded-md bg-surface-1 px-5 text-sm font-bold text-text shadow-sm transition hover:bg-surface-1/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green xl:px-6"
             >
               Register

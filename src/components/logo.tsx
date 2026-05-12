@@ -59,7 +59,7 @@ function Logo({ className, linkToFrontPage = true }: LogoProps) {
 
   if (linkToFrontPage) {
     return (
-      <a className={classes} href="/page/home">
+      <a className={classes} href="/home">
         {content}
       </a>
     );
