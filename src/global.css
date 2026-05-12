@@ -1,4 +1,4 @@
-/* 
+/*
  * Loading fonts purely via Code Components in Drupal Canvas is currently best
  * done by importing a CSS file with the font declarations from a URL, i.e. a
  * CDN.
@@ -6,7 +6,8 @@
  * (If you do that, you can import the same font, e.g., from a Fontsource package
  * in `.storybook/preview.js`.)
  */
-@import url("https://rsms.me/inter/inter.css");
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
 /*
  * Importing Tailwind CSS after the font import, so PostCSS is happy with the
@@ -14,7 +15,7 @@
  * will take care of both importing all layers from Tailwind CSS, as well as
  * moving font imports to the top before compiling.
  */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /**
  * Uncomment if you would like to use the Tailwind CSS Typography plugin.
@@ -22,143 +23,62 @@
  */
 /* @plugin "@tailwindcss/typography"; */
 
-/*
- * Colors are based on the Catpuccin color palette.
- * @see https://catppuccin.com
- * @see https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md
- *
- * Defining variables for the colors, which we can override for dark mode, and
- * using them as Tailwind CSS theme variables for colors, we can, e.g., simply set
- * `bg-base` on an element, and the background color will adopt based on the
- * presence of the `dark` class. (No need to add separate classes like
- * `dark:bg-base-dark` or similar.)
- * (This is also the technique used by shadcn/ui with the CSS variables theming
- * approach: https://ui.shadcn.com/docs/theming.)
- */
 :root {
-  /*
-   * "Latte" flavor for default, light colors.
-   * @see https://catppuccin.com/palette/#flavor-latte
-   */
-  --catpuccin-base: hsl(220deg, 23%, 95%);
-  --catpuccin-mantle: hsl(220deg, 22%, 92%);
-  --catpuccin-crust: hsl(220deg, 21%, 89%);
-  --catpuccin-surface-0: hsl(223deg, 16%, 83%);
-  --catpuccin-surface-1: hsl(225deg, 14%, 77%);
-  --catpuccin-surface-2: hsl(227deg, 12%, 71%);
-  --catpuccin-text: hsl(234deg, 16%, 35%);
-  --catpuccin-subtext-0: hsl(233deg, 10%, 47%);
-  --catpuccin-subtext-1: hsl(233deg, 13%, 41%);
+  --cream: hsl(48deg, 55%, 97%);
+  --paper: hsl(45deg, 70%, 99%);
+  --mist: hsl(80deg, 35%, 94%);
+  --navy: hsl(211deg, 90%, 11%);
 
-  --catpuccin-rosewater: hsl(11deg, 59%, 67%);
-  --catpuccin-flamingo: hsl(0deg, 60%, 67%);
-  --catpuccin-pink: hsl(316deg, 73%, 69%);
-  --catpuccin-mauve: hsl(266deg, 85%, 58%);
-  --catpuccin-red: hsl(347deg, 87%, 44%);
-  --catpuccin-maroon: hsl(355deg, 76%, 59%);
-  --catpuccin-peach: hsl(22deg, 99%, 52%);
-  --catpuccin-yellow: hsl(35deg, 77%, 49%);
-  --catpuccin-green: hsl(109deg, 58%, 40%);
-  --catpuccin-teal: hsl(183deg, 74%, 35%);
-  --catpuccin-sky: hsl(197deg, 97%, 46%);
-  --catpuccin-sapphire: hsl(189deg, 70%, 42%);
-  --catpuccin-blue: hsl(220deg, 91%, 54%);
-  --catpuccin-lavender: hsl(231deg, 97%, 72%);
+  --sage: hsl(96deg, 25%, 82%);
+  --green: hsl(119deg, 21%, 46%);
+  --deep-green: hsl(161deg, 42%, 25%);
+  --eucalyptus: hsl(111deg, 18%, 60%);
+
+  --surface-0: hsl(95deg, 31%, 91%);
+  --surface-1: hsl(98deg, 28%, 77%);
+  --line: hsl(45deg, 20%, 86%);
+  --text: var(--navy);
+  --muted: hsl(218deg, 23%, 31%);
 }
 
 .dark {
-  /*
-   * "Frappé" flavor for dark colors.
-   * @see https://catppuccin.com/palette/#flavor-frappe
-   */
-  --catpuccin-base: hsl(229deg, 19%, 23%);
-  --catpuccin-mantle: hsl(231deg, 19%, 20%);
-  --catpuccin-crust: hsl(229deg, 20%, 17%);
-  --catpuccin-surface-0: hsl(230deg, 16%, 30%);
-  --catpuccin-surface-1: hsl(227deg, 15%, 37%);
-  --catpuccin-surface-2: hsl(228deg, 13%, 44%);
-  --catpuccin-text: hsl(227deg, 70%, 87%);
-  --catpuccin-subtext-0: hsl(228deg, 29%, 73%);
-  --catpuccin-subtext-1: hsl(227deg, 44%, 80%);
-
-  --catpuccin-rosewater: hsl(10deg, 57%, 88%);
-  --catpuccin-flamingo: hsl(0deg, 59%, 84%);
-  --catpuccin-pink: hsl(316deg, 73%, 84%);
-  --catpuccin-mauve: hsl(277deg, 59%, 76%);
-  --catpuccin-red: hsl(359deg, 68%, 71%);
-  --catpuccin-maroon: hsl(358deg, 66%, 76%);
-  --catpuccin-peach: hsl(20deg, 79%, 70%);
-  --catpuccin-yellow: hsl(40deg, 62%, 73%);
-  --catpuccin-green: hsl(96deg, 44%, 68%);
-  --catpuccin-teal: hsl(172deg, 39%, 65%);
-  --catpuccin-sky: hsl(189deg, 48%, 73%);
-  --catpuccin-sapphire: hsl(199deg, 55%, 69%);
-  --catpuccin-blue: hsl(222deg, 74%, 74%);
-  --catpuccin-lavender: hsl(239deg, 66%, 84%);
+  --surface-0: hsl(210deg, 48%, 22%);
+  --surface-1: hsl(211deg, 39%, 32%);
+  --text: hsl(48deg, 55%, 97%);
+  --muted: hsl(80deg, 10%, 70%);
 }
 
-/* 
+/*
  * Allow toggling dark mode in Tailwind CSS manually by adding the `dark` class.
  * This allows adding props to components that control dark mode.
  * @see https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
  */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* 
+/*
  * Tailwind CSS theme variables.
  * @see https://tailwindcss.com/docs/theme
  */
 @theme inline {
   --font-sans:
-    "InterVariable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    'InterVariable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-sans--font-feature-settings:
-    "liga" 1, "calt" 1, "ss01" 1, "cv05" 1, "cv11" 1;
+    'liga' 1, 'calt' 1, 'ss01' 1, 'cv05' 1, 'cv11' 1;
+  --font-serif: 'DM Serif Display', Georgia, Cambria, 'Times New Roman', serif;
 
-  --color-base: var(--catpuccin-base);
-  --color-mantle: var(--catpuccin-mantle);
-  --color-crust: var(--catpuccin-crust);
-  --color-surface-0: var(--catpuccin-surface-0);
-  --color-surface-1: var(--catpuccin-surface-1);
-  --color-surface-2: var(--catpuccin-surface-2);
-  --color-text: var(--catpuccin-text);
-  --color-inverted-text: var(--catpuccin-base);
-  --color-subtext-0: var(--catpuccin-subtext-0);
-  --color-subtext-1: var(--catpuccin-subtext-1);
-
-  --color-rosewater: var(--catpuccin-rosewater);
-  --color-flamingo: var(--catpuccin-flamingo);
-  --color-pink: var(--catpuccin-pink);
-  --color-mauve: var(--catpuccin-mauve);
-  --color-red: var(--catpuccin-red);
-  --color-maroon: var(--catpuccin-maroon);
-  --color-peach: var(--catpuccin-peach);
-  --color-yellow: var(--catpuccin-yellow);
-  --color-green: var(--catpuccin-green);
-  --color-teal: var(--catpuccin-teal);
-  --color-sky: var(--catpuccin-sky);
-  --color-sapphire: var(--catpuccin-sapphire);
-  --color-blue: var(--catpuccin-blue);
-  --color-lavender: var(--catpuccin-lavender);
-
-  --color-drupal-blue: #009cde;
-  --color-drupal-dark-blue: #006aa9;
-  --color-drupal-navy: #12285f;
-  --color-drupal-dark-navy: #091942;
-  --color-drupal-light-blue: #ccedf9;
-  --color-drupal-black: #000;
-  --color-drupal-white: #fff;
-  --color-drupal-purple: #ccbaf4;
-  --color-drupal-yellow: #ffc423;
-  --color-drupal-red: #f46351;
-  --color-drupal-dark-red: #c63c00;
-  --color-drupal-green: #397618;
-  --color-drupal-gray-darkest: #1f2420;
-  --color-drupal-gray-darker: #323946;
-  --color-drupal-gray-dark: #4f5661;
-  --color-drupal-gray-default: #6d7583;
-  --color-drupal-gray-mild: #a2acbe;
-  --color-drupal-gray-milder: #cfd4dd;
-  --color-drupal-gray-mildest: #f8f9fc;
-  --color-drupal-gray-disabled: #e7ebf3;
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-mist: var(--mist);
+  --color-navy: var(--navy);
+  --color-sage: var(--sage);
+  --color-green: var(--green);
+  --color-deep-green: var(--deep-green);
+  --color-eucalyptus: var(--eucalyptus);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-surface-0: var(--surface-0);
+  --color-surface-1: var(--surface-1);
+  --color-text: var(--text);
+  --color-inverted-text: var(--cream);
 }

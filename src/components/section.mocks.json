@@ -1,0 +1,73 @@
+{
+  "mocks": [
+    {
+      "name": "Cream background",
+      "props": {
+        "backgroundColor": "cream"
+      },
+      "slots": {
+        "content": ["section-default-heading", "section-default-paragraph"]
+      },
+      "elements": {
+        "section-default-heading": {
+          "type": "heading",
+          "props": {
+            "text": "We bring human strengths to AI-first teams."
+          }
+        },
+        "section-default-paragraph": {
+          "type": "paragraph",
+          "props": {
+            "text": "We partner with AI-native teams to add what machines still struggle to replicate: taste, narrative coherence, emotional resonance, and domain-informed judgment."
+          }
+        }
+      }
+    },
+    {
+      "name": "Paper background",
+      "props": {
+        "backgroundColor": "paper"
+      },
+      "slots": {
+        "content": ["section-paper-heading", "section-paper-paragraph"]
+      },
+      "elements": {
+        "section-paper-heading": {
+          "type": "heading",
+          "props": {
+            "text": "We bring human strengths to AI-first teams."
+          }
+        },
+        "section-paper-paragraph": {
+          "type": "paragraph",
+          "props": {
+            "text": "We partner with AI-native teams to add what machines still struggle to replicate: taste, narrative coherence, emotional resonance, and domain-informed judgment."
+          }
+        }
+      }
+    },
+    {
+      "name": "Mist background",
+      "props": {
+        "backgroundColor": "mist"
+      },
+      "slots": {
+        "content": ["section-mist-heading", "section-mist-paragraph"]
+      },
+      "elements": {
+        "section-mist-heading": {
+          "type": "heading",
+          "props": {
+            "text": "We bring human strengths to AI-first teams."
+          }
+        },
+        "section-mist-paragraph": {
+          "type": "paragraph",
+          "props": {
+            "text": "We partner with AI-native teams to add what machines still struggle to replicate: taste, narrative coherence, emotional resonance, and domain-informed judgment."
+          }
+        }
+      }
+    }
+  ]
+}

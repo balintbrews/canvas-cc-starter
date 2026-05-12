@@ -1,0 +1,51 @@
+name: Footer
+machineName: footer
+status: true
+required:
+  - backgroundColor
+  - copyrightNotice
+props:
+  properties:
+    backgroundColor:
+      type: string
+      enum:
+        - cream
+        - paper
+        - mist
+        - navy
+      meta:enum:
+        cream: Cream
+        paper: Paper
+        mist: Mist
+        navy: Navy
+      title: Background color
+      examples:
+        - cream
+    copyrightNotice:
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      title: Copyright notice
+      examples:
+        - '&copy; 2025-2026 Humanify Example Ventures Inc.'
+    linkedInUrl:
+      type: string
+      format: uri-reference
+      title: LinkedIn URL
+      examples:
+        - https://www.linkedin.com
+    xUrl:
+      type: string
+      format: uri-reference
+      title: X URL
+      examples:
+        - https://x.com
+    emailUrl:
+      type: string
+      format: uri-reference
+      title: Email URL
+      examples:
+        - mailto:hello@example.com
+slots:
+  branding:
+    title: Branding

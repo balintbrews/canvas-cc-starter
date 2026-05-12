@@ -1,0 +1,25 @@
+{
+  "mocks": [
+    {
+      "name": "In section",
+      "root": "image-feature-in-section",
+      "elements": {
+        "image-feature-in-section": {
+          "type": "section",
+          "props": {
+            "backgroundColor": "mist"
+          },
+          "slots": {
+            "content": ["image-feature-default"]
+          }
+        },
+        "image-feature-default": {
+          "type": "image-feature",
+          "props": {
+            "eyebrow": "Human judgment, applied"
+          }
+        }
+      }
+    }
+  ]
+}

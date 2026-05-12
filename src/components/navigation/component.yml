@@ -1,7 +1,0 @@
-name: Navigation
-machineName: navigation
-status: true
-required: []
-props:
-  properties: []
-slots: []

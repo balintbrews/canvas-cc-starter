@@ -1,0 +1,11 @@
+{
+  "mocks": [
+    {
+      "name": "Without icon",
+      "props": {
+        "title": "Creative direction",
+        "description": "We shape raw ideas and AI-generated directions into clear creative choices your team can execute confidently."
+      }
+    }
+  ]
+}

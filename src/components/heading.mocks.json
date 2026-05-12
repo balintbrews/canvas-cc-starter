@@ -1,0 +1,25 @@
+{
+  "mocks": [
+    {
+      "name": "Heading in a section",
+      "root": "heading-in-a-section",
+      "elements": {
+        "heading-in-a-section": {
+          "type": "section",
+          "props": {
+            "backgroundColor": "cream"
+          },
+          "slots": {
+            "content": ["heading-default"]
+          }
+        },
+        "heading-default": {
+          "type": "heading",
+          "props": {
+            "text": "We bring human strengths to AI-first teams."
+          }
+        }
+      }
+    }
+  ]
+}

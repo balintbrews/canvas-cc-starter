@@ -1,0 +1,75 @@
+{
+  "title": "About",
+  "path": "/about",
+  "elements": {
+    "about-header": {
+      "type": "js.header",
+      "props": {
+        "backgroundColor": "cream"
+      },
+      "slots": {
+        "branding": ["about-header-logo"],
+        "navigation": ["about-navigation"]
+      }
+    },
+    "about-header-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": true
+      }
+    },
+    "about-navigation": {
+      "type": "js.navigation",
+      "props": {
+        "activeUrl": "/page/about"
+      }
+    },
+    "about-section": {
+      "type": "js.section",
+      "props": {
+        "backgroundColor": "paper"
+      },
+      "slots": {
+        "content": ["about-eyebrow", "about-heading", "about-paragraph"]
+      }
+    },
+    "about-eyebrow": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "About",
+        "variant": "eyebrow"
+      }
+    },
+    "about-heading": {
+      "type": "js.heading",
+      "props": {
+        "text": "We add the human layer AI agents need."
+      }
+    },
+    "about-paragraph": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "<p>Humanify partners with AI-native teams to bring taste, judgment, narrative coherence, and domain context to automated workflows.</p>"
+      }
+    },
+    "about-footer": {
+      "type": "js.footer",
+      "props": {
+        "backgroundColor": "navy",
+        "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc.",
+        "linkedInUrl": "https://www.linkedin.com",
+        "xUrl": "https://x.com",
+        "emailUrl": "mailto:hello@example.com"
+      },
+      "slots": {
+        "branding": ["about-footer-logo"]
+      }
+    },
+    "about-footer-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": false
+      }
+    }
+  }
+}

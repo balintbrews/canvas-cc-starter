@@ -1,0 +1,54 @@
+name: Hero
+machineName: hero
+status: true
+required:
+  - title
+  - description
+  - buttonLabel
+  - buttonLink
+  - backgroundColor
+props:
+  properties:
+    title:
+      type: string
+      title: Title
+      examples:
+        - Human expertise that amplifies what your AI agents can do
+    description:
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      title: Description
+      examples:
+        - >-
+          AI agents are extraordinary at speed, scale, and automation. We add
+          the human layer they need: creative direction, editorial judgment, and
+          strategic thinking that turns capable output into <em>standout
+          work</em>.
+    buttonLabel:
+      type: string
+      title: Button label
+      examples:
+        - Build your hybrid team
+    buttonLink:
+      type: string
+      format: uri-reference
+      title: Button link
+      examples:
+        - /page/1
+    backgroundColor:
+      type: string
+      enum:
+        - cream
+        - paper
+        - mist
+        - navy
+      meta:enum:
+        cream: Cream
+        paper: Paper
+        mist: Mist
+        navy: Navy
+      title: Background color
+      examples:
+        - cream
+slots: []

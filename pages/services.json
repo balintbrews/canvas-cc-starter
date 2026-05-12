@@ -1,0 +1,79 @@
+{
+  "title": "Services",
+  "path": "/services",
+  "elements": {
+    "services-header": {
+      "type": "js.header",
+      "props": {
+        "backgroundColor": "cream"
+      },
+      "slots": {
+        "branding": ["services-header-logo"],
+        "navigation": ["services-navigation"]
+      }
+    },
+    "services-header-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": true
+      }
+    },
+    "services-navigation": {
+      "type": "js.navigation",
+      "props": {
+        "activeUrl": "/page/services"
+      }
+    },
+    "services-section": {
+      "type": "js.section",
+      "props": {
+        "backgroundColor": "paper"
+      },
+      "slots": {
+        "content": [
+          "services-eyebrow",
+          "services-heading",
+          "services-paragraph"
+        ]
+      }
+    },
+    "services-eyebrow": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "Services",
+        "variant": "eyebrow"
+      }
+    },
+    "services-heading": {
+      "type": "js.heading",
+      "props": {
+        "text": "Human specialists for AI-assisted work."
+      }
+    },
+    "services-paragraph": {
+      "type": "js.paragraph",
+      "props": {
+        "text": "<p>Choose support across creative direction, product storytelling, brand systems, campaign concepts, insight synthesis, and executive communication.</p>"
+      }
+    },
+    "services-footer": {
+      "type": "js.footer",
+      "props": {
+        "backgroundColor": "navy",
+        "copyrightNotice": "&copy; 2025-2026 Humanify Example Ventures Inc.",
+        "linkedInUrl": "https://www.linkedin.com",
+        "xUrl": "https://x.com",
+        "emailUrl": "mailto:hello@example.com"
+      },
+      "slots": {
+        "branding": ["services-footer-logo"]
+      }
+    },
+    "services-footer-logo": {
+      "type": "js.logo",
+      "props": {
+        "linkToFrontPage": false
+      }
+    }
+  }
+}

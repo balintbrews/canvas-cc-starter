@@ -1,0 +1,27 @@
+name: Header
+machineName: header
+status: true
+required:
+  - backgroundColor
+props:
+  properties:
+    backgroundColor:
+      type: string
+      enum:
+        - cream
+        - paper
+        - mist
+        - navy
+      meta:enum:
+        cream: Cream
+        paper: Paper
+        mist: Mist
+        navy: Navy
+      title: Background color
+      examples:
+        - cream
+slots:
+  branding:
+    title: Branding
+  navigation:
+    title: Navigation

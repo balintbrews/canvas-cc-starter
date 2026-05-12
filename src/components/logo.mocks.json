@@ -1,0 +1,10 @@
+{
+  "mocks": [
+    {
+      "name": "No link",
+      "props": {
+        "linkToFrontPage": false
+      }
+    }
+  ]
+}

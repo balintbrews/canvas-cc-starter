@@ -1,0 +1,67 @@
+{
+  "mocks": [
+    {
+      "name": "Paper background",
+      "props": {
+        "backgroundColor": "paper"
+      },
+      "slots": {
+        "branding": ["header-logo-paper"],
+        "navigation": ["header-navigation-paper"]
+      },
+      "elements": {
+        "header-logo-paper": {
+          "type": "logo",
+          "props": {
+            "linkToFrontPage": true
+          }
+        },
+        "header-navigation-paper": {
+          "type": "navigation"
+        }
+      }
+    },
+    {
+      "name": "Mist background",
+      "props": {
+        "backgroundColor": "mist"
+      },
+      "slots": {
+        "branding": ["header-logo-mist"],
+        "navigation": ["header-navigation-mist"]
+      },
+      "elements": {
+        "header-logo-mist": {
+          "type": "logo",
+          "props": {
+            "linkToFrontPage": true
+          }
+        },
+        "header-navigation-mist": {
+          "type": "navigation"
+        }
+      }
+    },
+    {
+      "name": "Navy background",
+      "props": {
+        "backgroundColor": "navy"
+      },
+      "slots": {
+        "branding": ["header-logo-navy"],
+        "navigation": ["header-navigation-navy"]
+      },
+      "elements": {
+        "header-logo-navy": {
+          "type": "logo",
+          "props": {
+            "linkToFrontPage": true
+          }
+        },
+        "header-navigation-navy": {
+          "type": "navigation"
+        }
+      }
+    }
+  ]
+}

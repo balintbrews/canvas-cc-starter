@@ -1,7 +1,7 @@
 import { isValidElement } from 'react';
 import type { ReactNode } from 'react';
 
-export type BackgroundColor = 'base' | 'mantle' | 'crust';
+export type BackgroundColor = 'cream' | 'paper' | 'mist' | 'navy';
 
 export interface CanvasImage {
   alt: string;

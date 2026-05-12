@@ -1,0 +1,23 @@
+name: Section
+machineName: section
+status: true
+required:
+  - backgroundColor
+props:
+  properties:
+    backgroundColor:
+      type: string
+      enum:
+        - cream
+        - paper
+        - mist
+      meta:enum:
+        cream: Cream
+        paper: Paper
+        mist: Mist
+      title: Background color
+      examples:
+        - cream
+slots:
+  content:
+    title: Content

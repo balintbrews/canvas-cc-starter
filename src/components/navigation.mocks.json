@@ -1,0 +1,22 @@
+{
+  "mocks": [
+    {
+      "name": "Primary navigation",
+      "root": "navigation-primary-navigation",
+      "elements": {
+        "navigation-primary-navigation": {
+          "type": "section",
+          "props": {
+            "backgroundColor": "cream"
+          },
+          "slots": {
+            "content": ["navigation-default"]
+          }
+        },
+        "navigation-default": {
+          "type": "navigation"
+        }
+      }
+    }
+  ]
+}

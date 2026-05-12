@@ -1,0 +1,137 @@
+name: Pricing table
+machineName: pricing-table
+status: true
+required:
+  - entryTierName
+  - entryTierDescription
+  - entryTierIconNameFromLucide
+  - entryTierPriceMonthly
+  - entryTierPriceAnnual
+  - midTierName
+  - midTierDescription
+  - midTierIconNameFromLucide
+  - midTierPriceMonthly
+  - midTierPriceAnnual
+  - advancedTierName
+  - advancedTierDescription
+  - advancedTierIconNameFromLucide
+  - advancedTierPriceMonthly
+  - advancedTierPriceAnnual
+  - defaultTier
+  - annualBadgeText
+  - buttonLabel
+  - buttonLink
+props:
+  properties:
+    entryTierName:
+      type: string
+      title: 'Entry tier: Name'
+      examples:
+        - Starter
+    entryTierDescription:
+      type: string
+      title: 'Entry tier: Description'
+      examples:
+        - For pilots and focused projects
+    entryTierIconNameFromLucide:
+      type: string
+      title: 'Entry tier: Icon name from Lucide'
+      examples:
+        - send
+    entryTierPriceMonthly:
+      type: number
+      title: 'Entry tier: Price, monthly'
+      examples:
+        - 2500
+    entryTierPriceAnnual:
+      type: number
+      title: 'Entry tier: Price, annual'
+      examples:
+        - 25000
+    midTierName:
+      type: string
+      title: 'Mid tier: Name'
+      examples:
+        - Growth
+    midTierDescription:
+      type: string
+      title: 'Mid tier: Description'
+      examples:
+        - For teams scaling AI-assisted delivery
+    midTierIconNameFromLucide:
+      type: string
+      title: 'Mid tier: Icon name from Lucide'
+      examples:
+        - chart-no-axes-column-increasing
+    midTierPriceMonthly:
+      type: number
+      title: 'Mid tier: Price, monthly'
+      examples:
+        - 4500
+    midTierPriceAnnual:
+      type: number
+      title: 'Mid tier: Price, annual'
+      examples:
+        - 45000
+    advancedTierName:
+      type: string
+      title: 'Advanced tier: Name'
+      examples:
+        - Enterprise
+    advancedTierDescription:
+      type: string
+      title: 'Advanced tier: Description'
+      examples:
+        - For complex organizations and mission-critical work
+    advancedTierIconNameFromLucide:
+      type: string
+      title: 'Advanced tier: Icon name from Lucide'
+      examples:
+        - building-2
+    advancedTierPriceMonthly:
+      type: number
+      title: 'Advanced tier: Price, monthly'
+      examples:
+        - 9500
+    advancedTierPriceAnnual:
+      type: number
+      title: 'Advanced tier: Price, annual'
+      examples:
+        - 95000
+    defaultTier:
+      type: string
+      enum:
+        - entry
+        - mid
+        - advanced
+      meta:enum:
+        entry: Entry
+        mid: Mid
+        advanced: Advanced
+      title: Default tier
+      examples:
+        - mid
+    annualSelectedByDefault:
+      type: boolean
+      title: Annual selected by default
+      examples:
+        - false
+    annualBadgeText:
+      type: string
+      title: Annual badge text
+      examples:
+        - Save 17%
+    buttonLabel:
+      type: string
+      title: Button label
+      examples:
+        - Choose {tier}
+    buttonLink:
+      type: string
+      format: uri-reference
+      title: Button link
+      examples:
+        - /page/1
+slots:
+  intro:
+    title: Intro
