@@ -111,7 +111,7 @@ function Footer({
           </div>
           <FormattedText
             as="div"
-            className="text-xs leading-5 text-text/65 md:text-sm"
+            className="text-xs leading-5 text-muted md:text-sm"
           >
             {copyrightNotice}
           </FormattedText>

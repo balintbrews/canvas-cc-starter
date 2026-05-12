@@ -58,7 +58,7 @@ function ImageFeature({
         </h2>
         <FormattedText
           as="div"
-          className="mt-5 max-w-2xl text-base leading-7 text-balance text-subtext-0 md:text-lg"
+          className="mt-5 max-w-2xl text-base leading-7 text-balance text-muted md:text-lg"
         >
           {description}
         </FormattedText>

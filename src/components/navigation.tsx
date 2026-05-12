@@ -27,7 +27,7 @@ function Navigation({
   // @see https://project.pages.drupalcode.org/canvas/code-components/data-fetching
   return (
     <div
-      className={cn('flex items-center lg:gap-7 xl:gap-12', className)}
+      className={cn('flex items-center lg:gap-10 xl:gap-16', className)}
       {...props}
     >
       <nav aria-label="Global" className="hidden lg:block!">
@@ -37,9 +37,9 @@ function Navigation({
               <a
                 href={item.url}
                 className={cn(
-                  'inline-flex min-h-10 items-center border-b border-transparent text-text transition-colors hover:text-green dark:text-subtext-0 dark:hover:text-cream',
+                  'inline-flex min-h-10 items-center border-b border-transparent text-text transition-colors hover:text-green dark:hover:text-green',
                   item.url === activeUrl &&
-                    'border-green text-green dark:border-cream dark:text-cream',
+                    'border-green dark:border-green dark:text-cream',
                 )}
               >
                 {item.title}
@@ -52,7 +52,7 @@ function Navigation({
         <div className="hidden lg:flex lg:items-center lg:gap-4 xl:gap-5">
           <a
             href="/page/login"
-            className="inline-flex text-sm font-medium text-text transition-colors hover:text-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green dark:text-subtext-0 dark:hover:text-cream"
+            className="inline-flex text-sm font-medium text-text transition-colors hover:text-green focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green dark:hover:text-green"
           >
             Login
           </a>
@@ -60,7 +60,7 @@ function Navigation({
           <div className="flex">
             <a
               href="/page/register"
-              className="inline-flex min-h-12 items-center rounded-md bg-surface-1 px-5 text-sm font-bold text-text shadow-sm transition hover:bg-surface-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green xl:px-6 dark:hover:bg-surface-0"
+              className="inline-flex min-h-12 items-center rounded-md bg-surface-1 px-5 text-sm font-bold text-text shadow-sm transition hover:bg-surface-1/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green xl:px-6"
             >
               Register
             </a>

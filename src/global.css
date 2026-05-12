@@ -1,4 +1,4 @@
-/* 
+/*
  * Loading fonts purely via Code Components in Drupal Canvas is currently best
  * done by importing a CSS file with the font declarations from a URL, i.e. a
  * CDN.
@@ -6,8 +6,8 @@
  * (If you do that, you can import the same font, e.g., from a Fontsource package
  * in `.storybook/preview.js`.)
  */
-@import url("https://rsms.me/inter/inter.css");
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
 
 /*
  * Importing Tailwind CSS after the font import, so PostCSS is happy with the
@@ -15,7 +15,7 @@
  * will take care of both importing all layers from Tailwind CSS, as well as
  * moving font imports to the top before compiling.
  */
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /**
  * Uncomment if you would like to use the Tailwind CSS Typography plugin.
@@ -23,91 +23,62 @@
  */
 /* @plugin "@tailwindcss/typography"; */
 
-/* Humanify color tokens. */
 :root {
-  --navy: hsl(211deg, 90%, 11%);
-  --ink: hsl(215deg, 55%, 15%);
   --cream: hsl(48deg, 55%, 97%);
   --paper: hsl(45deg, 70%, 99%);
   --mist: hsl(80deg, 35%, 94%);
+  --navy: hsl(211deg, 90%, 11%);
+
   --sage: hsl(96deg, 25%, 82%);
   --green: hsl(119deg, 21%, 46%);
   --deep-green: hsl(161deg, 42%, 25%);
-  --muted: hsl(218deg, 23%, 31%);
-  --line: hsl(45deg, 20%, 86%);
+  --eucalyptus: hsl(111deg, 18%, 60%);
 
   --surface-0: hsl(95deg, 31%, 91%);
   --surface-1: hsl(98deg, 28%, 77%);
-  --surface-2: hsl(111deg, 18%, 60%);
+  --line: hsl(45deg, 20%, 86%);
   --text: var(--navy);
-  --subtext-0: var(--muted);
-  --subtext-1: hsl(162deg, 39%, 25%);
+  --muted: hsl(218deg, 23%, 31%);
 }
 
 .dark {
   --surface-0: hsl(210deg, 48%, 22%);
   --surface-1: hsl(211deg, 39%, 32%);
-  --surface-2: hsl(109deg, 21%, 58%);
   --text: hsl(48deg, 55%, 97%);
-  --subtext-0: hsl(80deg, 22%, 84%);
-  --subtext-1: hsl(96deg, 25%, 76%);
+  --muted: hsl(80deg, 10%, 70%);
 }
 
-/* 
+/*
  * Allow toggling dark mode in Tailwind CSS manually by adding the `dark` class.
  * This allows adding props to components that control dark mode.
  * @see https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually
  */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* 
+/*
  * Tailwind CSS theme variables.
  * @see https://tailwindcss.com/docs/theme
  */
 @theme inline {
   --font-sans:
-    "InterVariable", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    'InterVariable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-sans--font-feature-settings:
-    "liga" 1, "calt" 1, "ss01" 1, "cv05" 1, "cv11" 1;
-  --font-serif: "DM Serif Display", Georgia, Cambria, "Times New Roman", serif;
+    'liga' 1, 'calt' 1, 'ss01' 1, 'cv05' 1, 'cv11' 1;
+  --font-serif: 'DM Serif Display', Georgia, Cambria, 'Times New Roman', serif;
 
-  --color-navy: var(--navy);
-  --color-ink: var(--ink);
   --color-cream: var(--cream);
   --color-paper: var(--paper);
   --color-mist: var(--mist);
+  --color-navy: var(--navy);
   --color-sage: var(--sage);
   --color-green: var(--green);
   --color-deep-green: var(--deep-green);
+  --color-eucalyptus: var(--eucalyptus);
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-surface-0: var(--surface-0);
   --color-surface-1: var(--surface-1);
-  --color-surface-2: var(--surface-2);
   --color-text: var(--text);
   --color-inverted-text: var(--cream);
-  --color-subtext-0: var(--subtext-0);
-  --color-subtext-1: var(--subtext-1);
-
-  --color-drupal-blue: #009cde;
-  --color-drupal-dark-blue: #006aa9;
-  --color-drupal-navy: #12285f;
-  --color-drupal-dark-navy: #091942;
-  --color-drupal-light-blue: #ccedf9;
-  --color-drupal-black: #000;
-  --color-drupal-white: #fff;
-  --color-drupal-purple: #ccbaf4;
-  --color-drupal-yellow: #ffc423;
-  --color-drupal-red: #f46351;
-  --color-drupal-dark-red: #c63c00;
-  --color-drupal-green: #397618;
-  --color-drupal-gray-darkest: #1f2420;
-  --color-drupal-gray-darker: #323946;
-  --color-drupal-gray-dark: #4f5661;
-  --color-drupal-gray-default: #6d7583;
-  --color-drupal-gray-mild: #a2acbe;
-  --color-drupal-gray-milder: #cfd4dd;
-  --color-drupal-gray-mildest: #f8f9fc;
-  --color-drupal-gray-disabled: #e7ebf3;
 }

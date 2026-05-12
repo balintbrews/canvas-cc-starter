@@ -47,7 +47,7 @@ function Card({
           </h3>
         )}
         {description && (
-          <FormattedText as="div" className="text-sm leading-6 text-subtext-0">
+          <FormattedText as="div" className="text-sm leading-6 text-muted">
             {description}
           </FormattedText>
         )}

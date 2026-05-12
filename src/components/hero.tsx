@@ -56,13 +56,9 @@ export interface HeroProps extends Omit<
 function HeroGraphic({ isNavy = false }: { isNavy?: boolean }) {
   const gradientId = useId().replace(/:/g, '');
   const fadeId = useId().replace(/:/g, '');
-  const linePrimaryColor = isNavy
-    ? 'var(--color-sage)'
-    : 'var(--color-deep-green)';
-  const lineSecondaryColor = 'var(--color-green)';
 
   return (
-    <div className="relative h-full min-h-[24rem] w-[clamp(44rem,62vw,62rem)] overflow-hidden">
+    <div className="relative h-full min-h-96 w-[clamp(44rem,62vw,62rem)] overflow-hidden">
       <svg
         viewBox="0 0 700 500"
         className="absolute inset-0 h-full w-full origin-center"
@@ -97,9 +93,9 @@ function HeroGraphic({ isNavy = false }: { isNavy?: boolean }) {
               cy="246"
               r={92 + index * 14}
               fill="none"
-              stroke={isNavy ? 'var(--color-sage)' : 'var(--color-green)'}
               strokeDasharray="1 8"
               strokeWidth="1"
+              className={cn('stroke-green', isNavy && 'stroke-sage')}
             />
           ))}
         </g>
@@ -115,7 +111,7 @@ function HeroGraphic({ isNavy = false }: { isNavy?: boolean }) {
           cx="382"
           cy="248"
           r="112"
-          fill={isNavy ? 'var(--color-surface-2)' : 'var(--color-navy)'}
+          className={cn('fill-navy', isNavy && 'fill-eucalyptus')}
         />
         <circle
           cx="326"
@@ -132,7 +128,10 @@ function HeroGraphic({ isNavy = false }: { isNavy?: boolean }) {
               188 + offset
             } 700 ${146 + offset}`}
             fill="none"
-            stroke={index % 3 === 0 ? linePrimaryColor : lineSecondaryColor}
+            className={cn(
+              'stroke-green',
+              index % 3 === 0 && (isNavy ? 'stroke-sage' : 'stroke-deep-green'),
+            )}
             strokeWidth="1"
             opacity={isNavy ? '0.58' : '0.45'}
           />
@@ -151,7 +150,10 @@ function HeroGraphic({ isNavy = false }: { isNavy?: boolean }) {
             cx={cx}
             cy={cy}
             r={index % 2 === 0 ? 2.8 : 2.2}
-            fill={index % 2 === 0 ? linePrimaryColor : lineSecondaryColor}
+            className={cn(
+              'fill-green',
+              index % 2 === 0 && (isNavy ? 'fill-sage' : 'fill-deep-green'),
+            )}
             opacity="0.8"
           />
         ))}
@@ -213,7 +215,7 @@ function Hero({
             </h1>
             <FormattedText
               as="div"
-              className="max-w-xl text-base leading-7 text-balance text-subtext-0 md:text-lg"
+              className="max-w-xl text-base leading-7 text-balance text-muted md:text-lg"
             >
               {description}
             </FormattedText>

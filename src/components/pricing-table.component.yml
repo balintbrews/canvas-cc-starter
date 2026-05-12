@@ -110,7 +110,7 @@ props:
         advanced: Advanced
       title: Default tier
       examples:
-        - entry
+        - mid
     annualSelectedByDefault:
       type: boolean
       title: Annual selected by default

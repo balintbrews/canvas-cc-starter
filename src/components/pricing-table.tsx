@@ -103,7 +103,7 @@ function PricingTable({
   return (
     <div className={cn('w-full', className)} {...props}>
       {intro && (
-        <div className="mx-auto mb-10 w-full max-w-6xl border-y border-line py-8 md:py-10">
+        <div className="mx-auto mb-10 w-full max-w-6xl border-y border-line py-8 md:py-10 dark:border-surface-0">
           <div className="mx-auto flex max-w-3xl flex-col items-center gap-3 text-center [&>*]:max-w-3xl">
             {intro}
           </div>
@@ -114,10 +114,7 @@ function PricingTable({
       <div className="mb-6 flex items-center justify-center">
         <div className="w-24 text-right text-sm">
           <span
-            className={cn(
-              'font-medium text-subtext-0',
-              !isAnnual && 'text-text',
-            )}
+            className={cn('font-medium text-muted', !isAnnual && 'text-text')}
           >
             Monthly
           </span>
@@ -138,10 +135,7 @@ function PricingTable({
         </button>
         <div className="flex w-36 items-center text-sm">
           <span
-            className={cn(
-              'font-medium text-subtext-0',
-              isAnnual && 'text-text',
-            )}
+            className={cn('font-medium text-muted', isAnnual && 'text-text')}
           >
             Annual
           </span>
@@ -166,20 +160,21 @@ function PricingTable({
               key={planName}
               data-state={isSelected ? 'selected' : undefined}
               className={cn(
-                'relative flex flex-col rounded-xl border border-line bg-paper p-6 transition-colors',
-                'data-[state=selected]:border-green data-[state=selected]:shadow-sm',
+                'relative flex flex-col rounded-xl border border-line bg-paper p-6 shadow-sm transition-colors',
+                'data-[state=selected]:border-green',
+                'dark:border-surface-1 dark:bg-surface-0/80 dark:shadow-none dark:data-[state=selected]:border-green dark:data-[state=selected]:bg-surface-1/70',
               )}
             >
               <div className="mb-5 flex min-h-6 justify-center">
                 {planName === 'mid' && (
-                  <div className="inline-flex h-5 items-center rounded-full bg-surface-0 px-3 text-xs leading-none font-bold tracking-wide text-green uppercase">
+                  <div className="inline-flex h-5 items-center rounded-full bg-surface-0 px-3 text-xs leading-none font-bold tracking-wide text-green uppercase dark:bg-navy/55">
                     Most popular
                   </div>
                 )}
               </div>
 
               <div className="mb-4 flex items-center gap-5">
-                <div className="flex size-16 shrink-0 items-center justify-center rounded-full bg-surface-0">
+                <div className="flex size-16 shrink-0 items-center justify-center rounded-full bg-surface-0 dark:bg-navy/55">
                   <span
                     aria-hidden="true"
                     className="size-9 bg-green"
@@ -196,7 +191,7 @@ function PricingTable({
                 </div>
               </div>
 
-              <div className="mb-5 min-h-12 text-sm leading-6 text-subtext-0">
+              <div className="mb-5 min-h-12 text-sm leading-6 text-muted">
                 {tierDescriptions[planName]}
               </div>
 
@@ -205,7 +200,8 @@ function PricingTable({
                 className={cn(
                   'mt-auto inline-flex min-h-11 items-center justify-center rounded-md border border-green px-5 text-center text-base font-medium text-green transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green',
                   isSelected && 'bg-green text-inverted-text hover:bg-green/90',
-                  !isSelected && 'hover:bg-surface-0',
+                  !isSelected &&
+                    'hover:bg-surface-0 dark:border-sage/70 dark:text-sage dark:hover:bg-navy/35 dark:hover:text-cream',
                 )}
               >
                 {buttonLabel.replace('{tier}', tierNames[planName])}
