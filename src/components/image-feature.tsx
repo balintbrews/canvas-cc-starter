@@ -1,5 +1,5 @@
 import { LogoMark } from '@/components/logo';
-import { cn, FormattedText, Image } from 'drupal-canvas';
+import { cn, FormattedText } from 'drupal-canvas';
 import type { ComponentPropsWithoutRef } from 'react';
 import type { CanvasImage } from '@/lib/types';
 
@@ -30,7 +30,7 @@ function ImageFeature({
       {...props}
     >
       <div className="relative min-h-72 overflow-hidden rounded-lg bg-surface-0 md:min-h-96">
-        <Image
+        <img
           alt={image.alt}
           src={image.src}
           width={image.width}
