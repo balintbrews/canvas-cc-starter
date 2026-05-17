@@ -1,0 +1,23 @@
+name: Prose
+machineName: prose
+status: true
+required: []
+props:
+  properties:
+    text:
+      type: string
+      contentMediaType: text/html
+      x-formatting-context: block
+      title: Text
+      examples:
+        - <p>Product teams can generate launch copy in seconds, but the real
+          work is choosing a story people can repeat.</p><h2>Build around
+          outcomes</h2><p>Start with the customer tension, then show the product
+          change in concrete terms. Link teams to supporting details such as <a
+          href="/release-notes">release notes</a>.</p><ul><li>Name the user
+          problem in plain language.</li><li>Explain the measurable
+          result.</li></ul><blockquote><p>“Features explain what changed.
+          Stories explain why anyone should care.”</p></blockquote><p>Apply
+          <strong>editorial discipline</strong> so the final message feels
+          <em>clear and credible</em>.</p>
+slots: []

@@ -18,10 +18,9 @@
 @import 'tailwindcss';
 
 /**
- * Uncomment if you would like to use the Tailwind CSS Typography plugin.
  * @see https://github.com/tailwindlabs/tailwindcss-typography
  */
-/* @plugin "@tailwindcss/typography"; */
+@plugin '@tailwindcss/typography';
 
 :root {
   --cream: hsl(48deg, 55%, 97%);
