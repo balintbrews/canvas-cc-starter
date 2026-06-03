@@ -61,6 +61,12 @@
       "skillPath": "skills/canvas-page-definition/SKILL.md",
       "computedHash": "52c0fbbc12619640e38e7f7f14939930337bc51b822a4142e231cd71a4483187"
     },
+    "canvas-regions": {
+      "source": "drupal-canvas/skills",
+      "sourceType": "github",
+      "skillPath": "skills/canvas-regions/SKILL.md",
+      "computedHash": "e5c4b9c70bc2bd44f94e0c65fc720cd8a91e6c37567a4db2796d62527e34ad71"
+    },
     "canvas-styling-conventions": {
       "source": "drupal-canvas/skills",
       "sourceType": "github",
