@@ -1,4 +1,9 @@
 {
   "componentDir": "src/components",
-  "globalCssPath": "src/global.css"
+  "globalCssPath": "src/global.css",
+  "sync": {
+    "pages": false,
+    "contentTemplates": false,
+    "regions": false
+  }
 }
