@@ -1,14 +1,8 @@
 import { useState } from 'react';
-import {
-  buildTierDescriptions,
-  buildTierNames,
-  buildTierPrices,
-  getCurrentPrice,
-  TIER_NAMES,
-} from '@/lib/pricing-utils';
 import { cn } from 'drupal-canvas';
 import type { ComponentPropsWithoutRef, CSSProperties, ReactNode } from 'react';
-import type { TierName } from '@/lib/pricing-utils';
+
+type TierName = 'entry' | 'mid' | 'advanced';
 
 export interface PricingTableProps extends Omit<
   ComponentPropsWithoutRef<'div'>,
@@ -74,31 +68,32 @@ function PricingTable({
   ...props
 }: PricingTableProps) {
   const [isAnnual, setIsAnnual] = useState(annualSelectedByDefault ?? false);
-  const tier = defaultTier;
-
-  const tierNames = buildTierNames({
-    entryTierName,
-    midTierName,
-    advancedTierName,
-  });
-  const tierDescriptions = buildTierDescriptions({
-    entryTierDescription,
-    midTierDescription,
-    advancedTierDescription,
-  });
-  const tierIcons: Record<TierName, string> = {
-    entry: entryTierIconNameFromLucide,
-    mid: midTierIconNameFromLucide,
-    advanced: advancedTierIconNameFromLucide,
-  };
-  const tierPrices = buildTierPrices({
-    entryTierPriceMonthly,
-    entryTierPriceAnnual,
-    midTierPriceMonthly,
-    midTierPriceAnnual,
-    advancedTierPriceMonthly,
-    advancedTierPriceAnnual,
-  });
+  const tiers = [
+    {
+      description: entryTierDescription,
+      iconName: entryTierIconNameFromLucide,
+      id: 'entry',
+      name: entryTierName,
+      priceAnnual: entryTierPriceAnnual,
+      priceMonthly: entryTierPriceMonthly,
+    },
+    {
+      description: midTierDescription,
+      iconName: midTierIconNameFromLucide,
+      id: 'mid',
+      name: midTierName,
+      priceAnnual: midTierPriceAnnual,
+      priceMonthly: midTierPriceMonthly,
+    },
+    {
+      description: advancedTierDescription,
+      iconName: advancedTierIconNameFromLucide,
+      id: 'advanced',
+      name: advancedTierName,
+      priceAnnual: advancedTierPriceAnnual,
+      priceMonthly: advancedTierPriceMonthly,
+    },
+  ] as const;
 
   return (
     <div className={cn('w-full', className)} {...props}>
@@ -147,17 +142,13 @@ function PricingTable({
 
       {/* Pricing tiers */}
       <div className="grid gap-8 md:grid-cols-3">
-        {TIER_NAMES.map((planName) => {
-          const isSelected = tier === planName;
-          const price = getCurrentPrice({
-            tierPrices,
-            tierName: planName,
-            isAnnual,
-          });
+        {tiers.map((tier) => {
+          const isSelected = defaultTier === tier.id;
+          const price = isAnnual ? tier.priceAnnual : tier.priceMonthly;
 
           return (
             <div
-              key={planName}
+              key={tier.id}
               data-state={isSelected ? 'selected' : undefined}
               className={cn(
                 'relative flex flex-col rounded-xl border border-line bg-paper p-6 shadow-sm transition-colors',
@@ -165,7 +156,7 @@ function PricingTable({
               )}
             >
               <div className="mb-5 flex min-h-6 justify-center">
-                {planName === 'mid' && (
+                {tier.id === 'mid' && (
                   <div className="inline-flex h-5 items-center rounded-full bg-surface-0 px-3 text-xs leading-none font-bold tracking-wide text-green uppercase">
                     Most popular
                   </div>
@@ -177,12 +168,12 @@ function PricingTable({
                   <span
                     aria-hidden="true"
                     className="size-9 bg-green"
-                    style={getIconMaskStyle(tierIcons[planName])}
+                    style={getIconMaskStyle(tier.iconName)}
                   />
                 </div>
                 <div>
                   <h3 className="text-xl leading-6 font-bold text-text">
-                    {tierNames[planName]}
+                    {tier.name}
                   </h3>
                   <div className="mt-4 font-serif text-4xl leading-none font-normal text-text">
                     ${price.toLocaleString()}
@@ -191,7 +182,7 @@ function PricingTable({
               </div>
 
               <div className="mb-5 min-h-12 text-sm leading-6 text-muted">
-                {tierDescriptions[planName]}
+                {tier.description}
               </div>
 
               <a
@@ -202,12 +193,12 @@ function PricingTable({
                   !isSelected && 'hover:bg-surface-0',
                 )}
               >
-                {buttonLabel.replace('{tier}', tierNames[planName])}
+                {buttonLabel.replace('{tier}', tier.name)}
               </a>
 
               <span className="sr-only">
                 {isSelected ? 'Selected plan: ' : 'Plan: '}
-                {tierNames[planName]}
+                {tier.name}
               </span>
             </div>
           );

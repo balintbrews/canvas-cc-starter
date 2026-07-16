@@ -1,4 +1,3 @@
-import { hasEmptySlotPlaceholder } from '@/lib/types';
 import { cva } from 'class-variance-authority';
 import { cn } from 'drupal-canvas';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
@@ -49,12 +48,7 @@ function Header({
       {...props}
     >
       <div className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-x-8 px-5 py-4 sm:px-8 lg:px-16">
-        <div
-          className={cn(
-            'h-10 shrink-0 items-center justify-start md:h-12',
-            hasEmptySlotPlaceholder(branding) && 'min-w-32',
-          )}
-        >
+        <div className="h-10 min-w-32 shrink-0 items-center justify-start md:h-12">
           {branding}
         </div>
         <div className="flex min-h-12 grow items-center justify-end">

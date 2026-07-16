@@ -1,4 +1,3 @@
-import { hasEmptySlotPlaceholder } from '@/lib/types';
 import { cva } from 'class-variance-authority';
 import { cn, FormattedText } from 'drupal-canvas';
 import type { ComponentPropsWithoutRef, ReactNode } from 'react';
@@ -101,12 +100,7 @@ function Footer({
     >
       <div className="mx-auto grid max-w-7xl gap-8 px-5 py-8 sm:px-8 md:grid-cols-[1fr_auto] md:items-center lg:px-16">
         <div className="flex flex-col gap-3">
-          <div
-            className={cn(
-              'h-10 shrink-0 items-center justify-start',
-              hasEmptySlotPlaceholder(branding) && 'min-w-32',
-            )}
-          >
+          <div className="h-10 min-w-32 shrink-0 items-center justify-start">
             {branding}
           </div>
           <FormattedText

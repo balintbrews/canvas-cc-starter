@@ -1,7 +1,6 @@
 import { LogoMark } from '@/components/logo';
 import { cn, FormattedText } from 'drupal-canvas';
 import type { ComponentPropsWithoutRef } from 'react';
-import type { CanvasImage } from '@/lib/types';
 
 export interface ImageFeatureProps extends Omit<
   ComponentPropsWithoutRef<'div'>,
@@ -9,7 +8,12 @@ export interface ImageFeatureProps extends Omit<
 > {
   description: string;
   eyebrow?: string;
-  image: CanvasImage;
+  image: {
+    alt: string;
+    height?: number;
+    src: string;
+    width?: number;
+  };
   title: string;
 }
 
