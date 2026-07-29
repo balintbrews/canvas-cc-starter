@@ -1,7 +1,5 @@
 import { cva } from 'class-variance-authority';
 import { cn, FormattedText } from 'drupal-canvas';
-import type { ComponentPropsWithoutRef, ReactNode } from 'react';
-import type { VariantProps } from 'class-variance-authority';
 
 const footerVariants = cva('', {
   variants: {
@@ -16,10 +14,6 @@ const footerVariants = cva('', {
     backgroundColor: 'cream',
   },
 });
-
-type FooterBackgroundColor = NonNullable<
-  VariantProps<typeof footerVariants>['backgroundColor']
->;
 
 function LinkedInLogoIcon() {
   return (
@@ -53,13 +47,7 @@ function MailIcon() {
   );
 }
 
-interface SocialLinkProps {
-  children: ReactNode;
-  label: string;
-  url: string;
-}
-
-function SocialLink({ children, label, url }: SocialLinkProps) {
+function SocialLink({ children, label, url }) {
   return (
     <a
       href={url}
@@ -71,18 +59,6 @@ function SocialLink({ children, label, url }: SocialLinkProps) {
   );
 }
 
-export interface FooterProps extends Omit<
-  ComponentPropsWithoutRef<'footer'>,
-  'children'
-> {
-  backgroundColor: FooterBackgroundColor;
-  branding?: ReactNode;
-  copyrightNotice: string;
-  emailUrl?: string;
-  linkedInUrl?: string;
-  xUrl?: string;
-}
-
 function Footer({
   backgroundColor,
   branding,
@@ -92,7 +68,7 @@ function Footer({
   linkedInUrl,
   xUrl,
   ...props
-}: FooterProps) {
+}) {
   return (
     <footer
       className={cn(footerVariants({ backgroundColor }), className)}

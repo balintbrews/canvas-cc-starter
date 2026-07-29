@@ -1,20 +1,7 @@
 import { cn, FormattedText } from 'drupal-canvas';
-import type { CSSProperties, HTMLAttributes } from 'react';
 
-export interface CardProps extends HTMLAttributes<HTMLDivElement> {
-  description?: string;
-  iconNameFromLucide?: string;
-  title?: string;
-}
-
-function Card({
-  className,
-  description,
-  iconNameFromLucide,
-  title,
-  ...props
-}: CardProps) {
-  const iconMaskStyle: CSSProperties | undefined = iconNameFromLucide
+function Card({ className, description, iconNameFromLucide, title, ...props }) {
+  const iconMaskStyle = iconNameFromLucide
     ? {
         maskImage: `url(https://esm.sh/lucide-static@0.544.0/icons/${iconNameFromLucide}.svg)`,
         maskPosition: 'center',

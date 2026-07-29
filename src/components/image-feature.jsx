@@ -1,21 +1,5 @@
 import { LogoMark } from '@/components/logo';
 import { cn, FormattedText } from 'drupal-canvas';
-import type { ComponentPropsWithoutRef } from 'react';
-
-export interface ImageFeatureProps extends Omit<
-  ComponentPropsWithoutRef<'div'>,
-  'children'
-> {
-  description: string;
-  eyebrow?: string;
-  image: {
-    alt: string;
-    height?: number;
-    src: string;
-    width?: number;
-  };
-  title: string;
-}
 
 function ImageFeature({
   className,
@@ -24,7 +8,7 @@ function ImageFeature({
   image,
   title,
   ...props
-}: ImageFeatureProps) {
+}) {
   return (
     <div
       className={cn(

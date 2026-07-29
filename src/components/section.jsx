@@ -1,7 +1,5 @@
 import { cva } from 'class-variance-authority';
 import { cn } from 'drupal-canvas';
-import type { ComponentPropsWithoutRef, ReactNode } from 'react';
-import type { VariantProps } from 'class-variance-authority';
 
 const sectionVariants = cva('', {
   variants: {
@@ -16,24 +14,7 @@ const sectionVariants = cva('', {
   },
 });
 
-type SectionBackgroundColor = NonNullable<
-  VariantProps<typeof sectionVariants>['backgroundColor']
->;
-
-export interface SectionProps extends Omit<
-  ComponentPropsWithoutRef<'section'>,
-  'children' | 'content'
-> {
-  backgroundColor: SectionBackgroundColor;
-  content?: ReactNode;
-}
-
-function Section({
-  backgroundColor,
-  className,
-  content,
-  ...props
-}: SectionProps) {
+function Section({ backgroundColor, className, content, ...props }) {
   return (
     <section
       className={cn(

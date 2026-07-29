@@ -1,14 +1,6 @@
 import { cn } from 'drupal-canvas';
-import type { ComponentPropsWithoutRef } from 'react';
 
-export interface HeadingProps extends Omit<
-  ComponentPropsWithoutRef<'h2'>,
-  'children'
-> {
-  text: string;
-}
-
-function Heading({ className, text, ...props }: HeadingProps) {
+function Heading({ className, text, ...props }) {
   return (
     <h2
       className={cn(

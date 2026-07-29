@@ -1,12 +1,6 @@
 import { cn } from 'drupal-canvas';
-import type { HTMLAttributes } from 'react';
 
-interface MenuItem {
-  title: string;
-  url: string;
-}
-
-const menu: MenuItem[] = [
+const menu = [
   { title: 'Home', url: '/home' },
   { title: 'Services', url: '/services' },
   { title: 'Blog', url: '/blog' },
@@ -14,15 +8,7 @@ const menu: MenuItem[] = [
   { title: 'Careers', url: '/careers' },
 ];
 
-export interface NavigationProps extends HTMLAttributes<HTMLDivElement> {
-  activeUrl?: string;
-}
-
-function Navigation({
-  activeUrl = '/home',
-  className,
-  ...props
-}: NavigationProps) {
+function Navigation({ activeUrl = '/home', className, ...props }) {
   // Data fetching is supported using SWR and @drupal-api-client/json-api-client.
   // @see https://project.pages.drupalcode.org/canvas/code-components/data-fetching
   return (

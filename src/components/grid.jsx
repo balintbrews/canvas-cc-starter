@@ -1,14 +1,6 @@
 import { cn } from 'drupal-canvas';
-import type { HTMLAttributes, ReactNode } from 'react';
 
-export interface GridProps extends Omit<
-  HTMLAttributes<HTMLDivElement>,
-  'children' | 'content'
-> {
-  content?: ReactNode;
-}
-
-function Grid({ className, content, ...props }: GridProps) {
+function Grid({ className, content, ...props }) {
   return (
     <div
       className={cn(

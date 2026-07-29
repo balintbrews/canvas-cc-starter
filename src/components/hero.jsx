@@ -1,8 +1,6 @@
 import { useId } from 'react';
 import { cva } from 'class-variance-authority';
 import { cn, FormattedText } from 'drupal-canvas';
-import type { ComponentPropsWithoutRef } from 'react';
-import type { VariantProps } from 'class-variance-authority';
 
 const heroVariants = cva('', {
   variants: {
@@ -17,10 +15,6 @@ const heroVariants = cva('', {
     backgroundColor: 'cream',
   },
 });
-
-type HeroBackgroundColor = NonNullable<
-  VariantProps<typeof heroVariants>['backgroundColor']
->;
 
 const flowLines = [-92, -70, -48, -28, -10, 8, 28, 48, 70, 92];
 
@@ -42,18 +36,7 @@ function ArrowRightIcon() {
   );
 }
 
-export interface HeroProps extends Omit<
-  ComponentPropsWithoutRef<'section'>,
-  'children'
-> {
-  backgroundColor: HeroBackgroundColor;
-  buttonLabel: string;
-  buttonLink: string;
-  description: string;
-  title: string;
-}
-
-function HeroGraphic({ isNavy = false }: { isNavy?: boolean }) {
+function HeroGraphic({ isNavy = false }) {
   const gradientId = useId().replace(/:/g, '');
   const fadeId = useId().replace(/:/g, '');
 
@@ -195,7 +178,7 @@ function Hero({
   description,
   title,
   ...props
-}: HeroProps) {
+}) {
   return (
     <section
       className={cn(

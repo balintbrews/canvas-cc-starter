@@ -1,7 +1,5 @@
 import { cva } from 'class-variance-authority';
 import { cn } from 'drupal-canvas';
-import type { ComponentPropsWithoutRef, ReactNode } from 'react';
-import type { VariantProps } from 'class-variance-authority';
 
 const headerVariants = cva('', {
   variants: {
@@ -17,26 +15,13 @@ const headerVariants = cva('', {
   },
 });
 
-type HeaderBackgroundColor = NonNullable<
-  VariantProps<typeof headerVariants>['backgroundColor']
->;
-
-export interface HeaderProps extends Omit<
-  ComponentPropsWithoutRef<'header'>,
-  'children'
-> {
-  backgroundColor: HeaderBackgroundColor;
-  branding?: ReactNode;
-  navigation?: ReactNode;
-}
-
 function Header({
   backgroundColor,
   branding,
   className,
   navigation,
   ...props
-}: HeaderProps) {
+}) {
   return (
     <header
       className={cn(

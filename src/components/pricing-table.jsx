@@ -1,37 +1,7 @@
 import { useState } from 'react';
 import { cn } from 'drupal-canvas';
-import type { ComponentPropsWithoutRef, CSSProperties, ReactNode } from 'react';
 
-type TierName = 'entry' | 'mid' | 'advanced';
-
-export interface PricingTableProps extends Omit<
-  ComponentPropsWithoutRef<'div'>,
-  'children'
-> {
-  advancedTierDescription: string;
-  advancedTierIconNameFromLucide: string;
-  advancedTierName: string;
-  advancedTierPriceAnnual: number;
-  advancedTierPriceMonthly: number;
-  annualBadgeText: string;
-  annualSelectedByDefault?: boolean;
-  buttonLabel: string;
-  buttonLink: string;
-  defaultTier: TierName;
-  entryTierDescription: string;
-  entryTierIconNameFromLucide: string;
-  entryTierName: string;
-  entryTierPriceAnnual: number;
-  entryTierPriceMonthly: number;
-  intro?: ReactNode;
-  midTierDescription: string;
-  midTierIconNameFromLucide: string;
-  midTierName: string;
-  midTierPriceAnnual: number;
-  midTierPriceMonthly: number;
-}
-
-const getIconMaskStyle = (iconName: string): CSSProperties => ({
+const getIconMaskStyle = (iconName) => ({
   maskImage: `url(https://esm.sh/lucide-static@0.544.0/icons/${iconName}.svg)`,
   maskPosition: 'center',
   maskRepeat: 'no-repeat',
@@ -66,7 +36,7 @@ function PricingTable({
   intro,
   className,
   ...props
-}: PricingTableProps) {
+}) {
   const [isAnnual, setIsAnnual] = useState(annualSelectedByDefault ?? false);
   const tiers = [
     {
@@ -93,7 +63,7 @@ function PricingTable({
       priceAnnual: advancedTierPriceAnnual,
       priceMonthly: advancedTierPriceMonthly,
     },
-  ] as const;
+  ];
 
   return (
     <div className={cn('w-full', className)} {...props}>

@@ -1,17 +1,6 @@
 import { cn } from 'drupal-canvas';
-import type { ReactNode } from 'react';
 
-export interface LogoProps {
-  className?: string;
-  linkToFrontPage?: boolean;
-}
-
-export interface LogoMarkProps {
-  className?: string;
-  primaryClassName?: string;
-}
-
-function LogoMark({ className, primaryClassName }: LogoMarkProps) {
+function LogoMark({ className, primaryClassName }) {
   return (
     <svg
       className={cn('h-full w-auto shrink-0', className)}
@@ -41,7 +30,7 @@ function LogoMark({ className, primaryClassName }: LogoMarkProps) {
   );
 }
 
-function LogoContent({ linkToFrontPage }: { linkToFrontPage: boolean }) {
+function LogoContent({ linkToFrontPage }) {
   return (
     <>
       {linkToFrontPage && <span className="sr-only">Home</span>}
@@ -53,9 +42,9 @@ function LogoContent({ linkToFrontPage }: { linkToFrontPage: boolean }) {
   );
 }
 
-function Logo({ className, linkToFrontPage = true }: LogoProps) {
+function Logo({ className, linkToFrontPage = true }) {
   const classes = cn('inline-flex h-10 items-center gap-3 md:h-12', className);
-  const content: ReactNode = <LogoContent linkToFrontPage={linkToFrontPage} />;
+  const content = <LogoContent linkToFrontPage={linkToFrontPage} />;
 
   if (linkToFrontPage) {
     return (

@@ -1,7 +1,5 @@
 import { cva } from 'class-variance-authority';
 import { cn, FormattedText } from 'drupal-canvas';
-import type { HTMLAttributes } from 'react';
-import type { VariantProps } from 'class-variance-authority';
 
 const paragraphVariants = cva('max-w-5xl text-balance', {
   variants: {
@@ -15,17 +13,7 @@ const paragraphVariants = cva('max-w-5xl text-balance', {
   },
 });
 
-type ParagraphVariant = NonNullable<
-  VariantProps<typeof paragraphVariants>['variant']
->;
-
-export interface ParagraphProps {
-  className?: HTMLAttributes<HTMLDivElement>['className'];
-  text: string;
-  variant?: ParagraphVariant;
-}
-
-function Paragraph({ className, text, variant }: ParagraphProps) {
+function Paragraph({ className, text, variant }) {
   return (
     <FormattedText
       as="div"
