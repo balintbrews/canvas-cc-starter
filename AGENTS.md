@@ -20,8 +20,13 @@ npm run code:fix
 
 Fix any issues that were not fixed automatically, and re-run the check.
 
-When all issues are fixed, ask the user if they would like to push the current
-Canvas changes to Canvas. See the `canvas-component-push` skill.
+When all issues are fixed, ask the user if they would like to push the entire
+Canvas codebase to Canvas. A Canvas push is all or nothing: it pushes every
+Canvas-managed artifact in the codebase, including all pages and components, and
+cannot push an individual artifact or only the changes from the current task.
+This behavior is expected and accepted; do not stop or warn merely because the
+push includes unrelated or previously existing Canvas work. See the
+`canvas-component-push` skill.
 
 ## Writing and style
 
